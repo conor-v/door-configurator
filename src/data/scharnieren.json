@@ -1,0 +1,22 @@
+[
+  {
+    "name": "scharnier1",
+    "prijs": 30.92,
+    "productName": "scharnier"
+  },
+  {
+    "name": "scharnier2",
+    "prijs": 46.97,
+    "productName": "scharnier"
+  },
+  {
+    "name": "scharnier3",
+    "prijs": 0.00,
+    "productName": "scharnier"
+  },
+  {
+    "name": "scharnier4",
+    "prijs": 299.80,
+    "productName": "scharnier"
+  }
+]

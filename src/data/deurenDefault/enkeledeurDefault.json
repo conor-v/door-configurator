@@ -1,0 +1,58 @@
+{
+  "id": 1,
+  "doortype": "Enkele deur",
+  "doorWidth": 1100,
+  "doorHeight": 2380,
+  "doorPartitions": 1,
+  "doorGridType": "None",
+  "doorVariant": "Model3",
+  "gridMode": "Design",
+  "aluminium": "Black",
+  "aluminiumCustomColor": "",
+  "material": "Clear",
+  "partitionGridHor": [],
+  "partitionGridVer": [],
+  "borderSize": 0,
+  "uitzicht": "Mastiek",
+  "door": {
+    "sidepanel": {
+      "productName": "sidepanel",
+      "type": "None",
+      "Width": 100
+    },
+    "fanlight": {
+      "productName": "fanlight",
+      "position": "right",
+      "fanlightWidth": 100
+    },
+    "greep": {
+      "productName": "greep",
+      "name": "klink1",
+      "prijs": 60.48
+    },
+    "slot": {
+      "productName": "slot",
+      "name": "slot2",
+      "prijs": 12.50
+    },
+    "scharnier": {
+      "productName": "scharnier",
+      "name": "scharnier1",
+      "prijs": 30.92
+    },
+    "muurdikte_interval": {
+      "productName": "muurdikte_interval",
+      "name": "171-235",
+      "prijs": 1.00
+    },
+    "deurblad_afmeting": {
+      "productName": "deurblad_afmeting",
+      "name": "630x2015",
+      "prijs": 1.00
+    }
+  },
+  "hingedDoor": false,
+  "floorPump": false,
+  "pumpInDoor": false,
+  "slidingDoor": false
+}

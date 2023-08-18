@@ -1,0 +1,49 @@
+body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+input[type="range"] {
+	overflow: hidden;
+	width: 130px;
+	-webkit-appearance: none;
+	border-radius: 20px;
+	background-color: #f7f7f7;
+	border: 1px solid #eeeeee;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 20px;
+	-webkit-appearance: none;
+	color: #13bba4;
+	margin-top: -1px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	width: 20px;
+	-webkit-appearance: none;
+	height: 20px;
+	cursor: ew-resize;
+	background: #434343;
+	box-shadow: -130px 0 0 130px #222221;
+}
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+	background-color: #222221;
+	height: 20px;
+}
+input[type="range"]::-moz-range-track {
+	background-color: #f7f7f7;
+	height: 10px;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+	background-color: #222221;
+	height: 10px;
+}
+input[type="range"]::-ms-fill-upper {
+	background-color: #f7f7f7;
+	height: 10px;
+}

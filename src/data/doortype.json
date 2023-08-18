@@ -1,0 +1,22 @@
+[
+  {
+    "type": "Vast raam",
+    "img": "doortypes/vast_raam.jpg"
+  },
+  {
+    "type": "Enkele deur",
+    "img": "doortypes/enkele_deur.jpg"
+  },
+  {
+    "type": "Dubbele deur",
+    "img": "doortypes/dubbele_deur.jpg"
+  },
+  {
+    "type": "3 slagdeur",
+    "img": "doortypes/3_slagdeur.jpg"
+  },
+  {
+    "type": "4 slagdeur",
+    "img": "doortypes/4_slagdeur.jpg"
+  }
+]

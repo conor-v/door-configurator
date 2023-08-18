@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Clear",
+    "img": "material/color_clear.png"
+  },
+  {
+    "type": "Frosted",
+    "img": "material/color_frosted.png"
+  },
+  {
+    "type": "Colored",
+    "img": "material/color_colored.png"
+  }
+]

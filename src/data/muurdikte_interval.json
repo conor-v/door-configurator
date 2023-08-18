@@ -1,0 +1,17 @@
+[
+  {
+    "name": "171-235",
+    "prijs": 1.00,
+    "productName": "muurdikte_interval"
+  },
+  {
+    "name": "126-170",
+    "prijs": 2.00,
+    "productName": "muurdikte_interval"
+  },
+  {
+    "name": "90-125",
+    "prijs": 3.00,
+    "productName": "muurdikte_interval"
+  }
+]

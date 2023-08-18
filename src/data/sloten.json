@@ -1,0 +1,27 @@
+[
+  {
+    "name": "slot1",
+    "prijs": 11.50,
+    "productName": "slot"
+  },
+  {
+    "name": "slot2",
+    "prijs": 12.50,
+    "productName": "slot"
+  },
+  {
+    "name": "slot3",
+    "prijs": 13.50,
+    "productName": "slot"
+  },
+  {
+    "name": "slot4",
+    "prijs": 14.50,
+    "productName": "slot"
+  },
+  {
+    "name": "slot5",
+    "prijs": 15.50,
+    "productName": "slot"
+  }
+]

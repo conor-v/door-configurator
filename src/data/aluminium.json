@@ -1,0 +1,26 @@
+[
+  {
+    "color": "Black",
+    "img": "aluminium/color_black.png"
+  },
+  {
+    "color": "Bronze",
+    "img": "aluminium/color_bronze.png"
+  },
+  {
+    "color": "Gold",
+    "img": "aluminium/color_gold.png"
+  },
+  {
+    "color": "Silver",
+    "img": "aluminium/color_silver.png"
+  },
+  {
+    "color": "Stainless Steel",
+    "img": "aluminium/color_stainless.png"
+  },
+  {
+    "color": "Custom",
+    "img": "aluminium/color_wheel.png"
+  }
+]

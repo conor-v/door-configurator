@@ -1,0 +1,251 @@
+[
+  {
+    "name": "None",
+    "gridHorizontal": 0,
+    "gridVertical": 0,
+    "borderSize": 0,
+    "gridHorizontalArray": [],
+    "gridVerticalArray": [],
+    "img": "grid/x.svg"
+  },
+  {
+    "name": "Type 1 x 15mm",
+    "gridHorizontal": 1,
+    "gridVertical": 1,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0.3, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid1.svg"
+  },
+  {
+    "name": "Type 1 x 30mm",
+    "gridHorizontal": 1,
+    "gridVertical": 1,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0.3, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid2.svg"
+  },
+  {
+    "name": "Type 2 x 15mm",
+    "gridHorizontal": 2,
+    "gridVertical": 0,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0.35, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.65, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [],
+    "img": "grid/grid3.svg"
+  },
+  {
+    "name": "Type 2 x 30mm",
+    "gridHorizontal": 2,
+    "gridVertical": 0,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0.35, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.65, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [],
+    "img": "grid/grid4.svg"
+  },
+  {
+    "name": "Type 3 x 15mm",
+    "gridHorizontal": 3,
+    "gridVertical": 0,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0.25, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.75, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [],
+    "img": "grid/grid5.svg"
+  },
+  {
+    "name": "Type 3 x 30mm",
+    "gridHorizontal": 3,
+    "gridVertical": 0,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0.25, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.75, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [],
+    "img": "grid/grid6.svg"
+  },
+  {
+    "name": "Type 4 x 15mm",
+    "gridHorizontal": 2,
+    "gridVertical": 1,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0.35, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.65, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid7.svg"
+  },
+  {
+    "name": "Type 4 x 30mm",
+    "gridHorizontal": 2,
+    "gridVertical": 1,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0.35, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.65, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid8.svg"
+  },
+  {
+    "name": "Type 5 x 15mm",
+    "gridHorizontal": 3,
+    "gridVertical": 2,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0.25, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.75, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.32, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.67, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid9.svg"
+  },
+  {
+    "name": "Type 5 x 30mm",
+    "gridHorizontal": 3,
+    "gridVertical": 2,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0.25, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.5, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.75, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.32, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.67, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid10.svg"
+  },
+  {
+    "name": "Type 6 x 15mm",
+    "gridHorizontal": 2,
+    "gridVertical": 2,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0, "size": 1, "fixed": 2, "start": 0},
+      {"pos": 1, "size": 1, "fixed": -2, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0, "size": 1, "fixed": 2, "start": 0},
+      {"pos": 1, "size": 1, "fixed": -2, "start": 0}
+    ],
+    "img": "grid/grid11.svg"
+  },
+  {
+    "name": "Type 6 x 30mm",
+    "gridHorizontal": 2,
+    "gridVertical": 2,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0, "size": 1, "fixed": 2, "start": 0},
+      {"pos": 1, "size": 1, "fixed": -2, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0, "size": 1, "fixed": 2, "start": 0},
+      {"pos": 1, "size": 1, "fixed": -2, "start": 0}
+    ],
+    "img": "grid/grid12.svg"
+  },
+  {
+    "name": "Type 7 x 15mm",
+    "gridHorizontal": 4,
+    "gridVertical": 5,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0.2, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.4, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.6, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.8, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.32, "size": 0.2, "fixed": 0, "start": 0},
+      {"pos": 0.67, "size": 0.2, "fixed": 0, "start": 0.2},
+      {"pos": 0.32, "size": 0.2, "fixed": 0, "start": 0.4},
+      {"pos": 0.67, "size": 0.2, "fixed": 0, "start": 0.6},
+      {"pos": 0.32, "size": 0.2, "fixed": 0, "start": 0.8}
+    ],
+    "img": "grid/grid13.svg"
+  },
+  {
+    "name": "Type 7 x 30mm",
+    "gridHorizontal": 4,
+    "gridVertical": 5,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0.2, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.4, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.6, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.8, "size": 1, "fixed": 0, "start": 0}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.32, "size": 0.2, "fixed": 0, "start": 0},
+      {"pos": 0.67, "size": 0.2, "fixed": 0, "start": 0.2},
+      {"pos": 0.32, "size": 0.2, "fixed": 0, "start": 0.4},
+      {"pos": 0.67, "size": 0.2, "fixed": 0, "start": 0.6},
+      {"pos": 0.32, "size": 0.2, "fixed": 0, "start": 0.8}
+    ],
+    "img": "grid/grid14.svg"
+  },
+  {
+    "name": "Type 8 x 15mm",
+    "gridHorizontal": 3,
+    "gridVertical": 3,
+    "borderSize": 0.15,
+    "gridHorizontalArray": [
+      {"pos": 0.35, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.65, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.55, "size": 0.45, "fixed": 0, "start": 0.05}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.65, "size": 0.33, "fixed": 0, "start": 0.65},
+      {"pos": 0.55, "size": 0.3, "fixed": 0, "start": 0.35},
+      {"pos": 0.8, "size": 0.35, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid15.svg"
+  },
+  {
+    "name": "Type 8 x 30mm",
+    "gridHorizontal": 3,
+    "gridVertical": 3,
+    "borderSize": 0.3,
+    "gridHorizontalArray": [
+      {"pos": 0.35, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.65, "size": 1, "fixed": 0, "start": 0},
+      {"pos": 0.55, "size": 0.45, "fixed": 0, "start": 0.05}
+    ],
+    "gridVerticalArray": [
+      {"pos": 0.65, "size": 0.33, "fixed": 0, "start": 0.65},
+      {"pos": 0.55, "size": 0.3, "fixed": 0, "start": 0.35},
+      {"pos": 0.8, "size": 0.35, "fixed": 0, "start": 0}
+    ],
+    "img": "grid/grid16.svg"
+  }
+]

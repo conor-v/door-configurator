@@ -1,0 +1,48 @@
+{
+  "id": 1,
+  "doortype": "4 slagdeur",
+  "doorWidth": 1100,
+  "doorHeight": 2380,
+  "doorPartitions": 1,
+  "doorGridType": "None",
+  "doorVariant": "Model1",
+  "gridMode": "Design",
+  "aluminium": "Black",
+  "aluminiumCustomColor": "",
+  "material": "Clear",
+  "partitionGridHor": [],
+  "partitionGridVer": [],
+  "borderSize": 0,
+  "uitzicht": "Mastiek",
+  "door": {
+    "sidepanel": {
+      "productName": "sidepanel",
+      "type": "None",
+      "Width": 100
+    },
+    "fanlight": {
+      "productName": "fanlight",
+      "position": "right",
+      "fanlightWidth": 100
+    },
+    "greep": {
+      "productName": "greep",
+      "name": "klink1",
+      "prijs": 60.48
+    },
+    "slot": {
+      "productName": "slot",
+      "name": "slot2",
+      "prijs": 12.50
+    },
+    "scharnier": {
+      "productName": "scharnier",
+      "name": "scharnier1",
+      "prijs": 30.92
+    }
+  },
+  "hingedDoor": false,
+  "floorPump": false,
+  "pumpInDoor": false,
+  "slidingDoor": false
+}
