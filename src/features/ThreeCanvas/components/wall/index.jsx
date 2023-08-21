@@ -1,11 +1,10 @@
 import { useStore } from "../../../../stores/appStore";
 
 const Wall = () => {
-	const width = useStore((state) => state.door.doorWidth);
-	const height = useStore((state) => state.door.doorHeight);
+	const { doorHeight, doorWidth } = useStore((state) => state.door.gekozendeur);
 
-	const widthCalc = width / 100;
-	const heightCalc = height / 100;
+	const widthCalc = doorWidth / 100;
+	const heightCalc = doorHeight / 100;
 	return (
 		<group scale={0.09} position={[0, 0, 2.1]}>
 			{/* RECHTER MUUR HORIZONTAAL */}

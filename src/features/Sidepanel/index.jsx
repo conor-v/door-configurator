@@ -20,12 +20,12 @@ import IconNav from "./components/iconNav";
 
 const Sidepanel = ({ width = 500 }) => {
 	const [open, setOpen] = useState(true);
-	const doorType = useStore((state) => state.door.doorType);
+	const sidePanelType = useStore((state) => state.sidepanel.sidePanelType);
 	const { doorOpen, sideOpen } = useStore((state) => state.sidepanel);
 	const updateObject = useStore((state) => state.updateObject);
 
 	const sidePanelComp = () => {
-		switch (doorType) {
+		switch (sidePanelType) {
 			case "doors":
 				return <Doors />;
 

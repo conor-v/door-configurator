@@ -6,9 +6,9 @@ const inititalState = {
 	door: {
 		doorWidth: 1100,
 		doorHeight: 2380,
-		doorType: "doors",
 		gekozendeur: {},
 		deuren: [],
+		popup: false,
 	},
 	sidepanel: {
 		sideOpen: true,

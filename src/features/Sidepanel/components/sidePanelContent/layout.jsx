@@ -2,68 +2,95 @@ import { useStore } from "../../../../stores/appStore";
 import styled from "@emotion/styled";
 
 const Layout = () => {
-	const { doorWidth, doorHeight } = useStore((state) => state.door);
+	const gekozendeur = useStore((state) => state.door.gekozendeur);
 	const updateObject = useStore((state) => state.updateObject);
 
 	return (
 		<>
-			<InputComp>
-				<h3>Deur opening breedte</h3>
-				<DisplayBox>
-					<button disabled={doorWidth === 800} onClick={() => updateObject("door", { doorWidth: doorWidth - 1 })}>
-						-
-					</button>
-					<p>{`${doorWidth}mm`}</p>
-					<button disabled={doorWidth === 1200} onClick={() => updateObject("door", { doorWidth: doorWidth + 1 })}>
-						+
-					</button>
-				</DisplayBox>
+			<>
+				<InputComp>
+					<h3>Deur opening breedte</h3>
+					<DisplayBox>
+						<button
+							disabled={gekozendeur.doorWidth === 800}
+							onClick={() => {
+								gekozendeur.doorWidth = gekozendeur.doorWidth - 1;
+								updateObject("door", { gekozendeur: gekozendeur });
+								console.log(gekozendeur.doorWidth);
+							}}>
+							-
+						</button>
+						<p>{`${gekozendeur.doorWidth}mm`}</p>
+						<button
+							disabled={gekozendeur.doorWidth === 1200}
+							onClick={() => {
+								gekozendeur.doorWidth = gekozendeur.doorWidth + 1;
+								updateObject("door", { gekozendeur: gekozendeur });
+							}}>
+							+
+						</button>
+					</DisplayBox>
 
-				<input
-					type="range"
-					name="doorWidth"
-					id="doorWidth"
-					value={doorWidth}
-					min="800"
-					max="1200"
-					step="1"
-					onChange={(e) => updateObject("door", { doorWidth: e.target.valueAsNumber })}
-				/>
+					<input
+						type="range"
+						name="doorWidth"
+						id="doorWidth"
+						value={gekozendeur.doorWidth}
+						min="800"
+						max="1200"
+						step="1"
+						onChange={(e) => {
+							gekozendeur.doorWidth = e.target.valueAsNumber;
+							console.log(gekozendeur.doorWidth);
+							updateObject("door", { gekozendeur: gekozendeur });
+						}}
+					/>
 
-				<MinMax>
-					<p>800</p>
-					<p>1200</p>
-				</MinMax>
-			</InputComp>
+					<MinMax>
+						<p>800</p>
+						<p>1200</p>
+					</MinMax>
+				</InputComp>
 
-			<InputComp>
-				<h3>Deur opening hoogte</h3>
-				<DisplayBox>
-					<button disabled={doorHeight === 1800} onClick={() => updateObject("door", { doorHeight: doorHeight - 1 })}>
-						-
-					</button>
-					<p>{`${doorHeight}mm`}</p>
-					<button disabled={doorHeight === 2520} onClick={() => updateObject("door", { doorHeight: doorHeight + 1 })}>
-						+
-					</button>
-				</DisplayBox>
+				<InputComp>
+					<h3>Deur opening hoogte</h3>
+					<DisplayBox>
+						<button
+							disabled={gekozendeur.doorHeight === 1800}
+							onClick={() => {
+								gekozendeur.doorHeight = gekozendeur.doorHeight - 1;
+								updateObject("door", { gekozendeur: gekozendeur });
+							}}>
+							-
+						</button>
+						<p>{`${gekozendeur.doorHeight}mm`}</p>
+						<button
+							disabled={gekozendeur.doorHeight === 2520}
+							onClick={() => updateObject("door", { doorHeight: gekozendeur.doorHeight + 1 })}>
+							+
+						</button>
+					</DisplayBox>
 
-				<input
-					type="range"
-					name="doorHeight"
-					id="doorHeight"
-					value={doorHeight}
-					min="1800"
-					max="2520"
-					step="1"
-					onChange={(e) => updateObject("door", { doorHeight: e.target.valueAsNumber })}
-				/>
+					<input
+						type="range"
+						name="doorHeight"
+						id="doorHeight"
+						value={gekozendeur.doorHeight}
+						min="1800"
+						max="2520"
+						step="1"
+						onChange={(e) => {
+							gekozendeur.doorHeight = e.target.valueAsNumber;
+							updateObject("door", { doorHeight: gekozendeur });
+						}}
+					/>
 
-				<MinMax>
-					<p>1800</p>
-					<p>2520</p>
-				</MinMax>
-			</InputComp>
+					<MinMax>
+						<p>1800</p>
+						<p>2520</p>
+					</MinMax>
+				</InputComp>
+			</>
 		</>
 	);
 };

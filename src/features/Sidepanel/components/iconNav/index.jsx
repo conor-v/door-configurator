@@ -4,18 +4,23 @@ import styled from "@emotion/styled";
 
 const IconNav = () => {
 	const updateObject = useStore((state) => state.updateObject);
-	const doorType = useStore((state) => state.door.doorType);
+	const { doortype } = useStore((state) => state.door.gekozendeur);
+	const sidePanelType = useStore((state) => state.sidepanel.sidePanelType);
 	return (
 		<NavButtons>
-			{IconData.map((icon) => (
-				<OpenButton
-					type={doorType === icon.type ? 1 : 0}
-					key={icon.type}
-					onClick={() => updateObject("door", { doorType: icon.type })}>
-					<img src={icon.img} alt="" />
-					<p>{icon.name}</p>
-				</OpenButton>
-			))}
+			{IconData.map((icon) => {
+				if (icon.doortype.includes(doortype)) {
+					return (
+						<OpenButton
+							type={sidePanelType === icon.type ? 1 : 0}
+							key={icon.type}
+							onClick={() => updateObject("sidepanel", { sidePanelType: icon.type })}>
+							<img src={icon.img} alt="" />
+							<p>{icon.name}</p>
+						</OpenButton>
+					);
+				}
+			})}
 		</NavButtons>
 	);
 };
@@ -40,6 +45,7 @@ const OpenButton = styled.button`
 	cursor: pointer;
 	height: 70px;
 	width: 70px;
+	cursur: pointer;
 
 	img {
 		transition: transform 0.7s cubic-bezier(0.39, 1, 0.42, 1);

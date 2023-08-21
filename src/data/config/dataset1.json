@@ -2,8 +2,8 @@
 	{
 		"id": 2,
 		"doortype": "Enkele deur",
-		"doorWidth": 1100,
-		"doorHeight": 2380,
+		"doorWidth": 905,
+		"doorHeight": 2210,
 		"doorPartitions": 1,
 		"doorGridType": "None",
 		"doorVariant": "Model3",
