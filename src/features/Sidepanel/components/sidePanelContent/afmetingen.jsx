@@ -1,9 +1,101 @@
+import styled from "@emotion/styled";
+import IntervalData from "../../../../data/muurdikte_interval.json";
+import AfmetingenData from "../../../../data/deurblad_afmetingen.json";
+import { useStore } from "../../../../stores/appStore";
+
 const Afmetingen = () => {
+	const { muurdikte_interval, deurblad_afmeting } = useStore((state) => state.door.gekozendeur.door);
+	const gekozendeur = useStore((state) => state.door.gekozendeur);
+	const updateObject = useStore((state) => state.updateObject);
+
 	return (
-		<>
-			<p>afmetingen content</p>
-		</>
+		<div>
+			<Title>Muurdikte interval (mm)</Title>
+			<List>
+				{IntervalData.map((item) => (
+					<ListItem
+						key={item.name}
+						onClick={() => {
+							const updatedGekozendeur = { ...gekozendeur, door: { ...gekozendeur.door, muurdikte_interval: item } };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
+						}}
+						active={item.name === muurdikte_interval.name ? 1 : 0}>
+						<p>{item.name}</p>
+					</ListItem>
+				))}
+			</List>
+
+			<Title>Deurblad afmetingen (mm)</Title>
+			<List>
+				{AfmetingenData.map((item) => (
+					<ListItem
+						key={item.name}
+						onClick={() => {
+							const updatedGekozendeur = { ...gekozendeur, door: { ...gekozendeur.door, deurblad_afmeting: item } };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
+						}}
+						active={item.name === deurblad_afmeting.name ? 1 : 0}>
+						<p>{item.name}</p>
+					</ListItem>
+				))}
+			</List>
+		</div>
 	);
 };
+
+const Title = styled.h2`
+	color: #7d8896;
+	font-size: 27px;
+	text-align: center;
+	font-weight: 900;
+	margin-bottom: 30px;
+	line-height: 26px;
+`;
+
+const List = styled.ul`
+	padding: 0;
+	margin-bottom: 40px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	justify-items: center;
+`;
+
+const ListItem = styled.li`
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border: none;
+	background: #f7f7f7;
+	color: #7d8996;
+	font-size: 15px;
+	line-height: 26px;
+	width: 107.5px;
+	height: 107.5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 15px;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%) scale(0.5);
+		opacity: ${({ active }) => (active ? 1 : 0)};
+		width: 15px;
+		height: 15px;
+		background-color: #222221;
+		border-radius: 50%;
+		transition: transform 0.2s ease, opacity 0.2s ease;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+`;
 
 export default Afmetingen;

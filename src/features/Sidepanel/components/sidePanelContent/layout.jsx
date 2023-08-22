@@ -14,9 +14,8 @@ const Layout = () => {
 						<button
 							disabled={gekozendeur.doorWidth === 800}
 							onClick={() => {
-								gekozendeur.doorWidth = gekozendeur.doorWidth - 1;
-								updateObject("door", { gekozendeur: gekozendeur });
-								console.log(gekozendeur.doorWidth);
+								const updatedGekozendeur = { ...gekozendeur, doorWidth: gekozendeur.doorWidth - 1 };
+								updateObject("door", { gekozendeur: updatedGekozendeur });
 							}}>
 							-
 						</button>
@@ -24,8 +23,8 @@ const Layout = () => {
 						<button
 							disabled={gekozendeur.doorWidth === 1200}
 							onClick={() => {
-								gekozendeur.doorWidth = gekozendeur.doorWidth + 1;
-								updateObject("door", { gekozendeur: gekozendeur });
+								const updatedGekozendeur = { ...gekozendeur, doorWidth: gekozendeur.doorWidth + 1 };
+								updateObject("door", { gekozendeur: updatedGekozendeur });
 							}}>
 							+
 						</button>
@@ -40,9 +39,8 @@ const Layout = () => {
 						max="1200"
 						step="1"
 						onChange={(e) => {
-							gekozendeur.doorWidth = e.target.valueAsNumber;
-							console.log(gekozendeur.doorWidth);
-							updateObject("door", { gekozendeur: gekozendeur });
+							const updatedGekozendeur = { ...gekozendeur, doorWidth: e.target.valueAsNumber };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}}
 					/>
 
@@ -58,15 +56,18 @@ const Layout = () => {
 						<button
 							disabled={gekozendeur.doorHeight === 1800}
 							onClick={() => {
-								gekozendeur.doorHeight = gekozendeur.doorHeight - 1;
-								updateObject("door", { gekozendeur: gekozendeur });
+								const updatedGekozendeur = { ...gekozendeur, doorHeight: gekozendeur.doorHeight - 1 };
+								updateObject("door", { gekozendeur: updatedGekozendeur });
 							}}>
 							-
 						</button>
 						<p>{`${gekozendeur.doorHeight}mm`}</p>
 						<button
 							disabled={gekozendeur.doorHeight === 2520}
-							onClick={() => updateObject("door", { doorHeight: gekozendeur.doorHeight + 1 })}>
+							onClick={() => {
+								const updatedGekozendeur = { ...gekozendeur, doorHeight: gekozendeur.doorHeight + 1 };
+								updateObject("door", { gekozendeur: updatedGekozendeur });
+							}}>
 							+
 						</button>
 					</DisplayBox>
@@ -80,8 +81,8 @@ const Layout = () => {
 						max="2520"
 						step="1"
 						onChange={(e) => {
-							gekozendeur.doorHeight = e.target.valueAsNumber;
-							updateObject("door", { doorHeight: gekozendeur });
+							const updatedGekozendeur = { ...gekozendeur, doorHeight: e.target.valueAsNumber };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}}
 					/>
 

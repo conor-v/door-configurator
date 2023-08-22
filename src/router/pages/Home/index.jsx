@@ -5,10 +5,12 @@ import { useEffect } from "react";
 import DeurData from "../../../data/config/dataset1.json";
 import { useStore } from "../../../stores/appStore";
 import Popup from "../../../features/Popup";
+import GridData from "../../../data/doorgrid.json";
 
 const Home = () => {
 	const updateObject = useStore((state) => state.updateObject);
 	const popup = useStore((state) => state.door.popup);
+	const gekozendeur = useStore((state) => state.door.gekozendeur);
 
 	useEffect(() => {
 		const deurenLijst = [];
@@ -21,6 +23,18 @@ const Home = () => {
 
 		updateObject("door", { deuren: deurenLijst });
 	}, []);
+
+	useEffect(() => {
+		const gridArray = GridData.filter((grid) => grid.name === gekozendeur.doorGridType);
+		const arrayCopy = JSON.parse(JSON.stringify(gridArray));
+
+		if (JSON.stringify(gekozendeur) !== "{}") {
+			gekozendeur.partitionGridHor = arrayCopy[0].gridHorizontalArray;
+			gekozendeur.partitionGridVer = arrayCopy[0].gridVerticalArray;
+
+			updateObject("door", { gekozendeur: gekozendeur });
+		}
+	}, [gekozendeur.doorGridType]);
 
 	return (
 		<Container>

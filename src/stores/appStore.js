@@ -9,6 +9,7 @@ const inititalState = {
 		gekozendeur: {},
 		deuren: [],
 		popup: false,
+		floorTexture: "tiles",
 	},
 	sidepanel: {
 		sideOpen: true,
