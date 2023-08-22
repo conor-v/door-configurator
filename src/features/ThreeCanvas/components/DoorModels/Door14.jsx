@@ -13,12 +13,12 @@ export const Door14 = (props) => {
 	const rotation = spring.to([0, 1], [0, 1.6]);
 
 	return (
-		<a.group {...props} dispose={null} position={[6, 0, 0.2]} rotation-y={rotation}>
-			<group position={[-5 - 5.9, 0.5, 0.25]} rotation={[-Math.PI, 4.7, -Math.PI]} scale={12}>
+		<a.group {...props} dispose={null} position={[4.7, 0, 0.5]} rotation-y={rotation}>
+			<group position={[-2.4 - 5.9, 0.5, -0.1]} rotation={[-Math.PI, 4.7, -Math.PI]} scale={12}>
 				<mesh castShadow receiveShadow geometry={nodes.Door_Handle_01_1.geometry} material={materials["Metall.Aniz"]} />
 				<mesh castShadow receiveShadow geometry={nodes.Door_Handle_01_2.geometry} material={materials["Back.002"]} />
 			</group>
-			<group rotation={[Math.PI, Math.PI / 2, Math.PI / 2]} scale={0.94} scale-z={1.3} position={[-5.9, 7.3, -0.05]}>
+			<group rotation={[Math.PI, Math.PI / 2, Math.PI / 2]} scale={0.84} scale-z={1} position={[-4.5, 6.9, -0.5]}>
 				<mesh
 					castShadow
 					receiveShadow
