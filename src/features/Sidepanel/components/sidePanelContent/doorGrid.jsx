@@ -16,9 +16,8 @@ const DoorGrid = () => {
 						if (gridMode !== "Design") {
 							gekozendeur.partitionGridVer = [];
 							gekozendeur.partitionGridHor = [];
-							gekozendeur.doorGridType = "None";
-							gekozendeur.gridMode = "Design";
-							updateObject("door", "gekozendeur", gekozendeur);
+							const updatedGekozendeur = { ...gekozendeur, doorGridType: "None", gridMode: "Design" };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}
 					}}>
 					<p>Ontwerp</p>
@@ -29,10 +28,8 @@ const DoorGrid = () => {
 						if (gridMode !== "Custom") {
 							gekozendeur.partitionGridVer = [];
 							gekozendeur.partitionGridHor = [];
-							gekozendeur.doorGridType = "None";
-							gekozendeur.gridMode = "Custom";
-							gekozendeur.borderSize = 0.15;
-							updateObject("door", "gekozendeur", gekozendeur);
+							const updatedGekozendeur = { ...gekozendeur, doorGridType: "None", gridMode: "Custom", borderSize: 0.15 };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}
 					}}>
 					<p>Aangepast</p>
@@ -48,9 +45,8 @@ const DoorGrid = () => {
 							<ColorItem
 								key={grid.name}
 								onClick={() => {
-									gekozendeur.doorGridType = grid.name;
-									gekozendeur.borderSize = grid.borderSize;
-									updateObject("door", "gekozendeur", gekozendeur);
+									const updatedGekozendeur = { ...gekozendeur, doorGridType: grid.name, borderSize: grid.borderSize };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
 								}}
 								active={grid.name === doorGridType ? 1 : 0}>
 								<img src={grid.img} alt={grid.name} height={60} />
@@ -66,8 +62,8 @@ const DoorGrid = () => {
 							const line = { fixed: 0, pos: 0.5, size: 1, start: 0 };
 							const linesArray = partitionGridHor;
 							linesArray.push(line);
-							gekozendeur.partitionGridHor = linesArray;
-							updateObject("door", "gekozendeur", gekozendeur);
+							const updatedGekozendeur = { ...gekozendeur, partitionGridHor: linesArray };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}}>
 						Horizontale lijn toevoegen
 					</AddButton>
@@ -77,8 +73,8 @@ const DoorGrid = () => {
 							<button
 								onClick={() => {
 									partitionGridHor.splice(index, 1);
-									gekozendeur.partitionGridHor = partitionGridHor;
-									updateObject("door", "gekozendeur", gekozendeur);
+									const updatedGekozendeur = { ...gekozendeur, partitionGridHor: partitionGridHor };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
 								}}>
 								<img src="./x.svg" alt="" />
 							</button>
@@ -91,8 +87,8 @@ const DoorGrid = () => {
 							const line = { fixed: 0, pos: 0.5, size: 1, start: 0 };
 							const linesArray = partitionGridVer;
 							linesArray.push(line);
-							gekozendeur.partitionGridVer = linesArray;
-							updateObject("door", "gekozendeur", gekozendeur);
+							const updatedGekozendeur = { ...gekozendeur, partitionGridVer: linesArray };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}}>
 						Verticale lijn toevoegen
 					</AddButton>
@@ -102,8 +98,8 @@ const DoorGrid = () => {
 							<button
 								onClick={() => {
 									partitionGridVer.splice(index, 1);
-									gekozendeur.partitionGridVer = partitionGridVer;
-									updateObject("door", "gekozendeur", gekozendeur);
+									const updatedGekozendeur = { ...gekozendeur, partitionGridVer: partitionGridVer };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
 								}}>
 								<img src="./x.svg" alt="" />
 							</button>

@@ -17,8 +17,18 @@ const PartitionGrid = () => {
 						<button
 							onClick={() => {
 								if (Math.round(((doorHeight * line.pos) / 100) * 100) > 0) {
-									line.pos = line.pos - (1 * 100) / doorHeight / 100;
-									updateObject("door", "gekozendeur", gekozendeur);
+									const updatedPartitionGridHor = [...gekozendeur.partitionGridHor];
+									updatedPartitionGridHor[index] = {
+										...updatedPartitionGridHor[index],
+										pos: line.pos - (1 * 100) / doorHeight / 100,
+									};
+
+									const updatedGekozendeur = {
+										...gekozendeur,
+										partitionGridHor: updatedPartitionGridHor,
+									};
+
+									updateObject("door", { gekozendeur: updatedGekozendeur });
 								}
 							}}>
 							-
@@ -27,8 +37,18 @@ const PartitionGrid = () => {
 						<button
 							onClick={() => {
 								if (Math.round(((doorHeight * line.pos) / 100) * 100) < doorHeight) {
-									line.pos = line.pos + (1 * 100) / doorHeight / 100;
-									updateObject("door", "gekozendeur", gekozendeur);
+									const updatedPartitionGridHor = [...gekozendeur.partitionGridHor];
+									updatedPartitionGridHor[index] = {
+										...updatedPartitionGridHor[index],
+										pos: line.pos + (1 * 100) / doorHeight / 100,
+									};
+
+									const updatedGekozendeur = {
+										...gekozendeur,
+										partitionGridHor: updatedPartitionGridHor,
+									};
+
+									updateObject("door", { gekozendeur: updatedGekozendeur });
 								}
 							}}>
 							+
@@ -44,8 +64,18 @@ const PartitionGrid = () => {
 						max={doorHeight}
 						step="1"
 						onChange={(e) => {
-							line.pos = e.target.value / doorHeight;
-							updateObject("door", "gekozendeur", gekozendeur);
+							const updatedPartitionGridHor = [...gekozendeur.partitionGridHor];
+							updatedPartitionGridHor[index] = {
+								...updatedPartitionGridHor[index],
+								pos: e.target.value / doorHeight,
+							};
+
+							const updatedGekozendeur = {
+								...gekozendeur,
+								partitionGridHor: updatedPartitionGridHor,
+							};
+
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}}
 					/>
 
@@ -63,8 +93,18 @@ const PartitionGrid = () => {
 						<button
 							onClick={() => {
 								if (Math.round(((doorWidth * line.pos) / 100) * 100) > 0) {
-									line.pos = line.pos - (1 * 100) / doorWidth / 100;
-									updateObject("door", "gekozendeur", gekozendeur);
+									const updatedPartitionGridVer = [...gekozendeur.partitionGridVer];
+									updatedPartitionGridVer[index] = {
+										...updatedPartitionGridVer[index],
+										pos: line.pos - (1 * 100) / doorWidth / 100,
+									};
+
+									const updatedGekozendeur = {
+										...gekozendeur,
+										partitionGridVer: updatedPartitionGridVer,
+									};
+
+									updateObject("door", { gekozendeur: updatedGekozendeur });
 								}
 							}}>
 							-
@@ -73,8 +113,18 @@ const PartitionGrid = () => {
 						<button
 							onClick={() => {
 								if (Math.round(((doorWidth * line.pos) / 100) * 100) < doorWidth) {
-									line.pos = line.pos + (1 * 100) / doorWidth / 100;
-									updateObject("door", "gekozendeur", gekozendeur);
+									const updatedPartitionGridVer = [...gekozendeur.partitionGridVer];
+									updatedPartitionGridVer[index] = {
+										...updatedPartitionGridVer[index],
+										pos: line.pos + (1 * 100) / doorWidth / 100,
+									};
+
+									const updatedGekozendeur = {
+										...gekozendeur,
+										partitionGridVer: updatedPartitionGridVer,
+									};
+
+									updateObject("door", { gekozendeur: updatedGekozendeur });
 								}
 							}}>
 							+
@@ -90,8 +140,18 @@ const PartitionGrid = () => {
 						max={doorWidth}
 						step="1"
 						onChange={(e) => {
-							line.pos = e.target.value / doorWidth;
-							updateObject("door", "gekozendeur", gekozendeur);
+							const updatedPartitionGridVer = [...gekozendeur.partitionGridVer];
+							updatedPartitionGridVer[index] = {
+								...updatedPartitionGridVer[index],
+								pos: e.target.value / doorWidth,
+							};
+
+							const updatedGekozendeur = {
+								...gekozendeur,
+								partitionGridVer: updatedPartitionGridVer,
+							};
+
+							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}}
 					/>
 
