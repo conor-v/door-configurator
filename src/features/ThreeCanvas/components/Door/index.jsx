@@ -5,7 +5,7 @@ import { Scharnieren } from "./components/Scharnieren";
 import SingleDoor from "./components/SingleDoor";
 
 const Door = () => {
-	const { doortype } = useStore((state) => state.door.gekozendeur);
+	const { aluminium, material, aluminiumCustomColor, doortype } = useStore((state) => state.door.gekozendeur);
 	const materialProps = {
 		thickness: 2,
 		roughness: 0.6,
@@ -18,16 +18,52 @@ const Door = () => {
 		attenuationDistance: 1,
 	};
 
+	const handleGlassColor = () => {
+		switch (material) {
+			case "Clear":
+				return "#ffffff";
+			case "Frosted":
+				return "#bed7eb";
+			case "Colored":
+				return "#506e86";
+			default:
+				return "#ffffff";
+		}
+	};
+
+	const handleBorderColor = () => {
+		switch (aluminium) {
+			case "Black":
+				return "#43464b";
+			case "Bronze":
+				return "#cd7f32";
+			case "Gold":
+				return "#d4af37";
+			case "Silver":
+				return "#bed7eb";
+			case "Stainless Steel":
+				return "#5c6169";
+			case "Custom":
+				return aluminiumCustomColor;
+			default:
+				return "#43464b";
+		}
+	};
+
 	console.log(doortype);
 	return (
 		<>
 			{doortype === "Vast raam" && (
-				<GlassDoor handleGlassColor={"ffffff"} handleBorderColor={"#43464b"} materialProps={materialProps} />
+				<GlassDoor
+					handleGlassColor={handleGlassColor}
+					handleBorderColor={handleBorderColor}
+					materialProps={materialProps}
+				/>
 			)}
 			{doortype === "Enkele deur" && (
 				<>
 					<SingleDoor />
-					<Frame />
+					<Frame handleBorderColor={handleBorderColor} />
 					<Scharnieren scale={0.085} position={[-0.04, 0, 2.19]} />
 				</>
 			)}

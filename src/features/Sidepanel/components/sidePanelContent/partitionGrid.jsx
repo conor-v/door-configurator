@@ -16,7 +16,7 @@ const PartitionGrid = () => {
 					<DisplayBox>
 						<button
 							onClick={() => {
-								if (Math.round(((doorHeight * line.pos) / 100) * 100) > 0) {
+								if (Math.round(((doorHeight * line.pos) / 100) * 100) > 57) {
 									const updatedPartitionGridHor = [...gekozendeur.partitionGridHor];
 									updatedPartitionGridHor[index] = {
 										...updatedPartitionGridHor[index],
@@ -36,7 +36,7 @@ const PartitionGrid = () => {
 						<p>{Math.round(((doorHeight * line.pos) / 100) * 100)}</p>
 						<button
 							onClick={() => {
-								if (Math.round(((doorHeight * line.pos) / 100) * 100) < doorHeight) {
+								if (Math.round(((doorHeight * line.pos) / 100) * 100) < doorHeight - 57) {
 									const updatedPartitionGridHor = [...gekozendeur.partitionGridHor];
 									updatedPartitionGridHor[index] = {
 										...updatedPartitionGridHor[index],
@@ -92,7 +92,7 @@ const PartitionGrid = () => {
 					<DisplayBox>
 						<button
 							onClick={() => {
-								if (Math.round(((doorWidth * line.pos) / 100) * 100) > 0) {
+								if (Math.round(((doorWidth * line.pos) / 100) * 100) > 13) {
 									const updatedPartitionGridVer = [...gekozendeur.partitionGridVer];
 									updatedPartitionGridVer[index] = {
 										...updatedPartitionGridVer[index],
@@ -112,7 +112,7 @@ const PartitionGrid = () => {
 						<p>{Math.round(((doorWidth * line.pos) / 100) * 100)}</p>
 						<button
 							onClick={() => {
-								if (Math.round(((doorWidth * line.pos) / 100) * 100) < doorWidth) {
+								if (Math.round(((doorWidth * line.pos) / 100) * 100) < doorWidth - 32) {
 									const updatedPartitionGridVer = [...gekozendeur.partitionGridVer];
 									updatedPartitionGridVer[index] = {
 										...updatedPartitionGridVer[index],

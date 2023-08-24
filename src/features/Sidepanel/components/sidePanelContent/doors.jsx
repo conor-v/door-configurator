@@ -14,7 +14,15 @@ const Doors = () => {
 				{deuren.map((item) => (
 					<ListItem
 						key={item.id}
-						onClick={() => updateObject("door", { gekozendeur: item })}
+						onClick={() => {
+							const indexTeVervangen = deuren.findIndex((deur) => deur.id === gekozendeur.id);
+							console.log(indexTeVervangen);
+
+							if (indexTeVervangen !== -1) {
+								deuren[indexTeVervangen] = gekozendeur;
+							}
+							updateObject("door", { gekozendeur: { ...item } });
+						}}
 						active={item.id === gekozendeur.id ? 1 : 0}>
 						<img src="" alt={item.name} />
 						<p>deur {item.id}</p>
