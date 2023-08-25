@@ -11,7 +11,6 @@ import PartitionGrid from "./components/sidePanelContent/partitionGrid";
 import GlasMaterial from "./components/sidePanelContent/glasMaterial";
 import Grepen from "./components/sidePanelContent/grepen";
 import Sloten from "./components/sidePanelContent/sloten";
-import Display from "./components/sidePanelContent/display";
 import Overview from "./components/sidePanelContent/overview";
 import PrijsBerekening from "./components/sidePanelContent/prijsberekening";
 import Scharnieren from "./components/sidePanelContent/scharnieren";
@@ -52,9 +51,6 @@ const Sidepanel = ({ width = 500 }) => {
 
 			case "sloten":
 				return <Sloten />;
-
-			case "display":
-				return <Display />;
 
 			case "overview":
 				return <Overview />;

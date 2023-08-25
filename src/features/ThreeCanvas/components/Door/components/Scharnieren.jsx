@@ -9,9 +9,9 @@ export function Scharnieren(props) {
 				receiveShadow
 				geometry={nodes.scharnieren_2002.geometry}
 				material={materials["Material.024"]}
-				position={[6.5, 3.5, 0.4]}
+				position={[5.4, 3.8, 0.7]}
 				rotation={[Math.PI / 2, 0, 0]}
-				scale={1.2}
+				scale={1.05}
 			/>
 		</group>
 	);

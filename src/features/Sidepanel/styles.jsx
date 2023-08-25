@@ -48,7 +48,7 @@ export const PannelContentBox = styled.div`
 	padding: 20px;
 	width: calc(100% - 111px);
 	overflow-y: scroll;
-	height: 100%;
+	height: 95%;
 `;
 
 export const ButtonDoor = styled.div`

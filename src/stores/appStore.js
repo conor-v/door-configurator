@@ -16,6 +16,11 @@ const inititalState = {
 		sidePanelType: "doors",
 		doorOpen: 0,
 	},
+	pdf: {
+		aanvragen: false,
+		offerte: "",
+		popupDowmloadPdf: false,
+	},
 };
 
 export const useStore = create((set) => ({

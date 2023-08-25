@@ -6,11 +6,13 @@ import DeurData from "../../../data/config/dataset1.json";
 import { useStore } from "../../../stores/appStore";
 import Popup from "../../../features/Popup";
 import GridData from "../../../data/doorgrid.json";
+import AanvraagForm from "@/features/ApplicationFrom";
 
 const Home = () => {
 	const updateObject = useStore((state) => state.updateObject);
 	const popup = useStore((state) => state.door.popup);
 	const gekozendeur = useStore((state) => state.door.gekozendeur);
+	const aanvragen = useStore((state) => state.pdf.aanvragen);
 
 	useEffect(() => {
 		const deurenLijst = [];
@@ -41,6 +43,7 @@ const Home = () => {
 			<ThreeCanvas />
 			<Sidepanel width={400} />
 			{popup && <Popup />}
+			{aanvragen && <AanvraagForm />}
 		</Container>
 	);
 };

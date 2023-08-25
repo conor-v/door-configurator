@@ -5,6 +5,7 @@ import { useStore } from "../../../../stores/appStore";
 const PrijsBerekening = () => {
 	const { greep, slot, scharnier } = useStore((state) => state.door.gekozendeur.door);
 	const [totaal, setTotaal] = useState(0);
+	const updateObject = useStore((state) => state.updateObject);
 
 	useEffect(() => {
 		const Totaal = parseFloat(
@@ -50,9 +51,27 @@ const PrijsBerekening = () => {
 				<DataText>Totaal</DataText>
 				<DataText>€{totaal}</DataText>
 			</DataBoxTotaal>
+
+			<OfferteBtn
+				onClick={() => {
+					updateObject("pdf", { aanvragen: true });
+					updateObject("pdf", { optie: "SAVE_OFFERTE" });
+				}}>
+				offerte maken
+			</OfferteBtn>
 		</DataContainer>
 	);
 };
+
+const OfferteBtn = styled.button`
+	border: none;
+	background: black;
+	color: white;
+	padding: 16px;
+	width: 100%;
+	font-size: 16px;
+	text-transform: capitalize;
+`;
 
 const Title = styled.h2`
 	color: #7d8896;
