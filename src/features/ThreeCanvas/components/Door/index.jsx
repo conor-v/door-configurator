@@ -1,5 +1,6 @@
 import { useStore } from "../../../../stores/appStore";
 import Frame from "../Frame";
+import DubbleDoor from "./components/DubbleDoor";
 import GlassDoor from "./components/GlassDoor";
 import { Scharnieren } from "./components/Scharnieren";
 import SingleDoor from "./components/SingleDoor";
@@ -68,10 +69,11 @@ const Door = () => {
 				</>
 			)}
 			{doortype === "Dubbele deur" && (
-				<mesh>
-					<boxGeometry />
-					<meshBasicMaterial color={"blue"} />
-				</mesh>
+				<DubbleDoor
+					handleGlassColor={handleGlassColor}
+					handleBorderColor={handleBorderColor}
+					materialProps={materialProps}
+				/>
 			)}
 			{doortype === "3 slagdeur" && (
 				<mesh>

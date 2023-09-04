@@ -1,7 +1,7 @@
 {
 	"id": 1,
 	"doortype": "Dubbele deur",
-	"doorWidth": 1100,
+	"doorWidth": 2200,
 	"doorHeight": 2380,
 	"doorPartitions": 1,
 	"doorGridType": "None",

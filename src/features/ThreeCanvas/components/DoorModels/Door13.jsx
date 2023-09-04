@@ -18,7 +18,7 @@ export const Door13 = (props) => {
 				<mesh castShadow receiveShadow geometry={nodes.Door_Handle_01_1.geometry} material={materials["Metall.Aniz"]} />
 				<mesh castShadow receiveShadow geometry={nodes.Door_Handle_01_2.geometry} material={materials["Back.002"]} />
 			</group>
-			<group position={[0, 0.5, -0.5]} rotation={[Math.PI / 2, 0, 0]} scale={1} scale-y={1.2}>
+			<group position={[0.45, 0, -0.5]} rotation={[Math.PI / 2, 0, 0]} scale={[1.03, 1.05, 1.067]}>
 				<mesh
 					castShadow
 					receiveShadow

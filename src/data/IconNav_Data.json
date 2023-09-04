@@ -21,7 +21,7 @@
 		"img": "grid.svg",
 		"type": "door grid",
 		"name": "grid patronen",
-		"doortype": ["Vast raam"]
+		"doortype": ["Vast raam", "Dubbele deur"]
 	},
 	{
 		"img": "grid.svg",
@@ -33,13 +33,13 @@
 		"img": "columns.svg",
 		"type": "partition grid",
 		"name": "grid lijnen",
-		"doortype": ["Vast raam"]
+		"doortype": ["Vast raam", "Dubbele deur"]
 	},
 	{
 		"img": "table.svg",
 		"type": "material",
 		"name": "glas materiaal",
-		"doortype": ["Vast raam"]
+		"doortype": ["Vast raam", "Dubbele deur"]
 	},
 	{
 		"img": "eye.svg",

@@ -1,8 +1,18 @@
 import { useStore } from "../../../../../stores/appStore";
 
 const Lines = () => {
-	const { doorWidth, doorHeight, aluminium, partitionGridHor, partitionGridVer, borderSize, aluminiumCustomColor } =
-		useStore((state) => state.door.gekozendeur);
+	const {
+		doorWidth,
+		doorHeight,
+		aluminium,
+		partitionGridHor,
+		partitionGridVer,
+		borderSize,
+		aluminiumCustomColor,
+		doortype,
+	} = useStore((state) => state.door.gekozendeur);
+
+	const doorsizeWidth = doortype === "Vast raam" ? doorWidth : doorWidth / 2;
 
 	const handleBorderColor = () => {
 		switch (aluminium) {
@@ -23,6 +33,8 @@ const Lines = () => {
 		}
 	};
 
+	console.log(borderSize);
+
 	return (
 		<>
 			<group position={[0, 0, 0]}>
@@ -33,27 +45,28 @@ const Lines = () => {
 							position={[
 								line.start === 0
 									? 0
-									: (doorWidth * (line.size * 100)) / 100 / 100 / 2 + (doorWidth * (line.start * 100)) / 100 / 100,
-								(doorHeight * (line.pos * 100)) / 100 / 100 + line.fixed,
+									: (doorsizeWidth * (line.size * 1000)) / 1000 / 1000 / 2 +
+									  (doorsizeWidth * (line.start * 1000)) / 1000 / 1000,
+								(doorHeight * (line.pos * 1000)) / 1000 / 1000 + line.fixed,
 								0,
 							]}>
-							<boxGeometry args={[(doorWidth * (line.size * 100)) / 100 / 100, borderSize, 0.4]} />
+							<boxGeometry args={[(doorsizeWidth * (line.size * 1000)) / 1000 / 1000, borderSize / 10, 0.04]} />
 							<meshStandardMaterial color={handleBorderColor()} />
 						</mesh>
 					))}
 			</group>
 
-			<group position={[-doorWidth / 100 / 2, 0, 0]}>
+			<group position={[-doorsizeWidth / 1000 / 2, 0, 0]}>
 				{partitionGridVer.length > 0 &&
 					partitionGridVer?.map((line, index) => (
 						<mesh
 							key={index}
 							position={[
-								(doorWidth * (line.pos * 100)) / 100 / 100 + line.fixed,
-								(doorHeight * (line.size * 100)) / 100 / 100 / 2 + (doorHeight * (line.start * 100)) / 100 / 100,
+								(doorsizeWidth * (line.pos * 1000)) / 1000 / 1000 + line.fixed,
+								(doorHeight * (line.size * 1000)) / 1000 / 1000 / 2 + (doorHeight * (line.start * 1000)) / 1000 / 1000,
 								0,
 							]}>
-							<boxGeometry args={[borderSize, (doorHeight * (line.size * 100)) / 100 / 100, 0.4]} />
+							<boxGeometry args={[borderSize / 10, (doorHeight * (line.size * 1000)) / 1000 / 1000, 0.04]} />
 							<meshStandardMaterial color={handleBorderColor()} />
 						</mesh>
 					))}
