@@ -27,6 +27,7 @@
 		"@react-spring/core": "^9.6.1",
 		"@react-spring/three": "^9.6.1",
 		"@react-spring/web": "^9.6.1",
+		"@react-three/csg": "^3.0.0",
 		"@react-three/drei": "^9.56.20",
 		"@react-three/fiber": "^8.11.0",
 		"framer-motion": "^9.0.4",

@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Sky } from "@react-three/drei";
 import { Suspense } from "react";
-import Wall from "./components/wall";
+import WallTest from "./components/WallTest";
 import Lights from "./components/lights";
 import { Room } from "./components/Room";
 import Door from "./components/Door";
@@ -24,7 +24,8 @@ const ThreeCanvas = () => {
 				<Sky />
 
 				<Suspense fallback={null}>
-					<Wall />
+					{/* <Wall /> */}
+					<WallTest />
 					<Room rotation-y={Math.PI / 2} position={[0.41, 0, -1.05]} />
 					<Door />
 				</Suspense>
