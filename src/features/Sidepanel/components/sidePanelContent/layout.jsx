@@ -1,10 +1,10 @@
+import Bovenlicht from "@/components/Layout/BovenLicht";
 import { useStore } from "../../../../stores/appStore";
 import styled from "@emotion/styled";
+import ZijPaneel from "@/components/Layout/ZijPaneel";
 
 const Layout = () => {
-	const { door, hingedDoor, floorPump, pumpInDoor, slidingDoor, doortype } = useStore(
-		(state) => state.door.gekozendeur
-	);
+	const { hingedDoor, floorPump, pumpInDoor, slidingDoor, doortype } = useStore((state) => state.door.gekozendeur);
 	const gekozendeur = useStore((state) => state.door.gekozendeur);
 	const updateObject = useStore((state) => state.updateObject);
 
@@ -101,7 +101,7 @@ const Layout = () => {
 			<div>
 				<Title>Keuze systeem</Title>
 				<div>
-					<DataContianer>
+					<DataContainer>
 						<label>Scharnierende deur</label>
 						<input
 							type="checkbox"
@@ -113,8 +113,8 @@ const Layout = () => {
 							}}
 							checked={hingedDoor}
 						/>
-					</DataContianer>
-					<DataContianer>
+					</DataContainer>
+					<DataContainer>
 						<label>Vloer pomp</label>
 						<input
 							type="checkbox"
@@ -126,8 +126,8 @@ const Layout = () => {
 							}}
 							checked={floorPump}
 						/>
-					</DataContianer>
-					<DataContianer>
+					</DataContainer>
+					<DataContainer>
 						<label>Pomp in de deur</label>
 						<input
 							type="checkbox"
@@ -139,8 +139,8 @@ const Layout = () => {
 							}}
 							checked={pumpInDoor}
 						/>
-					</DataContianer>
-					<DataContianer>
+					</DataContainer>
+					<DataContainer>
 						<label>Schuifdeur</label>
 						<input
 							type="checkbox"
@@ -152,232 +152,16 @@ const Layout = () => {
 							}}
 							checked={slidingDoor}
 						/>
-					</DataContianer>
+					</DataContainer>
 				</div>
 			</div>
 
-			<div>
-				<Title>Keuze zijpaneel</Title>
-				<Toggle>
-					<ToggleButton
-						active={door.sidepanel.type === "None" ? 1 : 0}
-						onClick={() => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									sidepanel: { ...gekozendeur.door.sidepanel, type: "None" },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}>
-						<p>Geen</p>
-					</ToggleButton>
-					<ToggleButton
-						active={door.sidepanel.type === "Right" ? 1 : 0}
-						onClick={() => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									sidepanel: { ...gekozendeur.door.sidepanel, type: "Right" },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}>
-						<p>Rechts</p>
-					</ToggleButton>
-					<ToggleButton
-						active={door.sidepanel.type === "Left" ? 1 : 0}
-						onClick={() => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									sidepanel: { ...gekozendeur.door.sidepanel, type: "Left" },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}>
-						<p>Links</p>
-					</ToggleButton>
-					<ToggleButton
-						active={door.sidepanel.type === "Both" ? 1 : 0}
-						onClick={() => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									sidepanel: { ...gekozendeur.door.sidepanel, type: "Both" },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}>
-						<p>Bijde</p>
-					</ToggleButton>
-				</Toggle>
-				<InputComp>
-					<h3>Zijpaneel breedte</h3>
-					<DisplayBox>
-						<button
-							disabled={door.sidepanel.Width === 100}
-							onClick={() => {
-								const updatedGekozendeur = {
-									...gekozendeur,
-									door: {
-										...gekozendeur.door,
-										sidepanel: { ...gekozendeur.door.sidepanel, Width: gekozendeur.door.sidepanel.Width - 1 },
-									},
-								};
-								updateObject("door", { gekozendeur: updatedGekozendeur });
-							}}>
-							-
-						</button>
-						<p>{`${door.sidepanel.Width}mm`}</p>
-						<button
-							disabled={door.sidepanel.Width === 500}
-							onClick={() => {
-								const updatedGekozendeur = {
-									...gekozendeur,
-									door: {
-										...gekozendeur.door,
-										sidepanel: { ...gekozendeur.door.sidepanel, Width: gekozendeur.door.sidepanel.Width + 1 },
-									},
-								};
-								updateObject("door", { gekozendeur: updatedGekozendeur });
-							}}>
-							+
-						</button>
-					</DisplayBox>
-
-					<input
-						type="range"
-						name="sidepanelWidth"
-						id="sidepanelWidth"
-						value={door.sidepanel.Width}
-						min="100"
-						max="500"
-						step="1"
-						onChange={(e) => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									sidepanel: { ...gekozendeur.door.sidepanel, Width: e.target.valueAsNumber },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}
-					/>
-
-					<MinMax>
-						<p>100</p>
-						<p>500</p>
-					</MinMax>
-				</InputComp>
-			</div>
-			<div>
-				<Title>Bovenlicht</Title>
-				<Toggle>
-					<ToggleButton
-						active={door.fanlight.position === "right" ? 1 : 0}
-						onClick={() => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									fanlight: { ...gekozendeur.door.fanlight, position: "right" },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}>
-						<p>Rechts</p>
-					</ToggleButton>
-					<ToggleButton
-						active={door.fanlight.position === "left" ? 1 : 0}
-						onClick={() => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									fanlight: { ...gekozendeur.door.fanlight, position: "left" },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}>
-						<p>Links</p>
-					</ToggleButton>
-				</Toggle>
-
-				<InputComp>
-					<h3>Bovenlicht breedte</h3>
-					<DisplayBox>
-						<button
-							disabled={door.fanlight.fanlightWidth === 100}
-							onClick={() => {
-								const updatedGekozendeur = {
-									...gekozendeur,
-									door: {
-										...gekozendeur.door,
-										fanlight: {
-											...gekozendeur.door.fanlight,
-											fanlightWidth: gekozendeur.door.fanlight.fanlightWidth - 1,
-										},
-									},
-								};
-								updateObject("door", { gekozendeur: updatedGekozendeur });
-							}}>
-							-
-						</button>
-						<p>{`${door.fanlight.fanlightWidth}mm`}</p>
-						<button
-							disabled={door.fanlight.fanlightWidth === 1000}
-							onClick={() => {
-								const updatedGekozendeur = {
-									...gekozendeur,
-									door: {
-										...gekozendeur.door,
-										fanlight: {
-											...gekozendeur.door.fanlight,
-											fanlightWidth: gekozendeur.door.fanlight.fanlightWidth + 1,
-										},
-									},
-								};
-								updateObject("door", { gekozendeur: updatedGekozendeur });
-							}}>
-							+
-						</button>
-					</DisplayBox>
-
-					<input
-						type="range"
-						name="fanlightWidth"
-						id="fanlightWidth"
-						value={gekozendeur.door.fanlight.fanlightWidth}
-						min="100"
-						max="1000"
-						step="1"
-						onChange={(e) => {
-							const updatedGekozendeur = {
-								...gekozendeur,
-								door: {
-									...gekozendeur.door,
-									fanlight: { ...gekozendeur.door.fanlight, fanlightWidth: e.target.valueAsNumber },
-								},
-							};
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}
-					/>
-
-					<MinMax>
-						<p>100</p>
-						<p>1000</p>
-					</MinMax>
-				</InputComp>
-			</div>
+			<ZijPaneel />
+			<Bovenlicht />
 		</div>
 	);
 };
+
 const Title = styled.h2`
 	color: #7d8896;
 	font-size: 18px;
@@ -385,27 +169,6 @@ const Title = styled.h2`
 	font-weight: 900;
 	margin-bottom: 30px;
 	line-height: 26px;
-`;
-
-const Toggle = styled.div`
-	display: flex;
-	margin-bottom: 15px;
-`;
-
-const ToggleButton = styled.div`
-	width: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 50px;
-	background-color: ${({ active }) => (active ? "#222221" : "#f7f7f7")};
-	border: ${({ active }) => (active ? "1px solid #222221" : "1px solid #f7f7f7")};
-	color: ${({ active }) => (active ? "#fff" : "#7D8896")};
-	cursor: pointer;
-
-	p {
-		color: ${({ active }) => (active ? "#fff" : "#7D8896")};
-	}
 `;
 
 const InputComp = styled.div`
@@ -462,7 +225,7 @@ const MinMax = styled.div`
 	color: #495057;
 `;
 
-const DataContianer = styled.div`
+const DataContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	border-width: 0px 0px thin;

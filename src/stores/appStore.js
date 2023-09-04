@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import create from "zustand";
 import { mountStoreDevtool } from "simple-zustand-devtools";
 
 // initial state of the store

@@ -17,13 +17,15 @@
 	"door": {
 		"sidepanel": {
 			"productName": "sidepanel",
-			"type": "None",
-			"Width": 100
+			"type": "none",
+			"widthRight": 100,
+			"widthLeft": 100
 		},
 		"fanlight": {
 			"productName": "fanlight",
-			"position": "right",
-			"fanlightWidth": 100
+			"type": "none",
+			"widthRight": 100,
+			"widthLeft": 100
 		},
 		"greep": {
 			"productName": "greep",
