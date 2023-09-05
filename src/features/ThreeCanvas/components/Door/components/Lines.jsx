@@ -51,7 +51,7 @@ const Lines = () => {
 								0,
 							]}>
 							<boxGeometry args={[(doorsizeWidth * (line.size * 1000)) / 1000 / 1000, borderSize / 10, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 					))}
 			</group>
@@ -67,7 +67,7 @@ const Lines = () => {
 								0,
 							]}>
 							<boxGeometry args={[borderSize / 10, (doorHeight * (line.size * 1000)) / 1000 / 1000, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 					))}
 			</group>

@@ -21,7 +21,7 @@ const ThreeCanvas = () => {
 					position={[0, 1.65, 8]}
 				/>
 				<Lights />
-				<Sky />
+				<Sky sunPosition={[0, 2, 2]} />
 
 				<Suspense fallback={null}>
 					{/* <Wall /> */}

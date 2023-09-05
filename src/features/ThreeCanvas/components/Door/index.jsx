@@ -1,3 +1,4 @@
+import { useControls } from "leva";
 import { useStore } from "../../../../stores/appStore";
 import Frame from "../Frame";
 import DubbleDoor from "./components/DubbleDoor";
@@ -7,17 +8,20 @@ import SingleDoor from "./components/SingleDoor";
 
 const Door = () => {
 	const { aluminium, material, aluminiumCustomColor, doortype } = useStore((state) => state.door.gekozendeur);
-	const materialProps = {
-		thickness: 2,
-		roughness: 0.6,
-		clearcoat: 0.2,
-		clearcoatRoughness: 0,
-		transmission: 0.97,
-		ior: 1,
-		envMapIntensity: 0,
+
+	const materialProps = useControls({
+		thickness: { value: 0.2, min: 0, max: 20 },
+		roughness: { value: 0.3, min: 0, max: 1, step: 0.1 },
+		metalness: { value: 0.1, min: 0, max: 1, step: 0.1 },
+		clearcoat: { value: 1, min: 0, max: 1, step: 0.1 },
+		clearcoatRoughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
+		transmission: { value: 0.9, min: 0.9, max: 1, step: 0.01 },
+		ior: { value: 1.1, min: 1, max: 2.3, step: 0.05 },
+		envMapIntensity: { value: 25, min: 0, max: 100, step: 1 },
+		color: "#ffffff",
 		attenuationTint: "#ffe79e",
-		attenuationDistance: 1,
-	};
+		attenuationDistance: { value: 0.03, min: 0, max: 1 },
+	});
 
 	const handleGlassColor = () => {
 		switch (material) {

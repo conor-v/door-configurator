@@ -31,6 +31,7 @@
 		"@react-three/drei": "^9.56.20",
 		"@react-three/fiber": "^8.11.0",
 		"framer-motion": "^9.0.4",
+		"leva": "^0.9.35",
 		"pdf-lib": "^1.17.1",
 		"qrcode": "^1.5.3",
 		"r3f-perf": "^7.1.2",

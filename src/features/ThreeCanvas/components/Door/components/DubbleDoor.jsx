@@ -16,7 +16,7 @@ const DubbleDoor = ({ handleGlassColor, materialProps, handleBorderColor }) => {
 	const rotationleft = spring.to([0, 1], [0, -1.6]);
 
 	return (
-		<group>
+		<group position={[0, 0, -0.01]}>
 			{/* Rechter deur */}
 			<group position={[singledoorwidth / 1000 / 2, 0, 0]}>
 				<a.group position={[singledoorwidth / 1000 / 2, 0, 2.22]} rotation-y={rotationright}>
@@ -31,42 +31,42 @@ const DubbleDoor = ({ handleGlassColor, materialProps, handleBorderColor }) => {
 						<group position={[-singledoorwidth / 1000 / 2 + 0.025, doorHeight / 1000 / 2, 0.045]}>
 							<mesh>
 								<boxGeometry args={[0.03, 0.15, 0.05]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 							<mesh position={[0.035, 0, 0.04]}>
 								<boxGeometry args={[0.1, 0.15, 0.03]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 
 							<mesh position-z={-0.08}>
 								<boxGeometry args={[0.03, 0.15, 0.05]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 							<mesh position={[0.035, 0, -0.12]}>
 								<boxGeometry args={[0.1, 0.15, 0.03]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 						</group>
 						{/* BORDERS */}
 						{/* TOP */}
 						<mesh position={[0, doorHeight / 1000 - 0.025, 0]} receiveShadow castShadow>
 							<boxGeometry args={[singledoorwidth / 1000, 0.05, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 						{/* BOTTOM */}
 						<mesh position={[0, 0.025, 0]} receiveShadow castShadow>
 							<boxGeometry args={[singledoorwidth / 1000, 0.05, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 						{/* LEFT */}
 						<mesh position={[-(singledoorwidth / 1000) / 2 + 0.025, doorHeight / 1000 / 2, 0]} receiveShadow castShadow>
 							<boxGeometry args={[0.05, doorHeight / 1000, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 						{/* RIGHT */}
 						<mesh position={[singledoorwidth / 1000 / 2 - 0.025, doorHeight / 1000 / 2, 0]} receiveShadow castShadow>
 							<boxGeometry args={[0.05, doorHeight / 1000, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 
 						<Lines />
@@ -75,7 +75,7 @@ const DubbleDoor = ({ handleGlassColor, materialProps, handleBorderColor }) => {
 			</group>
 
 			{/* Linker deur */}
-			<group position={[-singledoorwidth / 1000 / 2, 0, 4.45]} rotation={[0, Math.PI, 0]}>
+			<group position={[-singledoorwidth / 1000 / 2, 0, 4.44]} rotation={[0, Math.PI, 0]}>
 				<a.group position={[singledoorwidth / 1000 / 2, 0, 2.22]} rotation-y={rotationleft}>
 					<group position={[-singledoorwidth / 1000 / 2, 0, 0]}>
 						{/* DOOR */}
@@ -88,42 +88,42 @@ const DubbleDoor = ({ handleGlassColor, materialProps, handleBorderColor }) => {
 						<group position={[-singledoorwidth / 1000 / 2 + 0.025, doorHeight / 1000 / 2, 0.045]}>
 							<mesh>
 								<boxGeometry args={[0.03, 0.15, 0.05]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 							<mesh position={[0.035, 0, 0.04]}>
 								<boxGeometry args={[0.1, 0.15, 0.03]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 
 							<mesh position-z={-0.08}>
 								<boxGeometry args={[0.03, 0.15, 0.05]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 							<mesh position={[0.035, 0, -0.12]}>
 								<boxGeometry args={[0.1, 0.15, 0.03]} />
-								<meshBasicMaterial color={"black"} />
+								<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 							</mesh>
 						</group>
 						{/* BORDERS */}
 						{/* TOP */}
 						<mesh position={[0, doorHeight / 1000 - 0.025, 0]} receiveShadow castShadow>
 							<boxGeometry args={[singledoorwidth / 1000, 0.05, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 						{/* BOTTOM */}
 						<mesh position={[0, 0.025, 0]} receiveShadow castShadow>
 							<boxGeometry args={[singledoorwidth / 1000, 0.05, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 						{/* LEFT */}
 						<mesh position={[-(singledoorwidth / 1000) / 2 + 0.025, doorHeight / 1000 / 2, 0]} receiveShadow castShadow>
 							<boxGeometry args={[0.05, doorHeight / 1000, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 						{/* RIGHT */}
 						<mesh position={[singledoorwidth / 1000 / 2 - 0.025, doorHeight / 1000 / 2, 0]} receiveShadow castShadow>
 							<boxGeometry args={[0.05, doorHeight / 1000, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
 						</mesh>
 
 						<Lines />
