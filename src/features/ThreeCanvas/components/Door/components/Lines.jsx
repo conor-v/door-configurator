@@ -1,3 +1,4 @@
+import { RepeatWrapping, TextureLoader, Vector2 } from "three";
 import { useStore } from "../../../../../stores/appStore";
 
 const Lines = () => {
@@ -33,7 +34,16 @@ const Lines = () => {
 		}
 	};
 
-	console.log(borderSize);
+	const textureLoader = new TextureLoader();
+	const grainTextureVer = textureLoader.load("./metaalTexture/noise2.jpg");
+	const grainTextureHor = textureLoader.load("./metaalTexture/noise2.jpg");
+
+	grainTextureVer.repeat = new Vector2(1, 20);
+	grainTextureVer.wrapS = RepeatWrapping;
+	grainTextureVer.wrapT = RepeatWrapping;
+	grainTextureHor.repeat = new Vector2(10, 1);
+	grainTextureHor.wrapS = RepeatWrapping;
+	grainTextureHor.wrapT = RepeatWrapping;
 
 	return (
 		<>
@@ -51,7 +61,7 @@ const Lines = () => {
 								0,
 							]}>
 							<boxGeometry args={[(doorsizeWidth * (line.size * 1000)) / 1000 / 1000, borderSize / 10, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} map={grainTextureHor} />
 						</mesh>
 					))}
 			</group>
@@ -67,7 +77,7 @@ const Lines = () => {
 								0,
 							]}>
 							<boxGeometry args={[borderSize / 10, (doorHeight * (line.size * 1000)) / 1000 / 1000, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} metalness={0.5} roughness={0.8} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} map={grainTextureVer} />
 						</mesh>
 					))}
 			</group>

@@ -1,7 +1,11 @@
 import { useGLTF } from "@react-three/drei";
+import { Base, Geometry, Subtraction } from "@react-three/csg";
+import { useRef } from "react";
 
 export function Room(props) {
 	const { nodes, materials } = useGLTF("/Kitchen-model-compressed.glb");
+	const holeCut = useRef();
+
 	return (
 		<group {...props} dispose={null}>
 			<group position={[0.47, 0.74, -0.07]} rotation={[Math.PI, -1.25, Math.PI]}>
@@ -222,13 +226,22 @@ export function Room(props) {
 				rotation={[0, -Math.PI / 2, 0]}
 				scale={[1, 1.26, 1]}
 			/>
-			<mesh
-				castShadow
-				receiveShadow
-				geometry={nodes.Room_Baked_Baked.geometry}
-				material={materials.Room_Baked_Baked}
-				position={[-6.89, 0, 2.09]}
-			/>
+
+			<mesh castShadow receiveShadow material={materials.Room_Baked_Baked} position={[-6.89, 0, 2.09]}>
+				<Geometry>
+					<Base geometry={nodes.Room_Baked_Baked.geometry}></Base>
+
+					<Subtraction ref={holeCut} name="cavity" position={[0, 0, 0]}>
+						<boxGeometry args={[0, 0, 0]} scale={0} />
+					</Subtraction>
+				</Geometry>
+			</mesh>
+
+			{/* <mesh position={[-6.89, 0, 2.09]}>
+				<boxGeometry args={[1, 1, 1]} />
+				<meshStandardMaterial color={"red"} />
+			</mesh> */}
+
 			<mesh
 				castShadow
 				receiveShadow
