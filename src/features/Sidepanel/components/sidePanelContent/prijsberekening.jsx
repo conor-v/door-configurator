@@ -17,7 +17,7 @@ const PrijsBerekening = () => {
 
 	return (
 		<DataContainer>
-			<Title>PrijsBerekening</Title>
+			<Title>Prijs Berekening</Title>
 			<DataBox>
 				<DataText>greep</DataText>
 				<DataText>€{greep?.prijs ? greep.prijs : 0}</DataText>
