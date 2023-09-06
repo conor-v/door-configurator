@@ -5,10 +5,14 @@ import { useStore } from "../../../../stores/appStore";
 
 export function NewRoom(props) {
 	const { nodes, materials } = useGLTF("./Kitchen-scene-transformed.glb");
-	const { doorHeight, doorWidth } = useStore((state) => state.door.gekozendeur);
+	const { doorHeight, doorWidth, door } = useStore((state) => state.door.gekozendeur);
 	const widthCalc = doorWidth / 1000;
 	const heightCalc = doorHeight / 1000;
+	const widthPanelLeftCalc = door.sidepanel.widthLeft / 1000;
+	const widthPanelRightCalc = door.sidepanel.widthRight / 1000;
 	const holeCut = useRef();
+	const holeCutLeftPanel = useRef();
+	const holeCutRightPanel = useRef();
 
 	const boxHeight = heightCalc; // Hoogte van de doos in de y-richting
 	const minHeight = -0.451; // Minimale hoogte boven de vloer bij 1.8
@@ -230,11 +234,31 @@ export function NewRoom(props) {
 					<Subtraction ref={holeCut} name="cavity" position={[-3, yPosition + 1.351, -0.41]} rotation-y={Math.PI / 2}>
 						<boxGeometry args={[widthCalc, heightCalc, 1]} scale={0.1} />
 					</Subtraction>
+
+					{(door.sidepanel.type === "both" || door.sidepanel.type === "left") && (
+						<Subtraction
+							ref={holeCutLeftPanel}
+							name="cavity"
+							position={[-3, yPosition + 1.351, -0.409 - widthCalc / 2 - widthPanelLeftCalc / 2]}
+							rotation-y={Math.PI / 2}>
+							<boxGeometry args={[widthPanelLeftCalc, heightCalc, 1]} scale={0.1} />
+						</Subtraction>
+					)}
+
+					{(door.sidepanel.type === "both" || door.sidepanel.type === "right") && (
+						<Subtraction
+							ref={holeCutRightPanel}
+							name="cavity"
+							position={[-3, yPosition + 1.351, widthCalc / 2 + widthPanelRightCalc / 2 - 0.411]}
+							rotation-y={Math.PI / 2}>
+							<boxGeometry args={[widthPanelRightCalc, heightCalc, 1]} scale={0.1} />
+						</Subtraction>
+					)}
 				</Geometry>
 			</mesh>
 
-			{/* <mesh position={[-3, yPosition + 1.351, -0.41]} rotation-y={Math.PI / 2}>
-				<boxGeometry args={[widthCalc, heightCalc, 1]} scale={0.1} />
+			{/* <mesh position={[-3, yPosition + 1.351, widthCalc / 2 + widthPanelRightCalc / 2 - 0.41]} rotation-y={Math.PI / 2}>
+				<boxGeometry args={[widthPanelRightCalc, heightCalc, 1]} scale={0.1} />
 				<meshStandardMaterial color={"red"} />
 			</mesh> */}
 

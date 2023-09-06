@@ -16,7 +16,6 @@ const Doors = () => {
 						key={item.id}
 						onClick={() => {
 							const indexTeVervangen = deuren.findIndex((deur) => deur.id === gekozendeur.id);
-							console.log(indexTeVervangen);
 
 							if (indexTeVervangen !== -1) {
 								deuren[indexTeVervangen] = gekozendeur;

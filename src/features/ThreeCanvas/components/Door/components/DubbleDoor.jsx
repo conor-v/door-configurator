@@ -35,7 +35,7 @@ const DubbleDoor = ({ handleGlassColor, materialProps, handleBorderColor }) => {
 	grainTextureklink.opacity = 0;
 
 	return (
-		<group position={[0, 0, -0.01]}>
+		<group position={[0, 0, 0]}>
 			{/* Rechter deur */}
 			<group position={[singledoorwidth / 1000 / 2, 0, 0]}>
 				<a.group position={[singledoorwidth / 1000 / 2, 0, 2.22]} rotation-y={rotationright}>

@@ -155,8 +155,7 @@ const Layout = () => {
 					</DataContainer>
 				</div>
 			</div>
-
-			<ZijPaneel />
+			{(doortype === "Vast raam" || doortype === "Dubbele deur") && <ZijPaneel />}
 			<Bovenlicht />
 		</div>
 	);

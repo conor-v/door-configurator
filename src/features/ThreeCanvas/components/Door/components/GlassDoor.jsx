@@ -29,7 +29,7 @@ const GlassDoor = ({ handleGlassColor, materialProps, handleBorderColor }) => {
 	grainTextureklink.wrapT = RepeatWrapping;
 
 	return (
-		<a.group position={[doorWidth / 1000 / 2, 0, 2.2]} rotation-y={rotation}>
+		<a.group position={[doorWidth / 1000 / 2, 0, 2.22]} rotation-y={rotation}>
 			<group position={[-doorWidth / 1000 / 2, 0, 0]}>
 				{/* DOOR */}
 				<mesh position={[0, doorHeight / 1000 / 2, 0]} receiveShadow castShadow>

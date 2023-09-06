@@ -73,7 +73,7 @@ const ZijPaneel = () => {
 					<h3>Zijpaneel rechter breedte</h3>
 					<DisplayBox>
 						<button
-							disabled={door.sidepanel.widthRight === 100}
+							disabled={door.sidepanel.widthRight === 150}
 							onClick={() => {
 								const updatedGekozendeur = {
 									...gekozendeur,
@@ -88,7 +88,7 @@ const ZijPaneel = () => {
 						</button>
 						<p>{`${door.sidepanel.widthRight}mm`}</p>
 						<button
-							disabled={door.sidepanel.widthRight === 500}
+							disabled={door.sidepanel.widthRight === 800}
 							onClick={() => {
 								const updatedGekozendeur = {
 									...gekozendeur,
@@ -108,8 +108,8 @@ const ZijPaneel = () => {
 						name="sidepanelwidthRight"
 						id="sidepanelwidthRight"
 						value={door.sidepanel.widthRight}
-						min="100"
-						max="500"
+						min="150"
+						max="800"
 						step="1"
 						onChange={(e) => {
 							const updatedGekozendeur = {
@@ -124,8 +124,8 @@ const ZijPaneel = () => {
 					/>
 
 					<MinMax>
-						<p>100</p>
-						<p>500</p>
+						<p>150</p>
+						<p>800</p>
 					</MinMax>
 				</InputComp>
 			)}
@@ -135,7 +135,7 @@ const ZijPaneel = () => {
 					<h3>Zijpaneel linker breedte</h3>
 					<DisplayBox>
 						<button
-							disabled={door.sidepanel.widthLeft === 100}
+							disabled={door.sidepanel.widthLeft === 150}
 							onClick={() => {
 								const updatedGekozendeur = {
 									...gekozendeur,
@@ -150,7 +150,7 @@ const ZijPaneel = () => {
 						</button>
 						<p>{`${door.sidepanel.widthLeft}mm`}</p>
 						<button
-							disabled={door.sidepanel.widthLeft === 500}
+							disabled={door.sidepanel.widthLeft === 800}
 							onClick={() => {
 								const updatedGekozendeur = {
 									...gekozendeur,
@@ -170,8 +170,8 @@ const ZijPaneel = () => {
 						name="sidepanelwidthLeft"
 						id="sidepanelwidthLeft"
 						value={door.sidepanel.widthLeft}
-						min="100"
-						max="500"
+						min="150"
+						max="800"
 						step="1"
 						onChange={(e) => {
 							const updatedGekozendeur = {
@@ -186,8 +186,8 @@ const ZijPaneel = () => {
 					/>
 
 					<MinMax>
-						<p>100</p>
-						<p>500</p>
+						<p>150</p>
+						<p>800</p>
 					</MinMax>
 				</InputComp>
 			)}

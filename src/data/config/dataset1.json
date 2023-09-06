@@ -19,8 +19,8 @@
 			"sidepanel": {
 				"productName": "sidepanel",
 				"type": "none",
-				"widthRight": 100,
-				"widthLeft": 100
+				"widthRight": 150,
+				"widthLeft": 150
 			},
 			"fanlight": {
 				"productName": "fanlight",
@@ -69,8 +69,8 @@
 			"sidepanel": {
 				"productName": "sidepanel",
 				"type": "none",
-				"widthRight": 100,
-				"widthLeft": 100
+				"widthRight": 150,
+				"widthLeft": 150
 			},
 			"fanlight": {
 				"productName": "fanlight",

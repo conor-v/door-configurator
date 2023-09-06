@@ -5,9 +5,10 @@ import DubbleDoor from "./components/DubbleDoor";
 import GlassDoor from "./components/GlassDoor";
 import { Scharnieren } from "./components/Scharnieren";
 import SingleDoor from "./components/SingleDoor";
+import SidePanels from "../SidePanels";
 
 const Door = () => {
-	const { aluminium, material, aluminiumCustomColor, doortype } = useStore((state) => state.door.gekozendeur);
+	const { aluminium, material, aluminiumCustomColor, doortype, door } = useStore((state) => state.door.gekozendeur);
 
 	const materialProps = useControls({
 		thickness: { value: 0.2, min: 0, max: 20 },
@@ -55,7 +56,6 @@ const Door = () => {
 		}
 	};
 
-	console.log(doortype);
 	return (
 		<>
 			{doortype === "Vast raam" && (
@@ -90,6 +90,24 @@ const Door = () => {
 					<boxGeometry />
 					<meshBasicMaterial color={"black"} />
 				</mesh>
+			)}
+
+			{(door.sidepanel.type === "both" || door.sidepanel.type === "left") && (
+				<SidePanels
+					handleGlassColor={handleGlassColor}
+					handleBorderColor={handleBorderColor}
+					materialProps={materialProps}
+					side="left"
+				/>
+			)}
+
+			{(door.sidepanel.type === "both" || door.sidepanel.type === "right") && (
+				<SidePanels
+					handleGlassColor={handleGlassColor}
+					handleBorderColor={handleBorderColor}
+					materialProps={materialProps}
+					side="right"
+				/>
 			)}
 		</>
 	);
