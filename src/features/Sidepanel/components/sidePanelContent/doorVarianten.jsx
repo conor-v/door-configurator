@@ -51,6 +51,10 @@ const List = styled.ul`
 	gap: 20px;
 	justify-items: center;
 	padding: 0;
+
+	@media (max-width: 479px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
 const ListItem = styled.li`
@@ -87,6 +91,11 @@ const ListItem = styled.li`
 
 	&:hover {
 		cursor: pointer;
+	}
+
+	@media (max-width: 479px) {
+		width: 150px;
+		height: 150px;
 	}
 `;
 

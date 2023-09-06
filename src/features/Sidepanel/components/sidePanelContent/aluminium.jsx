@@ -85,6 +85,10 @@ const ColorsList = styled.ul`
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
 	justify-items: center;
+
+	@media (max-width: 479px) {
+		grid-template-columns: 1fr;
+	}
 `;
 
 const ColorItem = styled.li`
@@ -121,6 +125,11 @@ const ColorItem = styled.li`
 
 	&:hover {
 		cursor: pointer;
+	}
+
+	@media (max-width: 479px) {
+		width: 150px;
+		height: 150px;
 	}
 `;
 

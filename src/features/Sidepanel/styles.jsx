@@ -8,10 +8,16 @@ export const StyledBox = styled.div`
 	top: 0px;
 	width: ${({ width }) => `${width}px`};
 	transform: ${({ open, width }) => (open ? "translateX(0)" : `translateX(${width}px)`)};
-	transition: transform .7s cubic-bezier(0.39, 1, 0.42, 1);
+	transition: transform 0.7s cubic-bezier(0.39, 1, 0.42, 1);
 	background-color: white;
-	border-left: 1px solid lightgray};
+	border-left: 1px solid lightgray;
+
+	@media (max-width: 479px) {
+		width: 332px !important;
+		transform: ${({ open }) => (open ? "translateX(0)" : `translateX(332px)`)};
+	}
 `;
+
 export const PanelToggle = styled.div`
 	border: 1px solid lightgray;
 	position: absolute;
@@ -66,4 +72,8 @@ export const ButtonDoor = styled.div`
 	align-items: center;
 	justify-content: center;
 	border-radius: 20%;
+
+	@media (max-width: 479px) {
+		right: -52px;
+	}
 `;

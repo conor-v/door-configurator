@@ -147,7 +147,7 @@ export const HeaderBox = styled.div`
 	justify-content: space-between;
 	margin-bottom: 25px;
 	align-items: center;
-
+	gap: 8px;
 	p {
 		font-weight: 500;
 	}
