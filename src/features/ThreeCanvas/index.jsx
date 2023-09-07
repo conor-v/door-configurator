@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, Sky } from "@react-three/drei";
 import { Suspense } from "react";
 import Lights from "./components/lights";
-import { NewRoom } from "./components/NewRoom";
 import Door from "./components/Door";
 import { Room } from "./components/Room";
 
