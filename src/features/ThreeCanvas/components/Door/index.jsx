@@ -22,6 +22,7 @@ const Door = () => {
 		color: "#ffffff",
 		attenuationTint: "#ffe79e",
 		attenuationDistance: { value: 0.03, min: 0, max: 1 },
+		reflectivity: { value: 0.1, min: 0, max: 1 },
 	});
 
 	const handleGlassColor = () => {

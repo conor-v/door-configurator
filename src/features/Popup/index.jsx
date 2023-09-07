@@ -17,83 +17,68 @@ const Popup = () => {
 				<Backbutton onClick={() => updateObject("door", { popup: false })}>
 					<img src="./x.svg" alt="" />
 				</Backbutton>
-				<div>
-					<img
-						src="./doortypes/vast_raam.jpg"
-						alt=""
-						onClick={() => {
-							const deurenArray = [...deuren];
-							const deurObj = { ...VasteRaamDefault };
-							deurObj.id = shortId.generate();
-							deurenArray.push(deurObj);
-							updateObject("door", { deuren: deurenArray });
-							updateObject("door", { popup: false });
-						}}
-					/>
+				<div
+					onClick={() => {
+						const deurenArray = [...deuren];
+						const deurObj = { ...VasteRaamDefault };
+						deurObj.id = shortId.generate();
+						deurenArray.push(deurObj);
+						updateObject("door", { deuren: deurenArray });
+						updateObject("door", { popup: false });
+					}}>
+					<img src="./doortypes/vast_raam.jpg" alt="glazen deur" />
 					<p>Vast raam</p>
 				</div>
 
-				<div>
-					<img
-						src="./doortypes/enkele_deur.jpg"
-						alt=""
-						onClick={() => {
-							const deurenArray = [...deuren];
-							const deurObj = { ...EnkeleDeurDefault };
-							deurObj.id = shortId.generate();
-							deurenArray.push(deurObj);
-							updateObject("door", { deuren: deurenArray });
-							updateObject("door", { popup: false });
-						}}
-					/>
+				<div
+					onClick={() => {
+						const deurenArray = [...deuren];
+						const deurObj = { ...EnkeleDeurDefault };
+						deurObj.id = shortId.generate();
+						deurenArray.push(deurObj);
+						updateObject("door", { deuren: deurenArray });
+						updateObject("door", { popup: false });
+					}}>
+					<img src="./doortypes/enkele_deur.jpg" alt="enkele deur" />
 					<p>Enkele deur</p>
 				</div>
 
-				<div>
-					<img
-						src="./doortypes/dubbele_deur.jpg"
-						alt=""
-						onClick={() => {
-							const deurenArray = [...deuren];
-							const deurObj = { ...DubbeleDeurDefault };
-							deurObj.id = shortId.generate();
-							deurenArray.push(deurObj);
-							updateObject("door", { deuren: deurenArray });
-							updateObject("door", { popup: false });
-						}}
-					/>
+				<div
+					onClick={() => {
+						const deurenArray = [...deuren];
+						const deurObj = { ...DubbeleDeurDefault };
+						deurObj.id = shortId.generate();
+						deurenArray.push(deurObj);
+						updateObject("door", { deuren: deurenArray });
+						updateObject("door", { popup: false });
+					}}>
+					<img src="./doortypes/dubbele_deur.jpg" alt="dubbele deur" />
 					<p>Dubbele deur</p>
 				</div>
 
-				<div>
-					<img
-						src="./doortypes/3_slagdeur.jpg"
-						alt=""
-						onClick={() => {
-							const deurenArray = [...deuren];
-							const deurObj = { ...Slag3DeurDefault };
-							deurObj.id = shortId.generate();
-							deurenArray.push(deurObj);
-							updateObject("door", { deuren: deurenArray });
-							updateObject("door", { popup: false });
-						}}
-					/>
+				<div
+					onClick={() => {
+						const deurenArray = [...deuren];
+						const deurObj = { ...Slag3DeurDefault };
+						deurObj.id = shortId.generate();
+						deurenArray.push(deurObj);
+						updateObject("door", { deuren: deurenArray });
+						updateObject("door", { popup: false });
+					}}>
+					<img src="./doortypes/3_slagdeur.jpg" alt="3 slagdeur" />
 					<p>3 slagdeur</p>
 				</div>
 
-				<div>
-					<img
-						src="./doortypes/4_slagdeur.jpg"
-						alt=""
-						onClick={() => {
-							const deurenArray = [...deuren];
-							const deurObj = { ...Slag4DeurDefault };
-							deurObj.id = shortId.generate();
-							deurenArray.push(deurObj);
-							updateObject("door", { deuren: deurenArray });
-							updateObject("door", { popup: false });
-						}}
-					/>
+				<div
+					onClick={() => {
+						const deurenArray = [...deuren];
+						const deurObj = { ...Slag4DeurDefault };
+						deurObj.id = shortId.generate();
+						deurenArray.push(deurObj);
+						updateObject("door", { deuren: deurenArray });
+						updateObject("door", { popup: false });
+					}}>
+					<img src="./doortypes/4_slagdeur.jpg" alt="4 slagdeur" />
 					<p>4 slagdeur</p>
 				</div>
 			</PopupContent>

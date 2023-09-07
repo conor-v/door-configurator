@@ -229,7 +229,9 @@ export function NewRoom(props) {
 
 			<mesh castShadow receiveShadow material={materials.Room_Baked}>
 				<Geometry>
-					<Base geometry={nodes.Room_Baked.geometry} position={[-3.105, 0, 2.091]}></Base>
+					<Base geometry={nodes.Room_Baked.geometry} position={[-3.105, 0, 2.091]}>
+						{/* <meshStandardMaterial color={"wit"} /> */}
+					</Base>
 
 					<Subtraction ref={holeCut} name="cavity" position={[-3, yPosition + 1.351, -0.41]} rotation-y={Math.PI / 2}>
 						<boxGeometry args={[widthCalc, heightCalc, 1]} scale={0.1} />
