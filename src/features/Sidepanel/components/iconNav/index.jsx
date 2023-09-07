@@ -30,12 +30,9 @@ const NavButtons = styled.div`
 	top: 0;
 	bottom: 0;
 	overflow-y: scroll;
-	right: -14px;
+	right: 0px;
 	overflow-x: hidden;
-
-	@media (max-width: 479px) {
-		right: 0;
-	}
+	background: #f7f7f7;
 `;
 
 const OpenButton = styled.button`
