@@ -11,8 +11,8 @@ const Frame = ({ handleBorderColor }) => {
 				<meshStandardMaterial color={handleBorderColor()} />
 			</mesh>
 			{/* top inner bar */}
-			<mesh position={[0, doorHeight / 1000 - 0.025, 2.15]}>
-				<boxGeometry args={[doorWidth / 1000, 0.05, 0.05]} />
+			<mesh position={[0, doorHeight / 1000 - 0.0125, 2.16]}>
+				<boxGeometry args={[doorWidth / 1000, 0.025, 0.025]} />
 				<meshStandardMaterial color={handleBorderColor()} />
 			</mesh>
 
@@ -22,8 +22,8 @@ const Frame = ({ handleBorderColor }) => {
 				<meshStandardMaterial color={handleBorderColor()} />
 			</mesh>
 			{/* left inner bar */}
-			<mesh position={[-doorWidth / 1000 / 2 + 0.025, doorHeight / 1000 / 2, 2.15]}>
-				<boxGeometry args={[0.05, doorHeight / 1000, 0.05]} />
+			<mesh position={[-doorWidth / 1000 / 2 + 0.0125, doorHeight / 1000 / 2, 2.16]}>
+				<boxGeometry args={[0.025, doorHeight / 1000, 0.025]} />
 				<meshStandardMaterial color={handleBorderColor()} />
 			</mesh>
 
@@ -33,8 +33,8 @@ const Frame = ({ handleBorderColor }) => {
 				<meshStandardMaterial color={handleBorderColor()} />
 			</mesh>
 			{/* right inner bar */}
-			<mesh position={[doorWidth / 1000 / 2 - 0.025, doorHeight / 1000 / 2, 2.15]}>
-				<boxGeometry args={[0.05, doorHeight / 1000, 0.05]} />
+			<mesh position={[doorWidth / 1000 / 2 - 0.0125, doorHeight / 1000 / 2, 2.16]}>
+				<boxGeometry args={[0.025, doorHeight / 1000, 0.025]} />
 				<meshStandardMaterial color={handleBorderColor()} />
 			</mesh>
 		</group>

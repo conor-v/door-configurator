@@ -64,7 +64,7 @@ const ZijPaneel = () => {
 						};
 						updateObject("door", { gekozendeur: updatedGekozendeur });
 					}}>
-					<p>Bijde</p>
+					<p>Beide</p>
 				</ToggleButton>
 			</Toggle>
 
