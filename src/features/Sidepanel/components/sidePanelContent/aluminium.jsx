@@ -3,34 +3,59 @@ import { useStore } from "../../../../stores/appStore";
 import colors from "../../../../data/aluminium.json";
 
 const Aluminium = () => {
-	const { aluminium, aluminiumCustomColor, uitzicht } = useStore((state) => state.door.gekozendeur);
+	const { aluminium, aluminiumCustomColor, uitzicht, doortype, doorcolor } = useStore(
+		(state) => state.door.gekozendeur
+	);
 	const gekozendeur = useStore((state) => state.door.gekozendeur);
 	const updateObject = useStore((state) => state.updateObject);
 
 	return (
 		<div>
 			<Title>Materiaal</Title>
-			<Toggle>
-				<ToggleButton
-					active={uitzicht === "Mastiek" ? 1 : 0}
-					onClick={() => {
-						const updatedGekozendeur = { ...gekozendeur, uitzicht: "Mastiek" };
-						updateObject("door", { gekozendeur: updatedGekozendeur });
-					}}>
-					<p>Mastiek</p>
-				</ToggleButton>
-				<ToggleButton
-					active={uitzicht === "Strak" ? 1 : 0}
-					onClick={() => {
-						const updatedGekozendeur = { ...gekozendeur, uitzicht: "Strak" };
-						updateObject("door", { gekozendeur: updatedGekozendeur });
-					}}>
-					<p>Strak</p>
-				</ToggleButton>
-			</Toggle>
-			<SelectedText>{aluminium}</SelectedText>
+			{doortype !== "Enkele deur" && (
+				<Toggle>
+					<ToggleButton
+						active={uitzicht === "Mastiek" ? 1 : 0}
+						onClick={() => {
+							const updatedGekozendeur = { ...gekozendeur, uitzicht: "Mastiek" };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
+						}}>
+						<p>Mastiek</p>
+					</ToggleButton>
+					<ToggleButton
+						active={uitzicht === "Strak" ? 1 : 0}
+						onClick={() => {
+							const updatedGekozendeur = { ...gekozendeur, uitzicht: "Strak" };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
+						}}>
+						<p>Strak</p>
+					</ToggleButton>
+				</Toggle>
+			)}
 
-			<input
+			{doortype === "Enkele deur" && (
+				<Toggle>
+					<ToggleButton
+						active={uitzicht === "Frame" ? 1 : 0}
+						onClick={() => {
+							const updatedGekozendeur = { ...gekozendeur, uitzicht: "Frame" };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
+						}}>
+						<p>Frame</p>
+					</ToggleButton>
+					<ToggleButton
+						active={uitzicht === "Deur" ? 1 : 0}
+						onClick={() => {
+							const updatedGekozendeur = { ...gekozendeur, uitzicht: "Deur" };
+							updateObject("door", { gekozendeur: updatedGekozendeur });
+						}}>
+						<p>Deur</p>
+					</ToggleButton>
+				</Toggle>
+			)}
+			{doortype !== "Enkele deur" && <SelectedText>{aluminium}</SelectedText>}
+			{doortype === "Enkele deur" && <SelectedText>{uitzicht === "Frame" ? aluminium : doorcolor}</SelectedText>}
+			{/* <input
 				type="color"
 				name="aluminiumCustomColor"
 				id="aluminiumCustomColor"
@@ -39,25 +64,53 @@ const Aluminium = () => {
 					const updatedGekozendeur = { ...gekozendeur, aluminium: "Custom", aluminiumCustomColor: e.target.value };
 					updateObject("door", { gekozendeur: updatedGekozendeur });
 				}}
-			/>
+			/> */}
+			{doortype !== "Enkele deur" && (
+				<ColorsList>
+					{colors.map((color) => {
+						if (color.color !== "Custom") {
+							return (
+								<ColorItem
+									key={color.color}
+									onClick={() => {
+										const updatedGekozendeur = { ...gekozendeur, aluminium: color.color };
+										updateObject("door", { gekozendeur: updatedGekozendeur });
+									}}
+									active={color.color === aluminium ? 1 : 0}>
+									<img src={color.img} alt={color.color} width={50} />
+								</ColorItem>
+							);
+						}
+					})}
+				</ColorsList>
+			)}
 
-			<ColorsList>
-				{colors.map((color) => {
-					if (color.color !== "Custom") {
-						return (
-							<ColorItem
-								key={color.color}
-								onClick={() => {
-									const updatedGekozendeur = { ...gekozendeur, aluminium: color.color };
-									updateObject("door", { gekozendeur: updatedGekozendeur });
-								}}
-								active={color.color === aluminium ? 1 : 0}>
-								<img src={color.img} alt={color.color} width={50} />
-							</ColorItem>
-						);
-					}
-				})}
-			</ColorsList>
+			{doortype === "Enkele deur" && (
+				<ColorsList>
+					{colors.map((color) => {
+						if (color.color !== "Custom") {
+							return (
+								<ColorItem
+									key={color.color}
+									onClick={() => {
+										if (uitzicht === "Frame") {
+											const updatedGekozendeur = { ...gekozendeur, aluminium: color.color };
+											updateObject("door", { gekozendeur: updatedGekozendeur });
+										} else {
+											const updatedGekozendeur = { ...gekozendeur, doorcolor: color.color };
+											updateObject("door", { gekozendeur: updatedGekozendeur });
+										}
+									}}
+									active={
+										uitzicht === "Frame" ? (color.color === aluminium ? 1 : 0) : color.color === doorcolor ? 1 : 0
+									}>
+									<img src={color.img} alt={color.color} width={50} />
+								</ColorItem>
+							);
+						}
+					})}
+				</ColorsList>
+			)}
 		</div>
 	);
 };

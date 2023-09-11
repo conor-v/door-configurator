@@ -22,11 +22,11 @@ export const Door11 = (props) => {
 				castShadow
 				receiveShadow
 				geometry={nodes.DBMULTILIJN_door001.geometry}
-				material={materials["Material.057"]}
 				position={[-5, 0, -0.5]}
 				rotation={[0, 0, 0]}
-				scale={0.2885}
-			/>
+				scale={0.2885}>
+				<meshStandardMaterial color={props.handleDeurColor()} />
+			</mesh>
 		</a.group>
 	);
 };

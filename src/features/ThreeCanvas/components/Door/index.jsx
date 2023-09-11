@@ -8,7 +8,9 @@ import SingleDoor from "./components/SingleDoor";
 import SidePanels from "../SidePanels";
 
 const Door = () => {
-	const { aluminium, material, aluminiumCustomColor, doortype, door } = useStore((state) => state.door.gekozendeur);
+	const { aluminium, material, aluminiumCustomColor, doortype, door, doorcolor } = useStore(
+		(state) => state.door.gekozendeur
+	);
 
 	const materialProps = useControls({
 		thickness: { value: 0.2, min: 0, max: 20 },
@@ -17,7 +19,7 @@ const Door = () => {
 		clearcoat: { value: 1, min: 0, max: 1, step: 0.1 },
 		clearcoatRoughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
 		transmission: { value: 0.9, min: 0.9, max: 1, step: 0.01 },
-		ior: { value: 1.1, min: 1, max: 2.3, step: 0.05 },
+		ior: { value: 1, min: 1, max: 2.3, step: 0.05 },
 		envMapIntensity: { value: 25, min: 0, max: 100, step: 1 },
 		color: "#ffffff",
 		attenuationTint: "#ffe79e",
@@ -42,18 +44,21 @@ const Door = () => {
 		switch (aluminium) {
 			case "Black":
 				return "#43464b";
-			case "Bronze":
-				return "#cd7f32";
-			case "Gold":
-				return "#d4af37";
-			case "Silver":
-				return "#bed7eb";
-			case "Stainless Steel":
-				return "#5c6169";
-			case "Custom":
-				return aluminiumCustomColor;
+			case "White":
+				return "#eeeeee";
 			default:
 				return "#43464b";
+		}
+	};
+
+	const handleDeurColor = () => {
+		switch (doorcolor) {
+			case "Black":
+				return "#43464b";
+			case "White":
+				return "#eeeeee";
+			default:
+				return "#eeeeee";
 		}
 	};
 
@@ -68,7 +73,7 @@ const Door = () => {
 			)}
 			{doortype === "Enkele deur" && (
 				<>
-					<SingleDoor />
+					<SingleDoor handleDeurColor={handleDeurColor} />
 					<Frame handleBorderColor={handleBorderColor} />
 					<Scharnieren scale={0.085} position={[-0.04, 0, 2.19]} />
 				</>

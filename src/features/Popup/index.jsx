@@ -4,8 +4,8 @@ import shortId from "shortid";
 import VasteRaamDefault from "../../data/deurenDefault/vastraamDefault.json";
 import EnkeleDeurDefault from "../../data/deurenDefault/enkeledeurDefault.json";
 import DubbeleDeurDefault from "../../data/deurenDefault/dubbeledeurDefault.json";
-import Slag3DeurDefault from "../../data/deurenDefault/3slagdeurDefault.json";
-import Slag4DeurDefault from "../../data/deurenDefault/4slagdeurDefault.json";
+// import Slag3DeurDefault from "../../data/deurenDefault/3slagdeurDefault.json";
+// import Slag4DeurDefault from "../../data/deurenDefault/4slagdeurDefault.json";
 
 const Popup = () => {
 	const updateObject = useStore((state) => state.updateObject);
@@ -56,7 +56,7 @@ const Popup = () => {
 					<p>Dubbele deur</p>
 				</div>
 
-				<div
+				{/* <div
 					onClick={() => {
 						const deurenArray = [...deuren];
 						const deurObj = { ...Slag3DeurDefault };
@@ -80,7 +80,7 @@ const Popup = () => {
 					}}>
 					<img src="./doortypes/4_slagdeur.jpg" alt="4 slagdeur" />
 					<p>4 slagdeur</p>
-				</div>
+				</div> */}
 			</PopupContent>
 		</PopupBox>
 	);
@@ -100,7 +100,7 @@ const PopupBox = styled.div`
 `;
 
 const PopupContent = styled.div`
-	height: 500px;
+	height: 300px;
 	width: 600px;
 	background: white;
 	display: flex;

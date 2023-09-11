@@ -19,12 +19,9 @@ export const Door13 = (props) => {
 				<mesh castShadow receiveShadow geometry={nodes.Door_Handle_01_2.geometry} material={materials["Back.002"]} />
 			</group>
 			<group position={[0.45, 0, -0.5]} rotation={[Math.PI / 2, 0, 0]} scale={[1.03, 1.05, 1.067]}>
-				<mesh
-					castShadow
-					receiveShadow
-					geometry={nodes.Set_D_Pattern_02020.geometry}
-					material={materials["Wood___Plastic_Frames.004"]}
-				/>
+				<mesh castShadow receiveShadow geometry={nodes.Set_D_Pattern_02020.geometry}>
+					<meshStandardMaterial color={props.handleDeurColor()} />
+				</mesh>
 				<mesh
 					castShadow
 					receiveShadow

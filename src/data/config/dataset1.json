@@ -1,6 +1,6 @@
 [
 	{
-		"id": 1,
+		"id": "Steeldesign deur",
 		"doortype": "Vast raam",
 		"doorWidth": 1100,
 		"doorHeight": 2380,
@@ -50,7 +50,7 @@
 		"slidingDoor": false
 	},
 	{
-		"id": 2,
+		"id": "Standaard deur",
 		"doortype": "Enkele deur",
 		"doorWidth": 830,
 		"doorHeight": 2015,
@@ -58,13 +58,14 @@
 		"doorGridType": "None",
 		"doorVariant": "Model3",
 		"gridMode": "Design",
-		"aluminium": "Custom",
+		"aluminium": "White",
+		"doorcolor": "White",
 		"aluminiumCustomColor": "#eaeaea",
 		"material": "Frosted",
 		"partitionGridHor": [],
 		"partitionGridVer": [],
 		"borderSize": 0.3,
-		"uitzicht": "Mastiek",
+		"uitzicht": "Frame",
 		"door": {
 			"sidepanel": {
 				"productName": "sidepanel",
@@ -102,6 +103,56 @@
 				"productName": "deurblad_afmeting",
 				"name": "630x2015",
 				"prijs": 1.0
+			}
+		},
+		"hingedDoor": false,
+		"floorPump": false,
+		"pumpInDoor": false,
+		"slidingDoor": false
+	},
+	{
+		"id": "Dubbele Steeldesign deur",
+		"doortype": "Dubbele deur",
+		"doorWidth": 2200,
+		"doorHeight": 2380,
+		"doorPartitions": 1,
+		"doorGridType": "None",
+		"doorVariant": "Model1",
+		"gridMode": "Design",
+		"aluminium": "Black",
+		"aluminiumCustomColor": "",
+		"material": "Clear",
+		"partitionGridHor": [],
+		"partitionGridVer": [],
+		"borderSize": 0,
+		"uitzicht": "Mastiek",
+		"door": {
+			"sidepanel": {
+				"productName": "sidepanel",
+				"type": "none",
+				"widthRight": 150,
+				"widthLeft": 150
+			},
+			"fanlight": {
+				"productName": "fanlight",
+				"type": "none",
+				"widthRight": 100,
+				"widthLeft": 100
+			},
+			"greep": {
+				"productName": "greep",
+				"name": "klink1",
+				"prijs": 60.48
+			},
+			"slot": {
+				"productName": "slot",
+				"name": "slot2",
+				"prijs": 12.5
+			},
+			"scharnier": {
+				"productName": "scharnier",
+				"name": "scharnier1",
+				"prijs": 30.92
 			}
 		},
 		"hingedDoor": false,

@@ -73,20 +73,35 @@ const Overview = () => {
 					<DataText>Zijpaneel zijde</DataText>
 					<DataText>{sidepanel.type}</DataText>
 				</DataBox>
-				{sidepanel.type !== "None" && (
+				{sidepanel.type !== "none" && (sidepanel.type === "right" || sidepanel.type === "both") && (
 					<DataBox>
-						<DataText>Zijpaneel breedte</DataText>
-						<DataText>{parseInt(sidepanel.Width)} mm</DataText>
+						<DataText>Zijpaneel rechts</DataText>
+						<DataText>{parseInt(sidepanel.widthRight)} mm</DataText>
 					</DataBox>
 				)}
+				{sidepanel.type !== "none" && (sidepanel.type === "left" || sidepanel.type === "both") && (
+					<DataBox>
+						<DataText>Zijpaneel links</DataText>
+						<DataText>{parseInt(sidepanel.widthLeft)} mm</DataText>
+					</DataBox>
+				)}
+
 				<DataBox>
 					<DataText>Bovenlicht zijde</DataText>
-					<DataText>{fanlight.position}</DataText>
+					<DataText>{fanlight.type}</DataText>
 				</DataBox>
-				<DataBox>
-					<DataText>Bovenlicht breedte</DataText>
-					<DataText>{parseInt(fanlight.fanlightWidth)} mm</DataText>
-				</DataBox>
+				{fanlight.type !== "none" && (
+					<>
+						<DataBox>
+							<DataText>Bovenlicht rechts</DataText>
+							<DataText>{parseInt(fanlight.widthRight)} mm</DataText>
+						</DataBox>
+						<DataBox>
+							<DataText>Bovenlicht links</DataText>
+							<DataText>{parseInt(fanlight.widthLeft)} mm</DataText>
+						</DataBox>
+					</>
+				)}
 				<DataBox>
 					<DataText>Scharnierende deur</DataText>
 					<DataText>{hingedDoor ? "True" : "False"}</DataText>

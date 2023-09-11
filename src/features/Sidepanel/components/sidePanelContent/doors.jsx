@@ -24,7 +24,7 @@ const Doors = () => {
 						}}
 						active={item.id === gekozendeur.id ? 1 : 0}>
 						<img src="" alt={item.name} />
-						<p>deur {item.id}</p>
+						<p>{item.id}</p>
 					</ListItem>
 				))}
 			</List>

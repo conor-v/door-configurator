@@ -28,70 +28,70 @@ import { Door26 } from "../../DoorModels/Door26";
 import { Door27 } from "../../DoorModels/Door27";
 import { Door28 } from "../../DoorModels/Door28";
 
-const SingleDoor = () => {
+const SingleDoor = ({ handleDeurColor }) => {
 	const { doorVariant } = useStore((state) => state.door.gekozendeur);
 
 	const DoorSwitch = () => {
 		switch (doorVariant) {
 			case "Model1":
-				return <Door1 />;
+				return <Door1 handleDeurColor={handleDeurColor} />;
 			case "Model2":
-				return <Door2 />;
+				return <Door2 handleDeurColor={handleDeurColor} />;
 			case "Model3":
-				return <Door3 />;
+				return <Door3 handleDeurColor={handleDeurColor} />;
 			case "Model4":
-				return <Door4 />;
+				return <Door4 handleDeurColor={handleDeurColor} />;
 			case "Model5":
-				return <Door5 />;
+				return <Door5 handleDeurColor={handleDeurColor} />;
 			case "Model6":
-				return <Door6 />;
+				return <Door6 handleDeurColor={handleDeurColor} />;
 			case "Model7":
-				return <Door7 />;
+				return <Door7 handleDeurColor={handleDeurColor} />;
 			case "Model8":
-				return <Door8 />;
+				return <Door8 handleDeurColor={handleDeurColor} />;
 			case "Model9":
-				return <Door9 />;
+				return <Door9 handleDeurColor={handleDeurColor} />;
 			case "Model10":
-				return <Door10 />;
+				return <Door10 handleDeurColor={handleDeurColor} />;
 			case "Model11":
-				return <Door11 />;
+				return <Door11 handleDeurColor={handleDeurColor} />;
 			case "Model12":
-				return <Door12 />;
+				return <Door12 handleDeurColor={handleDeurColor} />;
 			case "Model13":
-				return <Door13 />;
+				return <Door13 handleDeurColor={handleDeurColor} />;
 			case "Model14":
-				return <Door14 />;
+				return <Door14 handleDeurColor={handleDeurColor} />;
 			case "Model15":
-				return <Door15 />;
+				return <Door15 handleDeurColor={handleDeurColor} />;
 			case "Model16":
-				return <Door16 />;
+				return <Door16 handleDeurColor={handleDeurColor} />;
 			case "Model17":
-				return <Door17 />;
+				return <Door17 handleDeurColor={handleDeurColor} />;
 			case "Model18":
-				return <Door18 />;
+				return <Door18 handleDeurColor={handleDeurColor} />;
 			case "Model19":
-				return <Door19 />;
+				return <Door19 handleDeurColor={handleDeurColor} />;
 			case "Model20":
-				return <Door20 />;
+				return <Door20 handleDeurColor={handleDeurColor} />;
 			case "Model21":
-				return <Door21 />;
+				return <Door21 handleDeurColor={handleDeurColor} />;
 			case "Model22":
-				return <Door22 />;
+				return <Door22 handleDeurColor={handleDeurColor} />;
 			case "Model23":
-				return <Door23 />;
+				return <Door23 handleDeurColor={handleDeurColor} />;
 			case "Model24":
-				return <Door24 />;
+				return <Door24 handleDeurColor={handleDeurColor} />;
 			case "Model25":
-				return <Door25 />;
+				return <Door25 handleDeurColor={handleDeurColor} />;
 			case "Model26":
-				return <Door26 />;
+				return <Door26 handleDeurColor={handleDeurColor} />;
 			case "Model27":
-				return <Door27 />;
+				return <Door27 handleDeurColor={handleDeurColor} />;
 			case "Model28":
-				return <Door28 />;
+				return <Door28 handleDeurColor={handleDeurColor} />;
 
 			default:
-				return <Door1 />;
+				return <Door1 handleDeurColor={handleDeurColor} />;
 		}
 	};
 

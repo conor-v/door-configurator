@@ -6,10 +6,16 @@
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur"]
 	},
 	{
+		"img": "plank.svg",
+		"type": "afmetingen",
+		"name": "afmetingen",
+		"doortype": ["Enkele deur"]
+	},
+	{
 		"img": "sliders.svg",
 		"type": "layout",
 		"name": "layout",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur"]
+		"doortype": ["Vast raam", "Dubbele deur", "3 slagdeur", "4 slagdeur"]
 	},
 	{
 		"img": "layers.svg",
@@ -41,24 +47,7 @@
 		"name": "glas materiaal",
 		"doortype": ["Vast raam", "Dubbele deur"]
 	},
-	{
-		"img": "eye.svg",
-		"type": "display",
-		"name": "weergave",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur"]
-	},
-	{
-		"img": "list.svg",
-		"type": "overview",
-		"name": "overzicht",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur"]
-	},
-	{
-		"img": "plank.svg",
-		"type": "afmetingen",
-		"name": "afmetingen",
-		"doortype": ["Enkele deur"]
-	},
+
 	{
 		"img": "scharnier.svg",
 		"type": "scharnieren",
@@ -75,6 +64,12 @@
 		"img": "sloten.svg",
 		"type": "sloten",
 		"name": "sloten",
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur"]
+	},
+	{
+		"img": "list.svg",
+		"type": "overview",
+		"name": "overzicht",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur"]
 	},
 	{

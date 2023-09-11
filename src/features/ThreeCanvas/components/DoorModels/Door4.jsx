@@ -22,11 +22,11 @@ export const Door4 = (props) => {
 				castShadow
 				receiveShadow
 				geometry={nodes.DBIMW61.geometry}
-				material={materials["Material.021"]}
 				position={[-5, 3.9, -0.5]}
 				rotation={[0, 0, 0]}
-				scale={0.2885}
-			/>
+				scale={0.2885}>
+				<meshStandardMaterial color={props.handleDeurColor()} />
+			</mesh>
 		</a.group>
 	);
 };

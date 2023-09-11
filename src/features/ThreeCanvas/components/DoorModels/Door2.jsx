@@ -20,7 +20,9 @@ export const Door2 = (props) => {
 			</group>
 			<group position={[-4.5, 5.56, -0.5]} rotation={[0, 0, 0]} scale={0.282}>
 				<mesh castShadow receiveShadow geometry={nodes.Mesh042.geometry} material={materials["glass.004"]} />
-				<mesh castShadow receiveShadow geometry={nodes.Mesh042_1.geometry} material={materials["Material.025"]} />
+				<mesh castShadow receiveShadow geometry={nodes.Mesh042_1.geometry}>
+					<meshStandardMaterial color={props.handleDeurColor()} />
+				</mesh>
 			</group>
 		</a.group>
 	);

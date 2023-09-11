@@ -2,7 +2,7 @@ import { useGLTF, useTexture } from "@react-three/drei";
 import { useSpring } from "@react-spring/core";
 import { a } from "@react-spring/three";
 import { useStore } from "../../../../stores/appStore";
-import * as THREE from "three";
+// import * as THREE from "three";
 
 export const Door1 = (props) => {
 	const { nodes, materials } = useGLTF("/doormodels/door1.glb");
@@ -13,19 +13,19 @@ export const Door1 = (props) => {
 	});
 	const rotation = spring.to([0, 1], [0, 1.6]);
 
-	const doorTexture = useTexture("/plywood_diff_1k.jpg");
-	const doorRoughnessTexture = useTexture("/plywood_rough_1k.jpg");
-	const doorNormalTexture = useTexture("/plywood_nor_dx_1k.jpg");
-	const doorAOTexture = useTexture("/plywood_ao_1k.jpg");
-	const doorArnTexture = useTexture("/plywood_arm_1k.jpg");
+	// const doorTexture = useTexture("/plywood_diff_1k.jpg");
+	// const doorRoughnessTexture = useTexture("/plywood_rough_1k.jpg");
+	// const doorNormalTexture = useTexture("/plywood_nor_dx_1k.jpg");
+	// const doorAOTexture = useTexture("/plywood_ao_1k.jpg");
+	// const doorArnTexture = useTexture("/plywood_arm_1k.jpg");
 
-	const doorMaterial = new THREE.MeshStandardMaterial({
-		map: doorTexture,
-		roughnessMap: doorRoughnessTexture,
-		normalMap: doorNormalTexture,
-		aoMap: doorAOTexture,
-		envMap: doorArnTexture,
-	});
+	// const doorMaterial = new THREE.MeshStandardMaterial({
+	// 	map: doorTexture,
+	// 	roughnessMap: doorRoughnessTexture,
+	// 	normalMap: doorNormalTexture,
+	// 	aoMap: doorAOTexture,
+	// 	envMap: doorArnTexture,
+	// });
 
 	return (
 		<a.group {...props} dispose={null} position={[4.69, 0, 0.5]} rotation-y={rotation}>
@@ -37,11 +37,11 @@ export const Door1 = (props) => {
 				castShadow
 				receiveShadow
 				geometry={nodes["Fineer-Eik-cracks_door"].geometry}
-				material={doorMaterial}
 				position={[-5, 0, -0.5]}
 				rotation={[0, 0, 0]}
-				scale={0.2885}
-			/>
+				scale={0.2885}>
+				<meshStandardMaterial color={props.handleDeurColor()} />
+			</mesh>
 		</a.group>
 	);
 };
