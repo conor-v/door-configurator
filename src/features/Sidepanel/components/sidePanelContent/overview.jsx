@@ -102,22 +102,30 @@ const Overview = () => {
 						</DataBox>
 					</>
 				)}
-				<DataBox>
-					<DataText>Scharnierende deur</DataText>
-					<DataText>{hingedDoor ? "True" : "False"}</DataText>
-				</DataBox>
-				<DataBox>
-					<DataText>Vloer pomp</DataText>
-					<DataText>{floorPump ? "True" : "False"}</DataText>
-				</DataBox>
-				<DataBox>
-					<DataText>Pomp in de deur</DataText>
-					<DataText>{pumpInDoor ? "True" : "False"}</DataText>
-				</DataBox>
-				<DataBox>
-					<DataText>Schuifdeur</DataText>
-					<DataText>{slidingDoor ? "True" : "False"}</DataText>
-				</DataBox>
+				{hingedDoor && (
+					<DataBox>
+						<DataText>Scharnierende deur</DataText>
+						<DataText>True</DataText>
+					</DataBox>
+				)}
+				{floorPump && (
+					<DataBox>
+						<DataText>Vloer pomp</DataText>
+						<DataText>True</DataText>
+					</DataBox>
+				)}
+				{pumpInDoor && (
+					<DataBox>
+						<DataText>Pomp in de deur</DataText>
+						<DataText>True</DataText>
+					</DataBox>
+				)}
+				{slidingDoor && (
+					<DataBox>
+						<DataText>Schuifdeur</DataText>
+						<DataText>True</DataText>
+					</DataBox>
+				)}
 			</DataContainer>
 
 			<DataContainer>

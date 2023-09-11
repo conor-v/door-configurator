@@ -2,7 +2,7 @@
 	"id": 1,
 	"doortype": "Dubbele deur",
 	"doorWidth": 2200,
-	"doorHeight": 2380,
+	"doorHeight": 2100,
 	"doorPartitions": 1,
 	"doorGridType": "None",
 	"doorVariant": "Model1",
