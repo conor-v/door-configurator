@@ -19,18 +19,10 @@ const Lines = () => {
 		switch (aluminium) {
 			case "Black":
 				return "#43464b";
-			case "Bronze":
-				return "#cd7f32";
-			case "Gold":
-				return "#d4af37";
-			case "Silver":
-				return "#bed7eb";
-			case "Stainless Steel":
-				return "#5c6169";
-			case "Custom":
-				return aluminiumCustomColor;
+			case "White":
+				return "#eeeeee";
 			default:
-				return "#43464b";
+				return "#eeeeee";
 		}
 	};
 

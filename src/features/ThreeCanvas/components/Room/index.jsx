@@ -5,7 +5,7 @@ import { useStore } from "../../../../stores/appStore";
 
 export function Room(props) {
 	const { nodes, materials } = useGLTF("./Kitchen_rebaked-compressed.glb");
-	const { doorHeight, doorWidth, door, aluminium } = useStore((state) => state.door.gekozendeur);
+	const { doorHeight, doorWidth, door, aluminium, doortype } = useStore((state) => state.door.gekozendeur);
 	const widthCalc = doorWidth / 1000;
 	const heightCalc = doorHeight / 1000;
 	const widthPanelLeftCalc = door.sidepanel.widthLeft / 1000;
@@ -398,7 +398,7 @@ export function Room(props) {
 							: -widthCalc / 2 - 0.005,
 					]}>
 					<boxGeometry args={[0.175, heightCalc, 0.01]} />
-					<meshStandardMaterial color={aluminium !== undefined && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
+					<meshStandardMaterial color={doortype === "Enkele deur" && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
 				</mesh>
 				<mesh
 					position={[
@@ -409,7 +409,7 @@ export function Room(props) {
 							: widthCalc / 2 + 0.005,
 					]}>
 					<boxGeometry args={[0.175, heightCalc, 0.01]} />
-					<meshStandardMaterial color={aluminium !== undefined && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
+					<meshStandardMaterial color={doortype === "Enkele deur" && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
 				</mesh>
 				<mesh
 					position={[
@@ -436,7 +436,7 @@ export function Room(props) {
 								: widthCalc,
 						]}
 					/>
-					<meshStandardMaterial color={aluminium !== undefined && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
+					<meshStandardMaterial color={doortype === "Enkele deur" && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
 				</mesh>
 			</group>
 

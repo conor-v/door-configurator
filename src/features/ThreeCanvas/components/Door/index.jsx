@@ -47,7 +47,7 @@ const Door = () => {
 			case "White":
 				return "#eeeeee";
 			default:
-				return "#43464b";
+				return "#eeeeee";
 		}
 	};
 
