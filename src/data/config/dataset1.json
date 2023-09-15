@@ -2,8 +2,8 @@
 	{
 		"id": "Steeldesign deur",
 		"doortype": "Vast raam",
-		"doorWidth": 1100,
-		"doorHeight": 2100,
+		"doorWidth": 832,
+		"doorHeight": 2030,
 		"doorPartitions": 1,
 		"doorGridType": "None",
 		"doorVariant": "Model1",

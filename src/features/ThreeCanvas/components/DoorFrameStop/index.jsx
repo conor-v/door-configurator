@@ -5,7 +5,7 @@ export function DoorFrameStop(props) {
 	return (
 		<group {...props} dispose={null}>
 			<mesh castShadow receiveShadow geometry={nodes.Cube.geometry} position={[0, 0, 0]} scale={[0.0275, 0.038, 0.04]}>
-				<meshStandardMaterial color={"#eeeeee"} />
+				<meshStandardMaterial color={"#43464b"} />
 			</mesh>
 		</group>
 	);

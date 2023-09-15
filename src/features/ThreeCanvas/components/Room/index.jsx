@@ -393,23 +393,12 @@ export function Room(props) {
 					position={[
 						0,
 						heightCalc / 2,
-						door.sidepanel.type === "both" || door.sidepanel.type === "left"
-							? -widthCalc / 2 - widthPanelLeftCalc - 0.005
-							: -widthCalc / 2 - 0.005,
-					]}>
-					<boxGeometry args={[0.175, heightCalc, 0.01]} />
-					<meshStandardMaterial color={doortype === "Enkele deur" && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
-				</mesh>
-				<mesh
-					position={[
-						0,
-						heightCalc / 2,
 						door.sidepanel.type === "both" || door.sidepanel.type === "right"
 							? widthCalc / 2 + widthPanelRightCalc + 0.005
 							: widthCalc / 2 + 0.005,
 					]}>
 					<boxGeometry args={[0.175, heightCalc, 0.01]} />
-					<meshStandardMaterial color={doortype === "Enkele deur" && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
+					<meshStandardMaterial color={aluminium === "Black" ? "#43464b" : "#c0bebc"} />
 				</mesh>
 				<mesh
 					position={[
@@ -436,7 +425,7 @@ export function Room(props) {
 								: widthCalc,
 						]}
 					/>
-					<meshStandardMaterial color={doortype === "Enkele deur" && aluminium === "Black" ? "#43464b" : "#c0bebc"} />
+					<meshStandardMaterial color={aluminium === "Black" ? "#43464b" : "#c0bebc"} />
 				</mesh>
 			</group>
 

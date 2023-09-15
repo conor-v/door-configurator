@@ -17,7 +17,7 @@ const TestDoor = () => {
 		}
 	};
 	return (
-		<group position={[0, 0.015, 2.17]}>
+		<group position={[0, 0.015, 2.19]}>
 			<DoorFrameModel scaling={0.35} />
 			<mesh rotation={[0, 0, Math.PI]} position={[0, 2, 0]}>
 				<DoorFrameModel scaling={0.35} />
@@ -67,7 +67,7 @@ const TestDoor = () => {
 
 			<mesh position={[0, 1, 0.023]}>
 				<boxGeometry args={[0.78, 1.95, 0.023]} />
-				<meshStandardMaterial color={"#eeeeee"} />
+				<meshStandardMaterial color={"#43464b"} />
 			</mesh>
 
 			<group position={[0, 0, -2.17]}>

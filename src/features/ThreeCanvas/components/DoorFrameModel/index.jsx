@@ -10,7 +10,7 @@ export function DoorFrameModel(props) {
 				geometry={nodes.Cube.geometry}
 				position={[0, 0, 0]}
 				scale={[props.scaling, -0.001, -0.001]}>
-				<meshStandardMaterial color={"#eeeeee"} />
+				<meshStandardMaterial color={"#43464b"} />
 			</mesh>
 		</group>
 	);
