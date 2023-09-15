@@ -6,7 +6,6 @@ import Frame from "../Frame";
 import { DeurSlot } from "./DeurSlot";
 import { useRef } from "react";
 import { BoxGeometry } from "three";
-import { useControls } from "leva";
 
 const TestDoor = () => {
 	const holeCut = useRef();
@@ -39,8 +38,8 @@ const TestDoor = () => {
 	};
 	return (
 		<group position={[0, 0.015, 2.19]}>
-			<mesh position={[0, 0.09, 0]}>
-				<DoorFrameModel scaling={0.35} scalingTop={0.002} />
+			<mesh position={[0, 0.07, 0]}>
+				<DoorFrameModel scaling={0.35} scalingTop={0.0015} />
 			</mesh>
 			<mesh rotation={[0, 0, Math.PI]} position={[0, 2, 0]}>
 				<DoorFrameModel scaling={0.35} />

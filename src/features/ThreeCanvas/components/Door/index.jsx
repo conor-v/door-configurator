@@ -6,6 +6,7 @@ import GlassDoor from "./components/GlassDoor";
 import { Scharnieren } from "./components/Scharnieren";
 import SingleDoor from "./components/SingleDoor";
 import SidePanels from "../SidePanels";
+import TestDoor from "../TestDoor";
 
 const Door = () => {
 	const { aluminium, material, aluminiumCustomColor, doortype, door, doorcolor } = useStore(
@@ -73,9 +74,10 @@ const Door = () => {
 			)}
 			{doortype === "Enkele deur" && (
 				<>
-					<SingleDoor handleDeurColor={handleDeurColor} />
+					{/* <SingleDoor handleDeurColor={handleDeurColor} />
 					<Frame handleBorderColor={handleBorderColor} />
-					<Scharnieren scale={0.085} position={[-0.04, 0, 2.19]} />
+					<Scharnieren scale={0.085} position={[-0.04, 0, 2.19]} /> */}
+					<TestDoor />
 				</>
 			)}
 			{doortype === "Dubbele deur" && (

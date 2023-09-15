@@ -1,65 +1,15 @@
 [
 	{
-		"id": "Steeldesign deur",
-		"doortype": "Vast raam",
+		"id": "Standaard deur",
+		"doortype": "Enkele deur",
 		"doorWidth": 832,
 		"doorHeight": 2030,
 		"doorPartitions": 1,
 		"doorGridType": "None",
-		"doorVariant": "Model1",
-		"gridMode": "Design",
-		"aluminium": "Black",
-		"aluminiumCustomColor": "",
-		"material": "Clear",
-		"partitionGridHor": [],
-		"partitionGridVer": [],
-		"borderSize": 0.3,
-		"uitzicht": "Mastiek",
-		"door": {
-			"sidepanel": {
-				"productName": "sidepanel",
-				"type": "none",
-				"widthRight": 150,
-				"widthLeft": 150
-			},
-			"fanlight": {
-				"productName": "fanlight",
-				"type": "none",
-				"widthRight": 100,
-				"widthLeft": 100
-			},
-			"greep": {
-				"productName": "greep",
-				"name": "klink4",
-				"prijs": 22.97
-			},
-			"slot": {
-				"productName": "slot",
-				"name": "slot2",
-				"prijs": 12.5
-			},
-			"scharnier": {
-				"productName": "scharnier",
-				"name": "scharnier1",
-				"prijs": 30.92
-			}
-		},
-		"hingedDoor": false,
-		"floorPump": false,
-		"pumpInDoor": false,
-		"slidingDoor": false
-	},
-	{
-		"id": "Standaard deur",
-		"doortype": "Enkele deur",
-		"doorWidth": 830,
-		"doorHeight": 2015,
-		"doorPartitions": 1,
-		"doorGridType": "None",
 		"doorVariant": "Model3",
 		"gridMode": "Design",
-		"aluminium": "White",
-		"doorcolor": "White",
+		"aluminium": "Black",
+		"doorcolor": "Black",
 		"aluminiumCustomColor": "#eaeaea",
 		"material": "Frosted",
 		"partitionGridHor": [],
@@ -110,6 +60,57 @@
 		"pumpInDoor": false,
 		"slidingDoor": false
 	},
+	{
+		"id": "Steeldesign deur",
+		"doortype": "Vast raam",
+		"doorWidth": 1100,
+		"doorHeight": 2100,
+		"doorPartitions": 1,
+		"doorGridType": "None",
+		"doorVariant": "Model1",
+		"gridMode": "Design",
+		"aluminium": "Black",
+		"aluminiumCustomColor": "",
+		"material": "Clear",
+		"partitionGridHor": [],
+		"partitionGridVer": [],
+		"borderSize": 0.3,
+		"uitzicht": "Mastiek",
+		"door": {
+			"sidepanel": {
+				"productName": "sidepanel",
+				"type": "none",
+				"widthRight": 150,
+				"widthLeft": 150
+			},
+			"fanlight": {
+				"productName": "fanlight",
+				"type": "none",
+				"widthRight": 100,
+				"widthLeft": 100
+			},
+			"greep": {
+				"productName": "greep",
+				"name": "klink4",
+				"prijs": 22.97
+			},
+			"slot": {
+				"productName": "slot",
+				"name": "slot2",
+				"prijs": 12.5
+			},
+			"scharnier": {
+				"productName": "scharnier",
+				"name": "scharnier1",
+				"prijs": 30.92
+			}
+		},
+		"hingedDoor": false,
+		"floorPump": false,
+		"pumpInDoor": false,
+		"slidingDoor": false
+	},
+
 	{
 		"id": "Dubbele Steeldesign deur",
 		"doortype": "Dubbele deur",
