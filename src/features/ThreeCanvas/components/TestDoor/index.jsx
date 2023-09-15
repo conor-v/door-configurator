@@ -6,6 +6,7 @@ import Frame from "../Frame";
 import { DeurSlot } from "./DeurSlot";
 import { useRef } from "react";
 import { BoxGeometry } from "three";
+import { useControls } from "leva";
 
 const TestDoor = () => {
 	const holeCut = useRef();
@@ -24,17 +25,17 @@ const TestDoor = () => {
 
 	const materialProps = {
 		thickness: 0.2,
-		roughness: 0.8,
+		roughness: 0.7,
 		metalness: 0.3,
 		clearcoat: 1,
 		clearcoatRoughness: 0.1,
 		transmission: 0.9,
-		ior: 1.23,
+		ior: 1.4,
 		envMapIntensity: 25,
 		color: "#ffffff",
 		attenuationTint: "#ffe79e",
 		attenuationDistance: 0.06,
-		reflectivity: 0.1,
+		reflectivity: 0.33,
 	};
 	return (
 		<group position={[0, 0.015, 2.19]}>
