@@ -6,7 +6,6 @@ import Frame from "../Frame";
 import { DeurSlot } from "./DeurSlot";
 import { useRef } from "react";
 import { BoxGeometry } from "three";
-import { useControls } from "leva";
 
 const TestDoor = () => {
 	const holeCut = useRef();
@@ -23,20 +22,20 @@ const TestDoor = () => {
 		}
 	};
 
-	const materialProps = useControls({
-		thickness: { value: 0.2, min: 0, max: 20 },
-		roughness: { value: 0.3, min: 0, max: 1, step: 0.1 },
-		metalness: { value: 0.1, min: 0, max: 1, step: 0.1 },
-		clearcoat: { value: 1, min: 0, max: 1, step: 0.1 },
-		clearcoatRoughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
-		transmission: { value: 0.9, min: 0.9, max: 1, step: 0.01 },
-		ior: { value: 1, min: 1, max: 2.3, step: 0.05 },
-		envMapIntensity: { value: 25, min: 0, max: 100, step: 1 },
+	const materialProps = {
+		thickness: 0.2,
+		roughness: 0.8,
+		metalness: 0.3,
+		clearcoat: 1,
+		clearcoatRoughness: 0.1,
+		transmission: 0.9,
+		ior: 1.23,
+		envMapIntensity: 25,
 		color: "#ffffff",
 		attenuationTint: "#ffe79e",
-		attenuationDistance: { value: 0.03, min: 0, max: 1 },
-		reflectivity: { value: 0.1, min: 0, max: 1 },
-	});
+		attenuationDistance: 0.06,
+		reflectivity: 0.1,
+	};
 	return (
 		<group position={[0, 0.015, 2.19]}>
 			<mesh position={[0, 0.09, 0]}>
