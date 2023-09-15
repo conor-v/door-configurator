@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Lights from "./components/lights";
 import Door from "./components/Door";
 import { Room } from "./components/Room";
+import TestDoor from "./components/TestDoor";
 
 const ThreeCanvas = () => {
 	return (
@@ -24,8 +25,8 @@ const ThreeCanvas = () => {
 
 				<Suspense fallback={null}>
 					<Room rotation-y={Math.PI / 2} position={[0.41, 0, -1.05]} />
-					<Door />
-
+					{/* <Door /> */}
+					<TestDoor />
 					{/* <mesh position={[0, 0.7, 5]}>
 						<boxGeometry args={[1]} />
 						<meshStandardMaterial color={"red"} />
