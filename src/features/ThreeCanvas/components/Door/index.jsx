@@ -1,17 +1,15 @@
 import { useControls } from "leva";
 import { useStore } from "../../../../stores/appStore";
-import Frame from "../Frame";
+// import Frame from "../Frame";
 import DubbleDoor from "./components/DubbleDoor";
 import GlassDoor from "./components/GlassDoor";
-import { Scharnieren } from "./components/Scharnieren";
-import SingleDoor from "./components/SingleDoor";
+// import { Scharnieren } from "./components/Scharnieren";
+// import SingleDoor from "./components/SingleDoor";
 import SidePanels from "../SidePanels";
 import TestDoor from "../TestDoor";
 
 const Door = () => {
-	const { aluminium, material, aluminiumCustomColor, doortype, door, doorcolor } = useStore(
-		(state) => state.door.gekozendeur
-	);
+	const { aluminium, material, doortype, door } = useStore((state) => state.door.gekozendeur);
 
 	const materialProps = useControls({
 		thickness: { value: 0.2, min: 0, max: 20 },
@@ -52,16 +50,16 @@ const Door = () => {
 		}
 	};
 
-	const handleDeurColor = () => {
-		switch (doorcolor) {
-			case "Black":
-				return "#43464b";
-			case "White":
-				return "#eeeeee";
-			default:
-				return "#eeeeee";
-		}
-	};
+	// const handleDeurColor = () => {
+	// 	switch (doorcolor) {
+	// 		case "Black":
+	// 			return "#43464b";
+	// 		case "White":
+	// 			return "#eeeeee";
+	// 		default:
+	// 			return "#eeeeee";
+	// 	}
+	// };
 
 	return (
 		<>

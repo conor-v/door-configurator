@@ -354,7 +354,7 @@ export function Room(props) {
 
 			<mesh castShadow receiveShadow material={materials.Separating_wall_Baked}>
 				<Geometry>
-					<Base geometry={nodes.Separating_wall.geometry} position={[-3.105, 0, 2.091]}>
+					<Base geometry={nodes.Separating_wall.geometry} position={[-3.105, 0.0001, 2.091]}>
 						{/* <meshStandardMaterial color={"wit"} /> */}
 					</Base>
 
