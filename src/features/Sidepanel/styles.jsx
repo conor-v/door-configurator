@@ -77,3 +77,24 @@ export const ButtonDoor = styled.div`
 		right: -52px;
 	}
 `;
+
+export const ButtonShader = styled.div`
+	position: fixed;
+	bottom: 90px;
+	width: 50px;
+	height: 50px;
+	right: 15px;
+	background: #222221;
+	display: flex;
+	flex-flow: column;
+	gap: 15px;
+	transform: ${({ sideOpen }) => (sideOpen ? "translateX(-400px)" : "translateX(0px)")};
+	transition: transform 0.7s cubic-bezier(0.39, 1, 0.42, 1);
+	align-items: center;
+	justify-content: center;
+	border-radius: 20%;
+
+	@media (max-width: 479px) {
+		right: -52px;
+	}
+`;

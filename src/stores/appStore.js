@@ -15,6 +15,7 @@ const inititalState = {
 		sideOpen: true,
 		sidePanelType: "doors",
 		doorOpen: 0,
+		drawingplan: false,
 	},
 	pdf: {
 		aanvragen: false,

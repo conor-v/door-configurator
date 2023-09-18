@@ -1,5 +1,5 @@
 import ChevronLeft from "@/assets/svgs/ChevronLeft";
-import { StyledBox, PanelToggle, PannelContent, PannelContentBox, ButtonDoor } from "./styles";
+import { StyledBox, PanelToggle, PannelContent, PannelContentBox, ButtonDoor, ButtonShader } from "./styles";
 import { useState } from "react";
 import { useStore } from "../../stores/appStore";
 import Doors from "./components/sidePanelContent/doors";
@@ -20,7 +20,7 @@ import IconNav from "./components/iconNav";
 const Sidepanel = ({ width = 500 }) => {
 	const [open, setOpen] = useState(true);
 	const sidePanelType = useStore((state) => state.sidepanel.sidePanelType);
-	const { doorOpen, sideOpen } = useStore((state) => state.sidepanel);
+	const { doorOpen, sideOpen, drawingplan } = useStore((state) => state.sidepanel);
 	const updateObject = useStore((state) => state.updateObject);
 
 	const sidePanelComp = () => {
@@ -77,6 +77,9 @@ const Sidepanel = ({ width = 500 }) => {
 			<ButtonDoor sideOpen={sideOpen} onClick={() => updateObject("sidepanel", { doorOpen: Number(!doorOpen) })}>
 				<img src={doorOpen ? "/door_closed.svg" : "/door.svg"} alt="dooricon" />
 			</ButtonDoor>
+			<ButtonShader sideOpen={sideOpen} onClick={() => updateObject("sidepanel", { drawingplan: !drawingplan })}>
+				<img src={drawingplan ? "/shader_on.svg" : "/shader_off.svg"} alt="shadericon" />
+			</ButtonShader>
 			<PannelContent>
 				<PannelContentBox>{sidePanelComp()}</PannelContentBox>
 				<IconNav />
