@@ -16,6 +16,7 @@ import PrijsBerekening from "./components/sidePanelContent/prijsberekening";
 import Scharnieren from "./components/sidePanelContent/scharnieren";
 import Afmetingen from "./components/sidePanelContent/afmetingen";
 import IconNav from "./components/iconNav";
+import Ramen from "./components/sidePanelContent/ramen";
 
 const Sidepanel = ({ width = 500 }) => {
 	const [open, setOpen] = useState(true);
@@ -39,6 +40,9 @@ const Sidepanel = ({ width = 500 }) => {
 
 			case "door varianten":
 				return <DoorVarianten />;
+
+			case "raam varianten":
+				return <Ramen />;
 
 			case "partition grid":
 				return <PartitionGrid />;

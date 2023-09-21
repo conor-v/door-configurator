@@ -1,0 +1,82 @@
+[
+	{
+		"titel": "Model 1",
+		"value": "Model1",
+		"url": "./ramen/raam1.svg",
+		"minheight": 500,
+		"maxheight": 1200,
+		"minwidth": 500,
+		"maxwidth": 2000,
+		"total": 1
+	},
+	{
+		"titel": "Model 2",
+		"value": "Model2",
+		"url": "./ramen/raam2.svg",
+		"minheight": 500,
+		"maxheight": 2100,
+		"minwidth": 500,
+		"maxwidth": 1300,
+		"total": 1
+	},
+	{
+		"titel": "Model 3",
+		"value": "Model3",
+		"url": "./ramen/raam3.svg",
+		"minheight": 500,
+		"maxheight": 1750,
+		"minwidth": 800,
+		"maxwidth": 2000,
+		"total": 2
+	},
+	{
+		"titel": "Model 4",
+		"value": "Model4",
+		"url": "./ramen/raam4.svg",
+		"minheight": 1700,
+		"maxheight": 2300,
+		"minwidth": 1200,
+		"maxwidth": 3200,
+		"total": 2
+	},
+	{
+		"titel": "Model 5",
+		"value": "Model5",
+		"url": "./ramen/raam5.svg",
+		"minheight": 500,
+		"maxheight": 2300,
+		"minwidth": 400,
+		"maxwidth": 2100,
+		"total": 1
+	},
+	{
+		"titel": "Model 6",
+		"value": "Model6",
+		"url": "./ramen/raam6.svg",
+		"minheight": 500,
+		"maxheight": 1750,
+		"minwidth": 1500,
+		"maxwidth": 3000,
+		"total": 3
+	},
+	{
+		"titel": "Model 7",
+		"value": "Model7",
+		"url": "./ramen/raam7.svg",
+		"minheight": 1800,
+		"maxheight": 2300,
+		"minwidth": 700,
+		"maxwidth": 1100,
+		"total": 1
+	},
+	{
+		"titel": "Model 8",
+		"value": "Model8",
+		"url": "./ramen/raam8.svg",
+		"minheight": 1800,
+		"maxheight": 2300,
+		"minwidth": 1200,
+		"maxwidth": 2000,
+		"total": 2
+	}
+]

@@ -40,7 +40,7 @@ const Layout = () => {
 							id="doorWidth"
 							value={gekozendeur.doorWidth}
 							min="800"
-							max="1200"
+							max="2200"
 							step="1"
 							onChange={(e) => {
 								const updatedGekozendeur = { ...gekozendeur, doorWidth: e.target.valueAsNumber };
@@ -50,7 +50,7 @@ const Layout = () => {
 
 						<MinMax>
 							<p>800</p>
-							<p>1200</p>
+							<p>2200</p>
 						</MinMax>
 					</InputComp>
 
@@ -93,6 +93,94 @@ const Layout = () => {
 						<MinMax>
 							<p>1800</p>
 							<p>2520</p>
+						</MinMax>
+					</InputComp>
+				</>
+			)}
+
+			{doortype === "Raam" && (
+				<>
+					<InputComp>
+						<h3>Deur opening breedte</h3>
+						<DisplayBox>
+							<button
+								disabled={gekozendeur.doorWidth === gekozendeur.minwidth}
+								onClick={() => {
+									const updatedGekozendeur = { ...gekozendeur, doorWidth: gekozendeur.doorWidth - 1 };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
+								}}>
+								-
+							</button>
+							<p>{`${gekozendeur.doorWidth}mm`}</p>
+							<button
+								disabled={gekozendeur.doorWidth === gekozendeur.maxwidth}
+								onClick={() => {
+									const updatedGekozendeur = { ...gekozendeur, doorWidth: gekozendeur.doorWidth + 1 };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
+								}}>
+								+
+							</button>
+						</DisplayBox>
+
+						<input
+							type="range"
+							name="doorWidth"
+							id="doorWidth"
+							value={gekozendeur.doorWidth}
+							min={gekozendeur.minwidth}
+							max={gekozendeur.maxwidth}
+							step="1"
+							onChange={(e) => {
+								const updatedGekozendeur = { ...gekozendeur, doorWidth: e.target.valueAsNumber };
+								updateObject("door", { gekozendeur: updatedGekozendeur });
+							}}
+						/>
+
+						<MinMax>
+							<p>{gekozendeur.minwidth}</p>
+							<p>{gekozendeur.maxwidth}</p>
+						</MinMax>
+					</InputComp>
+
+					<InputComp>
+						<h3>Deur opening hoogte</h3>
+						<DisplayBox>
+							<button
+								disabled={gekozendeur.doorHeight === gekozendeur.minheight}
+								onClick={() => {
+									const updatedGekozendeur = { ...gekozendeur, doorHeight: gekozendeur.doorHeight - 1 };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
+								}}>
+								-
+							</button>
+							<p>{`${gekozendeur.doorHeight}mm`}</p>
+							<button
+								disabled={gekozendeur.doorHeight === gekozendeur.maxheight}
+								onClick={() => {
+									const updatedGekozendeur = { ...gekozendeur, doorHeight: gekozendeur.doorHeight + 1 };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
+								}}>
+								+
+							</button>
+						</DisplayBox>
+
+						<input
+							type="range"
+							name="doorHeight"
+							id="doorHeight"
+							value={gekozendeur.doorHeight}
+							min={gekozendeur.minheight}
+							max={gekozendeur.maxheight}
+							step="1"
+							onChange={(e) => {
+								const updatedGekozendeur = { ...gekozendeur, doorHeight: e.target.valueAsNumber };
+								updateObject("door", { gekozendeur: updatedGekozendeur });
+							}}
+						/>
+
+						<MinMax>
+							<p>{gekozendeur.minheight}</p>
+							<p>{gekozendeur.maxheight}</p>
 						</MinMax>
 					</InputComp>
 				</>
