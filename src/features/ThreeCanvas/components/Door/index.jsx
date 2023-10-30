@@ -65,16 +65,16 @@ const Door = () => {
 	return (
 		<>
 			{doortype === "Vast raam" && (
-				<GlassDoor
-					handleGlassColor={handleGlassColor}
-					handleBorderColor={handleBorderColor}
-					materialProps={materialProps}
-				/>
-				// <TestGlasDoor
+				// <GlassDoor
 				// 	handleGlassColor={handleGlassColor}
 				// 	handleBorderColor={handleBorderColor}
 				// 	materialProps={materialProps}
 				// />
+				<TestGlasDoor
+					handleGlassColor={handleGlassColor}
+					handleBorderColor={handleBorderColor}
+					materialProps={materialProps}
+				/>
 			)}
 			{doortype === "Enkele deur" && (
 				<>
