@@ -4,7 +4,7 @@ import { OrbitControls, PerspectiveCamera, Sky } from "@react-three/drei";
 import { Suspense } from "react";
 import Lights from "./components/lights";
 import Door from "./components/Door";
-import { Room } from "./components/Room";
+import Room from "./components/Room";
 
 const ThreeCanvas = () => {
 	return (
@@ -23,7 +23,7 @@ const ThreeCanvas = () => {
 				<Sky sunPosition={[0, 2, 2]} />
 
 				<Suspense fallback={null}>
-					<Room rotation-y={Math.PI / 2} position={[0.41, 0, -1.05]} />
+					<Room rotation-y={Math.PI / 2} position={[-0.46, 0.021, -1.05]} />
 					<Door />
 				</Suspense>
 

@@ -96,7 +96,7 @@ const PopupBox = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 10;
+	z-index: 9999999;
 `;
 
 const PopupContent = styled.div`

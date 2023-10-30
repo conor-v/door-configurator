@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const StyledBox = styled.div`
-	z-index: 10;
+	z-index: 9999999;
 	position: absolute;
 	height: 100vh;
 	right: 0;

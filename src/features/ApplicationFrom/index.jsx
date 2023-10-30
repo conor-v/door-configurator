@@ -116,7 +116,7 @@ const AanvraagForm = () => {
 };
 
 export const AanvraagBox = styled.div`
-	z-index: 1000000;
+	z-index: 9999999;
 	background-color: rgba(0, 0, 0, 0.25);
 	position: absolute;
 	inset: 0px;

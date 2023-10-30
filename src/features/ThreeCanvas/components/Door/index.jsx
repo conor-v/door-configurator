@@ -7,7 +7,7 @@ import GlassDoor from "./components/GlassDoor";
 // import SingleDoor from "./components/SingleDoor";
 import SidePanels from "../SidePanels";
 import TestDoor from "../TestDoor";
-import TestRaam from "../TestRaam";
+import TestGlasDoor from "../TestGlasDoor";
 
 const Door = () => {
 	const { aluminium, material, doortype, door } = useStore((state) => state.door.gekozendeur);
@@ -70,6 +70,11 @@ const Door = () => {
 					handleBorderColor={handleBorderColor}
 					materialProps={materialProps}
 				/>
+				// <TestGlasDoor
+				// 	handleGlassColor={handleGlassColor}
+				// 	handleBorderColor={handleBorderColor}
+				// 	materialProps={materialProps}
+				// />
 			)}
 			{doortype === "Enkele deur" && (
 				<>
@@ -86,7 +91,6 @@ const Door = () => {
 					materialProps={materialProps}
 				/>
 			)}
-			{doortype === "Raam" && <TestRaam />}
 			{doortype === "3 slagdeur" && (
 				<mesh>
 					<boxGeometry />

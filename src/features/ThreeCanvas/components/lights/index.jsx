@@ -24,7 +24,7 @@ const Lights = () => {
 				ref={rectAreaLight}
 				position={[0, 1, 3]}
 				width={0.5}
-				height={3}
+				height={2}
 				color={"#FEF4D9"}
 				intensity={2}
 				rotation={[0, 0, -Math.PI / 6]}

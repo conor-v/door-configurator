@@ -39,7 +39,7 @@ const TestDoor = () => {
 		reflectivity: 0.33,
 	};
 	return (
-		<group position={[0, 0.015, 2.19]}>
+		<group position={[0, 0.015, 2.16]}>
 			<mesh position={[0, 0.07, 0]}>
 				<DoorFrameModel scaling={0.35} scalingTop={0.0015} />
 			</mesh>
