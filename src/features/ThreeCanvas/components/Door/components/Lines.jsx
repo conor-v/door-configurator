@@ -53,7 +53,7 @@ const Lines = () => {
 								0,
 							]}>
 							<boxGeometry args={[(doorsizeWidth * (line.size * 1000)) / 1000 / 1000, borderSize / 10, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} map={grainTextureHor} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
 						</mesh>
 					))}
 			</group>
@@ -69,7 +69,7 @@ const Lines = () => {
 								0,
 							]}>
 							<boxGeometry args={[borderSize / 10, (doorHeight * (line.size * 1000)) / 1000 / 1000, 0.04]} />
-							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} map={grainTextureVer} />
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
 						</mesh>
 					))}
 			</group>
