@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Lights from "./components/lights";
 import Door from "./components/Door";
 import Room from "./components/Room";
+import WoodShape from "./components/WoodShape";
 
 const ThreeCanvas = () => {
 	return (
@@ -25,6 +26,7 @@ const ThreeCanvas = () => {
 				<Suspense fallback={null}>
 					<Room rotation-y={Math.PI / 2} position={[-0.46, 0.021, -1.05]} />
 					<Door />
+					{/* <WoodShape /> */}
 				</Suspense>
 
 				<OrbitControls />

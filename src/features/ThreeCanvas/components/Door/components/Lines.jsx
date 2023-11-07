@@ -2,16 +2,9 @@ import { RepeatWrapping, TextureLoader, Vector2 } from "three";
 import { useStore } from "../../../../../stores/appStore";
 
 const Lines = () => {
-	const {
-		doorWidth,
-		doorHeight,
-		aluminium,
-		partitionGridHor,
-		partitionGridVer,
-		borderSize,
-		aluminiumCustomColor,
-		doortype,
-	} = useStore((state) => state.door.gekozendeur);
+	const { doorWidth, doorHeight, aluminium, partitionGridHor, partitionGridVer, borderSize, doortype } = useStore(
+		(state) => state.door.gekozendeur
+	);
 
 	const doorsizeWidth = doortype === "Vast raam" ? doorWidth : doorWidth / 2;
 
