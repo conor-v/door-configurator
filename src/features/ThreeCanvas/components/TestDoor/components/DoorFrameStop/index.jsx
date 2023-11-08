@@ -1,6 +1,6 @@
 import { useGLTF } from "@react-three/drei";
-import { useStore } from "../../../../stores/appStore";
-import Shadermateriaal from "../../../../components/ShaderMateriaal";
+import { useStore } from "../../../../../../stores/appStore";
+import Shadermateriaal from "../../../../../../components/ShaderMateriaal";
 
 export function DoorFrameStop(props) {
 	const { nodes } = useGLTF("/doorframestop.glb");

@@ -1,5 +1,5 @@
-import { useStore } from "../../../../stores/appStore";
-import Shadermateriaal from "../../../../components/ShaderMateriaal";
+import { useStore } from "../../../../../stores/appStore";
+import Shadermateriaal from "../../../../../components/ShaderMateriaal";
 import { useGLTF } from "@react-three/drei";
 
 export function DoorFrameModel({ scaling, scalingTop = -0.001 }) {

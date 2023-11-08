@@ -1,7 +1,7 @@
 import { Base, Geometry, Subtraction } from "@react-three/csg";
 import { useStore } from "../../../../stores/appStore";
-import { DoorFrameModel } from "../DoorFrameModel";
-import { DoorFrameStop } from "../DoorFrameStop";
+import { DoorFrameModel } from "./components/DoorFrameModel";
+import { DoorFrameStop } from "./components/DoorFrameStop";
 import Frame from "../Frame";
 import { DeurSlot } from "./DeurSlot";
 import { useRef } from "react";
@@ -9,11 +9,13 @@ import { BoxGeometry } from "three";
 import Shadermateriaal from "../../../../components/ShaderMateriaal";
 import { useSpring } from "@react-spring/core";
 import { a } from "@react-spring/three";
-import Rechthoek from "./components/Rechthoek";
-import Diamont from "./components/Diamont";
-import Vierkant from "./components/Vierkant";
-import Cirkel from "./components/Cirkel";
-import HalveMoon from "./components/HalveMoon";
+import Rechthoek from "./components/Variants/Rechthoek";
+import Diamont from "./components/Variants/Diamont";
+import Vierkant from "./components/Variants/Vierkant";
+import Cirkel from "./components/Variants/Cirkel";
+import HalveMoon from "./components/Variants/HalveMoon";
+import { DoorFrameModelHoek1 } from "./components/DoorFrameModelHoek1";
+import { DoorFrameModelHoek2 } from "./components/DoorFrameModelHoek2";
 
 const TestDoor = () => {
 	const holeCut = useRef();
@@ -73,53 +75,37 @@ const TestDoor = () => {
 		<group position={[0, 0.015, 2.16]}>
 			<a.group rotation-y={rotation} position={[-doorWidth / 1000 / 2 + 0.05, 0, 0.01]}>
 				<group position={[doorWidth / 1000 / 2 - 0.05, 0, -0.01]}>
-					<mesh position={[0, 0.07, 0]}>
-						<DoorFrameModel scaling={0.35} scalingTop={0.0015} />
+					<mesh position={[0, 0, 0]}>
+						<DoorFrameModel scaling={0.3384} />
 					</mesh>
 					<mesh rotation={[0, 0, Math.PI]} position={[0, 2, 0]}>
-						<DoorFrameModel scaling={0.35} />
+						<DoorFrameModel scaling={0.3384} />
 					</mesh>
 					<mesh rotation={[0, -Math.PI * 2, -Math.PI / 2]} position={[-0.4, 1, 0]}>
-						<DoorFrameModel scaling={0.95} />
+						<DoorFrameModel scaling={0.9362} />
 					</mesh>
 					<mesh rotation={[0, 0, Math.PI / 2]} position={[0.4, 1, 0]}>
-						<DoorFrameModel scaling={0.96} />
+						<DoorFrameModel scaling={0.9362} />
 					</mesh>
 
 					<group position={[0.01, 0, 0]}>
-						<mesh position={[0.376, 0.0215, 0.025]} rotation={[0, Math.PI / 2, 0]}>
-							<DoorFrameStop />
-						</mesh>
-						<mesh position={[0.376, 0.0225, 0.025]} rotation={[0, -Math.PI / 2, Math.PI]}>
-							<DoorFrameStop />
-						</mesh>
+						<DoorFrameModelHoek1 position={[0.3452, 0.031, 0.0304]} rotation={[0, 0, Math.PI]} />
+						<DoorFrameModelHoek2 position={[0.3586, 0.048, 0.0304]} rotation={[0, 0, Math.PI]} />
 					</group>
 
 					<group position={[-0.76, 0, 0]} rotation={[0, 0, 0]}>
-						<mesh position={[0.376, 0.0215, 0.025]} rotation={[0, -Math.PI / 2, 0]}>
-							<DoorFrameStop />
-						</mesh>
-						<mesh position={[0.376, 0.0225, 0.025]} rotation={[0, Math.PI / 2, -Math.PI]}>
-							<DoorFrameStop />
-						</mesh>
+						<DoorFrameModelHoek1 position={[0.391, 0.0471, 0.0304]} rotation={[0, 0, Math.PI / 2]} />
+						<DoorFrameModelHoek2 position={[0.406, 0.0315, 0.0304]} rotation={[0, 0, Math.PI / 2]} />
 					</group>
 
 					<group position={[-0.76, 1.96, 0]}>
-						<mesh position={[0.376, 0.0215, 0.025]} rotation={[0, Math.PI / 2, 0]}>
-							<DoorFrameStop />
-						</mesh>
-						<mesh position={[0.376, 0.0225, 0.025]} rotation={[0, -Math.PI / 2, Math.PI]}>
-							<DoorFrameStop />
-						</mesh>
+						<DoorFrameModelHoek1 position={[0.405, 0.009, 0.0304]} rotation={[0, 0, 0]} />
+						<DoorFrameModelHoek2 position={[0.3915, -0.008, 0.0304]} rotation={[0, 0, 0]} />
 					</group>
 
 					<group position={[0, 1.97, 0]}>
-						<mesh position={[0.376, 0.0215, 0.025]} rotation={[0, -Math.PI / 2, 0]}>
-							<DoorFrameStop />
-						</mesh>
-						<mesh position={[0.376, 0.0225, 0.025]} rotation={[0, Math.PI / 2, -Math.PI]}>
-							<DoorFrameStop />
-						</mesh>
+						<DoorFrameModelHoek1 position={[0.3694, -0.0172, 0.0304]} rotation={[0, 0, -Math.PI / 2]} />
+						<DoorFrameModelHoek2 position={[0.3545, -0.0016, 0.0304]} rotation={[0, 0, -Math.PI / 2]} />
 					</group>
 
 					<mesh>
