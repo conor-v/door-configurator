@@ -1,142 +1,62 @@
 [
-  {
-    "titel": "Model 1",
-    "value": "Model1",
-    "url": "./doors/door1.svg"
-  },
-  {
-    "titel": "Model 2",
-    "value": "Model2",
-    "url": "./doors/door2.svg"
-  },
-  {
-    "titel": "Model 3",
-    "value": "Model3",
-    "url": "./doors/door3.svg"
-  },
-  {
-    "titel": "Model 4",
-    "value": "Model4",
-    "url": "./doors/door4.svg"
-  },
-  {
-    "titel": "Model 5",
-    "value": "Model5",
-    "url": "./doors/door5.svg"
-  },
-  {
-    "titel": "Model 6",
-    "value": "Model6",
-    "url": "./doors/door6.svg"
-  },
-  {
-    "titel": "Model 7",
-    "value": "Model7",
-    "url": "./doors/door7.svg"
-  },
-  {
-    "titel": "Model 8",
-    "value": "Model8",
-    "url": "./doors/door8.svg"
-  },
-  {
-    "titel": "Model 9",
-    "value": "Model9",
-    "url": "./doors/door9.svg"
-  },
-  {
-    "titel": "Model 10",
-    "value": "Model10",
-    "url": "./doors/door10.svg"
-  },
-  {
-    "titel": "Model 11",
-    "value": "Model11",
-    "url": "./doors/door11.svg"
-  },
-  {
-    "titel": "Model 12",
-    "value": "Model12",
-    "url": "./doors/door12.svg"
-  },
-  {
-    "titel": "Model 13",
-    "value": "Model13",
-    "url": "./doors/door13.svg"
-  },
-  {
-    "titel": "Model 14",
-    "value": "Model14",
-    "url": "./doors/door14.svg"
-  },
-  {
-    "titel": "Model 15",
-    "value": "Model15",
-    "url": "./doors/door15.svg"
-  },
-  {
-    "titel": "Model 16",
-    "value": "Model16",
-    "url": "./doors/door16.svg"
-  },
-  {
-    "titel": "Model 17",
-    "value": "Model17",
-    "url": "./doors/door17.svg"
-  },
-  {
-    "titel": "Model 18",
-    "value": "Model18",
-    "url": "./doors/door18.svg"
-  },
-  {
-    "titel": "Model 19",
-    "value": "Model19",
-    "url": "./doors/door19.svg"
-  },
-  {
-    "titel": "Model 20",
-    "value": "Model20",
-    "url": "./doors/door20.svg"
-  },
-  {
-    "titel": "Model 21",
-    "value": "Model21",
-    "url": "./doors/door21.svg"
-  },
-  {
-    "titel": "Model 22",
-    "value": "Model22",
-    "url": "./doors/door22.svg"
-  },
-  {
-    "titel": "Model 23",
-    "value": "Model23",
-    "url": "./doors/door23.svg"
-  },
-  {
-    "titel": "Model 24",
-    "value": "Model24",
-    "url": "./doors/door24.svg"
-  },
-  {
-    "titel": "Model 25",
-    "value": "Model25",
-    "url": "./doors/door25.svg"
-  },
-  {
-    "titel": "Model 26",
-    "value": "Model26",
-    "url": "./doors/door26.svg"
-  },
-  {
-    "titel": "Model 27",
-    "value": "Model27",
-    "url": "./doors/door27.svg"
-  },
-  {
-    "titel": "Model 28",
-    "value": "Model28",
-    "url": "./doors/door28.svg"
-  }
+	{
+		"titel": "geen vensters",
+		"value": "geen vensters",
+		"url": "./doors/door1.svg",
+		"position": [0, 0, 0]
+	},
+	{
+		"titel": "4 vensters",
+		"value": "4 vensters",
+		"url": "./doors/door1.svg",
+		"position": [-0.07, 0.3, 0.01]
+	},
+	{
+		"titel": "verticaal venster",
+		"value": "verticaal venster",
+		"url": "./doors/door1.svg",
+		"position": [-0.07, 0.3, 0.01]
+	},
+	{
+		"titel": "diamant venster",
+		"value": "diamant venster",
+		"url": "./doors/door1.svg",
+		"position": [-0.22, 1.3, 0.01]
+	},
+	{
+		"titel": "halve maan venster",
+		"value": "halve maan venster",
+		"url": "./doors/door1.svg",
+		"position": [-0.07, 0.3, 0.01]
+	},
+	{
+		"titel": "brugvenster",
+		"value": "brugvenster",
+		"url": "./doors/door1.svg",
+		"position": [-0.07, 0.3, 0.01]
+	},
+	{
+		"titel": "rond venster",
+		"value": "rond venster",
+		"url": "./doors/door1.svg",
+		"position": [0, 1.5, 0.01]
+	},
+	{
+		"titel": "vierkant venster",
+		"value": "vierkant venster",
+		"url": "./doors/door1.svg",
+		"position": [-0.22, 1.3, 0.01]
+	},
+	{
+		"titel": "brugvenster 4-glas",
+		"value": "brugvenster 4-glas",
+		"url": "./doors/door1.svg",
+		"position": [-0.07, 0.3, 0.01]
+	},
+	{
+		"titel": "diagonaal 3 vensters",
+		"value": "diagonaal 3 vensters",
+		"url": "./doors/door1.svg",
+		"position": [-0.07, 0.3, 0.01]
+	}
 ]

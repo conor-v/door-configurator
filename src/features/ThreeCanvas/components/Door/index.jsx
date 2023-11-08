@@ -1,10 +1,6 @@
 import { useControls } from "leva";
 import { useStore } from "../../../../stores/appStore";
-// import Frame from "../Frame";
 import DubbleDoor from "./components/DubbleDoor";
-import GlassDoor from "./components/GlassDoor";
-// import { Scharnieren } from "./components/Scharnieren";
-// import SingleDoor from "./components/SingleDoor";
 import SidePanels from "../SidePanels";
 import TestDoor from "../TestDoor";
 import TestGlasDoor from "../TestGlasDoor";
@@ -13,7 +9,7 @@ const Door = () => {
 	const { aluminium, material, doortype, door } = useStore((state) => state.door.gekozendeur);
 
 	const materialProps = useControls({
-		thickness: { value: 0.2, min: 0, max: 20 },
+		thickness: { value: 0.02, min: 0, max: 20 },
 		roughness: { value: 0.3, min: 0, max: 1, step: 0.1 },
 		metalness: { value: 0.1, min: 0, max: 1, step: 0.1 },
 		clearcoat: { value: 1, min: 0, max: 1, step: 0.1 },
@@ -65,11 +61,6 @@ const Door = () => {
 	return (
 		<>
 			{doortype === "Vast raam" && (
-				// <GlassDoor
-				// 	handleGlassColor={handleGlassColor}
-				// 	handleBorderColor={handleBorderColor}
-				// 	materialProps={materialProps}
-				// />
 				<TestGlasDoor
 					handleGlassColor={handleGlassColor}
 					handleBorderColor={handleBorderColor}
