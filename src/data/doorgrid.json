@@ -138,8 +138,8 @@
 		"gridVertical": 2,
 		"borderSize": 0.15,
 		"gridHorizontalArray": [
-			{ "pos": 0.08, "size": 1, "fixed": 2, "start": 0 },
-			{ "pos": 0.92, "size": 1, "fixed": -2, "start": 0 }
+			{ "pos": -0.05, "size": 1, "fixed": 2, "start": 0 },
+			{ "pos": 1.03, "size": 1, "fixed": -2, "start": 0 }
 		],
 		"gridVerticalArray": [
 			{ "pos": -1, "size": 1, "fixed": 2, "start": 0 },
@@ -153,8 +153,8 @@
 		"gridVertical": 2,
 		"borderSize": 0.3,
 		"gridHorizontalArray": [
-			{ "pos": 0.08, "size": 1, "fixed": 2, "start": 0 },
-			{ "pos": 0.92, "size": 1, "fixed": -2, "start": 0 }
+			{ "pos": -0.05, "size": 1, "fixed": 2, "start": 0 },
+			{ "pos": 1.03, "size": 1, "fixed": -2, "start": 0 }
 		],
 		"gridVerticalArray": [
 			{ "pos": -1, "size": 1, "fixed": 2, "start": 0 },
@@ -168,10 +168,10 @@
 		"gridVertical": 5,
 		"borderSize": 0.15,
 		"gridHorizontalArray": [
-			{ "pos": 0.2, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.4, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.6, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.8, "size": 1, "fixed": 0, "start": 0 }
+			{ "pos": 0.15, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.35, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.55, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.75, "size": 1, "fixed": 0, "start": 0 }
 		],
 		"gridVerticalArray": [
 			{ "pos": 0.32, "size": 0.2, "fixed": 0, "start": 0 },
@@ -188,10 +188,10 @@
 		"gridVertical": 5,
 		"borderSize": 0.3,
 		"gridHorizontalArray": [
-			{ "pos": 0.2, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.4, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.6, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.8, "size": 1, "fixed": 0, "start": 0 }
+			{ "pos": 0.15, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.35, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.55, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.75, "size": 1, "fixed": 0, "start": 0 }
 		],
 		"gridVerticalArray": [
 			{ "pos": 0.32, "size": 0.2, "fixed": 0, "start": 0 },
@@ -208,12 +208,12 @@
 		"gridVertical": 3,
 		"borderSize": 0.15,
 		"gridHorizontalArray": [
-			{ "pos": 0.35, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.65, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.55, "size": 0.45, "fixed": 0, "start": 0.05 }
+			{ "pos": 0.3, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.6, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.53, "size": 0.45, "fixed": 0, "start": 0.05 }
 		],
 		"gridVerticalArray": [
-			{ "pos": 0.65, "size": 0.33, "fixed": 0, "start": 0.65 },
+			{ "pos": 0.65, "size": 0.35, "fixed": 0, "start": 0.65 },
 			{ "pos": 0.55, "size": 0.3, "fixed": 0, "start": 0.35 },
 			{ "pos": 0.8, "size": 0.35, "fixed": 0, "start": 0 }
 		],
@@ -225,12 +225,12 @@
 		"gridVertical": 3,
 		"borderSize": 0.3,
 		"gridHorizontalArray": [
-			{ "pos": 0.35, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.65, "size": 1, "fixed": 0, "start": 0 },
-			{ "pos": 0.55, "size": 0.45, "fixed": 0, "start": 0.05 }
+			{ "pos": 0.3, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.6, "size": 1, "fixed": 0, "start": 0 },
+			{ "pos": 0.53, "size": 0.45, "fixed": 0, "start": 0.05 }
 		],
 		"gridVerticalArray": [
-			{ "pos": 0.65, "size": 0.33, "fixed": 0, "start": 0.65 },
+			{ "pos": 0.65, "size": 0.35, "fixed": 0, "start": 0.65 },
 			{ "pos": 0.55, "size": 0.3, "fixed": 0, "start": 0.35 },
 			{ "pos": 0.8, "size": 0.35, "fixed": 0, "start": 0 }
 		],

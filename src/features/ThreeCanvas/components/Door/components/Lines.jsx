@@ -51,7 +51,7 @@ const Lines = () => {
 					))}
 			</group>
 
-			<group position={[-doorsizeWidth / 1000 / 2, 0, 0]}>
+			<group position={[-doorsizeWidth / 1000 / 2, -0.1, 0]}>
 				{partitionGridVer.length > 0 &&
 					partitionGridVer?.map((line, index) => (
 						<mesh
