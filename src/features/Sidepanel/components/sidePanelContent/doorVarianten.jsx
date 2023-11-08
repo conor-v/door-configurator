@@ -9,17 +9,17 @@ const DoorVarianten = () => {
 	return (
 		<>
 			<Title>Deur varianten</Title>
-			<SelectedText>{gekozendeur.doorVariant}</SelectedText>
+			<SelectedText>{gekozendeur.doorVariant.value}</SelectedText>
 
 			<List>
 				{DoorVariantenData.map((door) => (
 					<ListItem
 						key={door.titel}
 						onClick={() => {
-							const updatedGekozendeur = { ...gekozendeur, doorVariant: door.value };
+							const updatedGekozendeur = { ...gekozendeur, doorVariant: door };
 							updateObject("door", { gekozendeur: updatedGekozendeur });
 						}}
-						active={gekozendeur.doorVariant === door.value ? 1 : 0}>
+						active={gekozendeur.doorVariant.value === door.value ? 1 : 0}>
 						<img src={door.url} alt={door.titel} height={60} />
 					</ListItem>
 				))}

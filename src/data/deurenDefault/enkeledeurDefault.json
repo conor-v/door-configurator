@@ -5,7 +5,12 @@
 	"doorHeight": 2030,
 	"doorPartitions": 1,
 	"doorGridType": "None",
-	"doorVariant": "Model3",
+	"doorVariant": {
+		"titel": "geen vensters",
+		"value": "geen vensters",
+		"url": "./doors/door1.svg",
+		"position": [0, 0, 0]
+	},
 	"gridMode": "Design",
 	"aluminium": "Black",
 	"doorcolor": "Black",

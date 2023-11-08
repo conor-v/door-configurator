@@ -1,7 +1,6 @@
 import { Base, Geometry, Subtraction } from "@react-three/csg";
 import { useStore } from "../../../../stores/appStore";
 import { DoorFrameModel } from "./components/DoorFrameModel";
-import { DoorFrameStop } from "./components/DoorFrameStop";
 import Frame from "../Frame";
 import { DeurSlot } from "./DeurSlot";
 import { useRef } from "react";
@@ -13,16 +12,14 @@ import Rechthoek from "./components/Variants/Rechthoek";
 import Diamont from "./components/Variants/Diamont";
 import Vierkant from "./components/Variants/Vierkant";
 import Cirkel from "./components/Variants/Cirkel";
-import HalveMoon from "./components/Variants/HalveMoon";
 import { DoorFrameModelHoek1 } from "./components/DoorFrameModelHoek1";
 import { DoorFrameModelHoek2 } from "./components/DoorFrameModelHoek2";
 
 const TestDoor = () => {
 	const holeCut = useRef();
-	const { aluminium } = useStore((state) => state.door.gekozendeur);
+	const { aluminium, doorWidth, doorVariant } = useStore((state) => state.door.gekozendeur);
 	const drawingplan = useStore((state) => state.sidepanel.drawingplan);
 	const doorOpen = useStore((state) => state.sidepanel.doorOpen);
-	const { doorWidth } = useStore((state) => state.door.gekozendeur);
 
 	const handleBorderColor = () => {
 		switch (aluminium) {
@@ -37,16 +34,16 @@ const TestDoor = () => {
 
 	const handleVariant = (name) => {
 		switch (name) {
-			case name === "verticaal venster":
-				return Rechthoek;
-			case name === "diamant venster":
-				return Diamont;
-			case name === "":
-				return Vierkant;
-			case name === "rond venster":
-				return Cirkel;
+			case "verticaal venster":
+				return <Rechthoek />;
+			case "diamant venster":
+				return <Diamont />;
+			case "vierkant venster":
+				return <Vierkant />;
+			case "rond venster":
+				return <Cirkel />;
 			default:
-				return Rechthoek;
+				return <Rechthoek />;
 		}
 	};
 
@@ -116,16 +113,16 @@ const TestDoor = () => {
 									new BoxGeometry(drawingplan ? 0.673 : 0.78, drawingplan ? 1.845 : 1.95, drawingplan ? 0.023 : 0.023)
 								}></Base>
 
-							<Subtraction ref={holeCut} name="cavity" position={[-0.07, 0.3, 0.01]}>
-								<Rechthoek />
+							<Subtraction ref={holeCut} name="cavity" position={doorVariant.position}>
+								{handleVariant(doorVariant.value)}
 							</Subtraction>
 						</Geometry>
 
 						{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#43464b"} />}
 					</mesh>
 
-					<mesh position={[-0.07, 0.3, 0.01]}>
-						<Rechthoek />
+					<mesh position={doorVariant.position}>
+						{handleVariant(doorVariant.value)}
 						{drawingplan ? <Shadermateriaal /> : <meshPhysicalMaterial {...materialProps} />}
 					</mesh>
 

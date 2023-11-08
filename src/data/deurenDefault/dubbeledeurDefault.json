@@ -5,7 +5,12 @@
 	"doorHeight": 2100,
 	"doorPartitions": 1,
 	"doorGridType": "None",
-	"doorVariant": "Model1",
+	"doorVariant": {
+		"titel": "geen vensters",
+		"value": "geen vensters",
+		"url": "./doors/door1.svg",
+		"position": [0, 0, 0]
+	},
 	"gridMode": "Design",
 	"aluminium": "Black",
 	"aluminiumCustomColor": "",
