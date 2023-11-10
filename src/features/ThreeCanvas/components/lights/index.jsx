@@ -26,7 +26,7 @@ const Lights = () => {
 				width={0.5}
 				height={2}
 				color={"#FEF4D9"}
-				intensity={2}
+				intensity={1}
 				rotation={[0, 0, -Math.PI / 6]}
 			/>
 		</>

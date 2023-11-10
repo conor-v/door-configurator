@@ -3,60 +3,106 @@
 		"titel": "geen vensters",
 		"value": "geen vensters",
 		"url": "./doors/door1.svg",
-		"position": [0, 0, 0]
-	},
-	{
-		"titel": "4 vensters",
-		"value": "4 vensters",
-		"url": "./doors/door2.svg",
-		"position": [-0.07, 0.3, 0.01]
+		"position": [0, 0, 0],
+		"type": "Enkele deur"
 	},
 	{
 		"titel": "verticaal venster",
 		"value": "verticaal venster",
 		"url": "./doors/door3.svg",
-		"position": [-0.07, 0.3, 0.01]
+		"position": [-0.07, 0.3, 0.01],
+		"type": "Enkele deur"
 	},
 	{
 		"titel": "diamant venster",
 		"value": "diamant venster",
 		"url": "./doors/door4.svg",
-		"position": [-0.22, 1.3, 0.01]
+		"position": [-0.22, 1.3, 0.01],
+		"type": "Enkele deur"
 	},
 	{
 		"titel": "halve maan venster",
 		"value": "halve maan venster",
 		"url": "./doors/door5.svg",
-		"position": [-0.07, 0.3, 0.01]
+		"position": [0.2, 1, 0.01],
+		"type": "Enkele deur"
 	},
-	{
-		"titel": "brugvenster",
-		"value": "brugvenster",
-		"url": "./doors/door6.svg",
-		"position": [-0.07, 0.3, 0.01]
-	},
+
 	{
 		"titel": "rond venster",
 		"value": "rond venster",
 		"url": "./doors/door7.svg",
-		"position": [0, 1.5, 0.01]
+		"position": [0, 1.5, 0.01],
+		"type": "Enkele deur"
 	},
 	{
 		"titel": "vierkant venster",
 		"value": "vierkant venster",
 		"url": "./doors/door8.svg",
-		"position": [-0.22, 1.3, 0.01]
+		"position": [-0.22, 1.3, 0.01],
+		"type": "Enkele deur"
 	},
 	{
-		"titel": "brugvenster 4-glas",
-		"value": "brugvenster 4-glas",
-		"url": "./doors/door9.svg",
-		"position": [-0.07, 0.3, 0.01]
+		"titel": "deur1",
+		"value": "deur1",
+		"url": "./doors/door1_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
 	},
 	{
-		"titel": "diagonaal 3 vensters",
-		"value": "diagonaal 3 vensters",
-		"url": "./doors/door10.svg",
-		"position": [-0.07, 0.3, 0.01]
+		"titel": "deur2",
+		"value": "deur2",
+		"url": "./doors/door2_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
+	},
+	{
+		"titel": "deur3",
+		"value": "deur3",
+		"url": "./doors/door3_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
+	},
+	{
+		"titel": "deur4",
+		"value": "deur4",
+		"url": "./doors/door4_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
+	},
+	{
+		"titel": "deur5",
+		"value": "deur5",
+		"url": "./doors/door5_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
+	},
+	{
+		"titel": "deur6",
+		"value": "deur6",
+		"url": "./doors/door6_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
+	},
+	{
+		"titel": "deur7",
+		"value": "deur7",
+		"url": "./doors/door7_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
+	},
+	{
+		"titel": "deur8",
+		"value": "deur8",
+		"url": "./doors/door8_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
+	},
+	{
+		"titel": "deur9",
+		"value": "deur9",
+		"url": "./doors/door9_wood.svg",
+		"position": [0, 0, 0],
+		"type": "Wooden door"
 	}
 ]

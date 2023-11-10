@@ -4,6 +4,7 @@ import DubbleDoor from "./components/DubbleDoor";
 import SidePanels from "../SidePanels";
 import TestDoor from "../TestDoor";
 import TestGlasDoor from "../TestGlasDoor";
+import WoodenDoor from "../WoodenDoor";
 
 const Door = () => {
 	const { aluminium, material, doortype, door } = useStore((state) => state.door.gekozendeur);
@@ -69,10 +70,12 @@ const Door = () => {
 			)}
 			{doortype === "Enkele deur" && (
 				<>
-					{/* <SingleDoor handleDeurColor={handleDeurColor} />
-					<Frame handleBorderColor={handleBorderColor} />
-					<Scharnieren scale={0.085} position={[-0.04, 0, 2.19]} /> */}
 					<TestDoor />
+				</>
+			)}
+			{doortype === "Wooden door" && (
+				<>
+					<WoodenDoor handleGlassColor={handleGlassColor} materialProps={materialProps} />
 				</>
 			)}
 			{doortype === "Dubbele deur" && (

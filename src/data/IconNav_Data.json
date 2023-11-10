@@ -3,7 +3,7 @@
 		"img": "door.svg",
 		"type": "doors",
 		"name": "deuren",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	},
 	{
 		"img": "plank.svg",
@@ -15,13 +15,13 @@
 		"img": "sliders.svg",
 		"type": "layout",
 		"name": "layout",
-		"doortype": ["Vast raam", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	},
 	{
 		"img": "layers.svg",
 		"type": "aluminium",
 		"name": "materiaal",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	},
 	{
 		"img": "grid.svg",
@@ -33,13 +33,7 @@
 		"img": "grid.svg",
 		"type": "door varianten",
 		"name": "varianten",
-		"doortype": ["Enkele deur"]
-	},
-	{
-		"img": "grid.svg",
-		"type": "raam varianten",
-		"name": "varianten",
-		"doortype": ["Raam"]
+		"doortype": ["Enkele deur", "Wooden door"]
 	},
 	{
 		"img": "columns.svg",
@@ -58,30 +52,30 @@
 		"img": "scharnier.svg",
 		"type": "scharnieren",
 		"name": "scharnieren",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	},
 	{
 		"img": "grepen.svg",
 		"type": "grepen",
 		"name": "grepen",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	},
 	{
 		"img": "sloten.svg",
 		"type": "sloten",
 		"name": "sloten",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	},
 	{
 		"img": "list.svg",
 		"type": "overview",
 		"name": "overzicht",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	},
 	{
 		"img": "euro.svg",
 		"type": "prijsberekening",
 		"name": "totaal",
-		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
+		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Wooden door"]
 	}
 ]

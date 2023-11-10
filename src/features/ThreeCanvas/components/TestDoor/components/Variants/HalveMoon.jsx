@@ -1,25 +1,19 @@
-import { Shape } from "three";
+import { EllipseCurve, Shape } from "three";
 const HalveMoon = () => {
-	// Definieer de punten voor de halve cirkel (halve maan).
-	const halfMoonShape = new Shape();
-	const radius = 0.5; // Straal van de halve maan
+	// Definieer de eigenschappen van de ovaal
+	const x = 0; // x-coördinaat van het middelpunt
+	const y = 0; // y-coördinaat van het middelpunt
+	const radiusX = 0.35; // Straal in de x-richting
+	const radiusY = 0.8; // Straal in de y-richting
+	const startAngle = Math.PI / 1.74; // Beginhoek (in radialen)
+	const endAngle = (Math.PI / 2) * 2.8; // Eindhoek (in radialen), halve cirkel
 
-	// Draai de punten van de halve maan om 90 graden.
-	for (let i = 0; i <= 180; i++) {
-		const angle = ((i - 90) * Math.PI) / 180; // Rotatie van 90 graden
-		const x = radius * Math.cos(angle);
-		const y = radius * Math.sin(angle);
-		halfMoonShape.lineTo(x, y);
-	}
+	// Maak een elliptische curve om de vorm van de ovaal te definiëren
+	const curve = new EllipseCurve(x, y, radiusX, radiusY, startAngle, endAngle);
 
-	// Definieer de punten voor de halve ovale cirkel.
-	const halfOvalShape = new Shape();
-	const width = 1; // Breedte van de halve ovale cirkel
-	const height = 0.5; // Hoogte van de halve ovale cirkel
-	halfOvalShape.ellipse(0, 0, width, height, 0, Math.PI, true);
-
-	// Combineer de halve maan en de halve ovale cirkel in één vorm.
-	halfOvalShape.holes.push(halfMoonShape);
+	// Genereer een 2D-vorm met behulp van de curve
+	const points = curve.getPoints(50); // 50 punten voor een soepele curve
+	const customShape = new Shape(points);
 
 	// Definieer de extrude-instellingen voor de aangepaste vorm.
 	const extrudeSettings = {
@@ -27,8 +21,6 @@ const HalveMoon = () => {
 		bevelEnabled: false, // Geen afgeschuinde randen
 	};
 
-	const rotationInRadians = Math.PI / 2;
-
-	return <extrudeGeometry args={[halfOvalShape, extrudeSettings, rotationInRadians]} />;
+	return <extrudeGeometry args={[customShape, extrudeSettings]} />;
 };
 export default HalveMoon;

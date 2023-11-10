@@ -12,17 +12,21 @@ const DoorVarianten = () => {
 			<SelectedText>{gekozendeur.doorVariant.value}</SelectedText>
 
 			<List>
-				{DoorVariantenData.map((door) => (
-					<ListItem
-						key={door.titel}
-						onClick={() => {
-							const updatedGekozendeur = { ...gekozendeur, doorVariant: door };
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}
-						active={gekozendeur.doorVariant.value === door.value ? 1 : 0}>
-						<img src={door.url} alt={door.titel} height={60} />
-					</ListItem>
-				))}
+				{DoorVariantenData.map((door) => {
+					if (door.type === gekozendeur.doortype) {
+						return (
+							<ListItem
+								key={door.titel}
+								onClick={() => {
+									const updatedGekozendeur = { ...gekozendeur, doorVariant: door };
+									updateObject("door", { gekozendeur: updatedGekozendeur });
+								}}
+								active={gekozendeur.doorVariant.value === door.value ? 1 : 0}>
+								<img src={door.url} alt={door.titel} height={60} />
+							</ListItem>
+						);
+					}
+				})}
 			</List>
 		</>
 	);

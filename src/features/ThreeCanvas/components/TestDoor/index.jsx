@@ -14,6 +14,8 @@ import Vierkant from "./components/Variants/Vierkant";
 import Cirkel from "./components/Variants/Cirkel";
 import { DoorFrameModelHoek1 } from "./components/DoorFrameModelHoek1";
 import { DoorFrameModelHoek2 } from "./components/DoorFrameModelHoek2";
+import VierRechthoeken from "./components/Variants/VierRechthoeken";
+import HalveMoon from "./components/Variants/HalveMoon";
 
 const TestDoor = () => {
 	const holeCut = useRef();
@@ -34,6 +36,8 @@ const TestDoor = () => {
 
 	const handleVariant = (name) => {
 		switch (name) {
+			case "4 vensters":
+				return <VierRechthoeken />;
 			case "verticaal venster":
 				return <Rechthoek />;
 			case "diamant venster":
@@ -42,6 +46,8 @@ const TestDoor = () => {
 				return <Vierkant />;
 			case "rond venster":
 				return <Cirkel />;
+			case "halve maan venster":
+				return <HalveMoon />;
 			default:
 				return <Rechthoek />;
 		}
@@ -121,10 +127,12 @@ const TestDoor = () => {
 						{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#43464b"} />}
 					</mesh>
 
-					<mesh position={doorVariant.position}>
-						{handleVariant(doorVariant.value)}
-						{drawingplan ? <Shadermateriaal /> : <meshPhysicalMaterial {...materialProps} />}
-					</mesh>
+					{doorVariant.value !== "geen vensters" && (
+						<mesh position={doorVariant.position}>
+							{handleVariant(doorVariant.value)}
+							{drawingplan ? <Shadermateriaal /> : <meshPhysicalMaterial {...materialProps} />}
+						</mesh>
+					)}
 
 					<DeurSlot position={[0.03, -0.05, 0.03]} scale={1.2} rotation={[0, -Math.PI / 2, 0]} />
 				</group>

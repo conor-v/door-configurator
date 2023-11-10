@@ -10,7 +10,8 @@
 			"titel": "geen vensters",
 			"value": "geen vensters",
 			"url": "./doors/door1.svg",
-			"position": [0, 0, 0]
+			"position": [0, 0, 0],
+			"type": "Enkele deur"
 		},
 		"gridMode": "Design",
 		"aluminium": "Black",
@@ -76,7 +77,8 @@
 			"titel": "geen vensters",
 			"value": "geen vensters",
 			"url": "./doors/door1.svg",
-			"position": [0, 0, 0]
+			"position": [0, 0, 0],
+			"type": "Enkele deur"
 		},
 		"gridMode": "Design",
 		"aluminium": "Black",
@@ -131,7 +133,8 @@
 			"titel": "geen vensters",
 			"value": "geen vensters",
 			"url": "./doors/door1.svg",
-			"position": [0, 0, 0]
+			"position": [0, 0, 0],
+			"type": "Enkele deur"
 		},
 		"gridMode": "Design",
 		"aluminium": "Black",
@@ -168,6 +171,73 @@
 				"productName": "scharnier",
 				"name": "scharnier1",
 				"prijs": 30.92
+			}
+		},
+		"hingedDoor": false,
+		"floorPump": false,
+		"pumpInDoor": false,
+		"slidingDoor": false
+	},
+	{
+		"id": "wooden door",
+		"doortype": "Wooden door",
+		"doorWidth": 880,
+		"doorHeight": 2030,
+		"doorPartitions": 1,
+		"doorGridType": "None",
+		"doorVariant": {
+			"titel": "deur1",
+			"value": "deur1",
+			"url": "./doors/door1_wood.svg",
+			"position": [0, 0, 0],
+			"type": "Wooden door"
+		},
+		"gridMode": "Design",
+		"aluminium": "Black",
+		"doorcolor": "Black",
+		"aluminiumCustomColor": "",
+		"material": "Clear",
+		"partitionGridHor": [],
+		"partitionGridVer": [],
+		"borderSize": 0,
+		"uitzicht": "Mastiek",
+		"door": {
+			"sidepanel": {
+				"productName": "sidepanel",
+				"type": "none",
+				"widthRight": 150,
+				"widthLeft": 150
+			},
+			"fanlight": {
+				"productName": "fanlight",
+				"type": "none",
+				"widthRight": 100,
+				"widthLeft": 100
+			},
+			"greep": {
+				"productName": "greep",
+				"name": "klink1",
+				"prijs": 60.48
+			},
+			"slot": {
+				"productName": "slot",
+				"name": "slot2",
+				"prijs": 12.5
+			},
+			"scharnier": {
+				"productName": "scharnier",
+				"name": "scharnier1",
+				"prijs": 30.92
+			},
+			"muurdikte_interval": {
+				"productName": "muurdikte_interval",
+				"name": "171-235",
+				"prijs": 1.0
+			},
+			"deurblad_afmeting": {
+				"productName": "deurblad_afmeting",
+				"name": "630x2015",
+				"prijs": 1.0
 			}
 		},
 		"hingedDoor": false,
