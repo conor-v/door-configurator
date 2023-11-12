@@ -1,7 +1,7 @@
 import { useStore } from "../../../../../../stores/appStore";
 import Shadermateriaal from "../../../../../../components/ShaderMateriaal";
 
-const Deur7 = ({ colorMap, colorMap2 }) => {
+const HoutDeur7 = ({ colorMap, colorMap2 }) => {
 	const { doorWidth, doorHeight } = useStore((state) => state.door.gekozendeur);
 	const drawingplan = useStore((state) => state.sidepanel.drawingplan);
 
@@ -23,4 +23,4 @@ const Deur7 = ({ colorMap, colorMap2 }) => {
 	);
 };
 
-export default Deur7;
+export default HoutDeur7;

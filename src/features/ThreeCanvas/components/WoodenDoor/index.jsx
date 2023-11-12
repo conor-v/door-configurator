@@ -5,15 +5,15 @@ import WoodFrame from "./components/WoodFrame";
 import { useSpring } from "@react-spring/core";
 import { a } from "@react-spring/three";
 import Shadermateriaal from "../../../../components/ShaderMateriaal";
-import Deur1 from "./components/varianten/deur1";
-import Deur4 from "./components/varianten/Deur4";
-import Deur2 from "./components/varianten/Deur2";
-import Deur3 from "./components/varianten/Deur3";
-import Deur5 from "./components/varianten/Deur5";
-import Deur6 from "./components/varianten/Deur6";
-import Deur7 from "./components/varianten/Deur7";
-import Deur8 from "./components/varianten/Deur8";
-import Deur9 from "./components/varianten/Deur9";
+import HoutDeur1 from "./components/varianten/HoutDeur1";
+import HoutDeur4 from "./components/varianten/HoutDeur4";
+import HoutDeur2 from "./components/varianten/HoutDeur2";
+import HoutDeur3 from "./components/varianten/HoutDeur3";
+import HoutDeur5 from "./components/varianten/HoutDeur5";
+import HoutDeur6 from "./components/varianten/HoutDeur6";
+import HoutDeur7 from "./components/varianten/HoutDeur7";
+import HoutDeur8 from "./components/varianten/HoutDeur8";
+import HoutDeur9 from "./components/varianten/HoutDeur9";
 
 const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 	const { doorWidth, doorHeight, doorVariant } = useStore((state) => state.door.gekozendeur);
@@ -50,12 +50,12 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 	const handleVariant = (name) => {
 		switch (name) {
 			case "deur1":
-				return <Deur1 materialProps={materialProps} handleGlassColor={handleGlassColor} />;
+				return <HoutDeur1 materialProps={materialProps} handleGlassColor={handleGlassColor} />;
 			case "deur2":
-				return <Deur2 colorMap={colorMap} colorMap4={colorMap4} />;
+				return <HoutDeur2 colorMap={colorMap} colorMap4={colorMap4} />;
 			case "deur3":
 				return (
-					<Deur3
+					<HoutDeur3
 						colorMap={colorMap}
 						colorMap4={colorMap4}
 						materialProps={materialProps}
@@ -64,7 +64,7 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 				);
 			case "deur4":
 				return (
-					<Deur4
+					<HoutDeur4
 						colorMap={colorMap}
 						colorMap4={colorMap4}
 						materialProps={materialProps}
@@ -72,16 +72,16 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 					/>
 				);
 			case "deur5":
-				return <Deur5 colorMap4={colorMap4} materialProps={materialProps} handleGlassColor={handleGlassColor} />;
+				return <HoutDeur5 colorMap4={colorMap4} materialProps={materialProps} handleGlassColor={handleGlassColor} />;
 			case "deur6":
-				return <Deur6 colorMap={colorMap} colorMap4={colorMap4} />;
+				return <HoutDeur6 colorMap={colorMap} colorMap4={colorMap4} />;
 			case "deur7":
-				return <Deur7 colorMap={colorMap} colorMap2={colorMap2} />;
+				return <HoutDeur7 colorMap={colorMap} colorMap2={colorMap2} />;
 			case "deur8":
-				return <Deur8 colorMap={colorMap} colorMap4={colorMap4} />;
+				return <HoutDeur8 colorMap={colorMap} colorMap4={colorMap4} />;
 			case "deur9":
 				return (
-					<Deur9
+					<HoutDeur9
 						colorMap={colorMap}
 						colorMap4={colorMap4}
 						materialProps={materialProps}
@@ -89,7 +89,7 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 					/>
 				);
 			default:
-				return <Deur1 materialProps={materialProps} handleGlassColor={handleGlassColor} />;
+				return <HoutDeur1 materialProps={materialProps} handleGlassColor={handleGlassColor} />;
 		}
 	};
 
