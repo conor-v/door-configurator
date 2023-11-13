@@ -3,7 +3,7 @@ import Shadermateriaal from "../../../../../components/ShaderMateriaal";
 import { useGLTF } from "@react-three/drei";
 
 export function DoorFrameModel({ scaling, scalingTop = -0.001 }) {
-	const { nodes } = useGLTF("/doorframe.glb");
+	const { nodes } = useGLTF("/models/doorframe.glb");
 	const drawingplan = useStore((state) => state.sidepanel.drawingplan);
 
 	return (
@@ -20,4 +20,4 @@ export function DoorFrameModel({ scaling, scalingTop = -0.001 }) {
 	);
 }
 
-useGLTF.preload("/doorframe.glb");
+useGLTF.preload("/models/doorframe.glb");

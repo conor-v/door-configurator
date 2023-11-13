@@ -14,16 +14,17 @@ import HoutDeur6 from "./components/varianten/HoutDeur6";
 import HoutDeur7 from "./components/varianten/HoutDeur7";
 import HoutDeur8 from "./components/varianten/HoutDeur8";
 import HoutDeur9 from "./components/varianten/HoutDeur9";
+import { DoorHandle } from "../DoorHandle";
 
 const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 	const { doorWidth, doorHeight, doorVariant } = useStore((state) => state.door.gekozendeur);
 	const { doorOpen, drawingplan } = useStore((state) => state.sidepanel);
 
 	const [colorMap, colorMap2, colorMap3, colorMap4] = useLoader(TextureLoader, [
-		"./wood.jpg",
-		"./wood2.jpg",
-		"./wood3.jpg",
-		"./wood4.jpg",
+		"./textures/wood.jpg",
+		"./textures/wood2.jpg",
+		"./textures/wood3.jpg",
+		"./textures/wood4.jpg",
 	]);
 
 	// Draai de texture met 90 graden (met de klok mee)
@@ -99,7 +100,7 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 			<WoodFrame textures={[colorMap, colorMap2, colorMap4]} />
 
 			{/* door */}
-			<a.group rotation-y={rotation} position={[doorWidth / 1000 / 2, doorHeight / 1000 / 2, 2.21]}>
+			<a.group rotation-y={rotation} position={[doorWidth / 1000 / 2, doorHeight / 1000 / 2, 2.2]}>
 				<group position={[-doorWidth / 1000 / 2, 0, 0]}>
 					{/* inner frame  (de 4 planken van de deur zelf)*/}
 					<group>
@@ -115,7 +116,6 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 
 						{doorVariant.value !== "deur7" && (
 							<>
-								{" "}
 								<mesh position={[0, doorHeight / 1000 / 2 - 0.083, 0]}>
 									<boxGeometry args={[doorWidth / 1000 - 0.166 * 2, 0.166, 0.04]} />
 									{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial map={colorMap3} />}
@@ -127,6 +127,9 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 							</>
 						)}
 					</group>
+
+					{/* doorhandle */}
+					<DoorHandle rotation={[0, 1.6, 0]} position={[-doorWidth / 1000 / 2 + 0.08, 0, 0]} />
 
 					{/* binne kant deur */}
 					<group>{handleVariant(doorVariant.value)}</group>

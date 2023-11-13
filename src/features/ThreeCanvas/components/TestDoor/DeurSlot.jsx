@@ -3,7 +3,7 @@ import { useStore } from "../../../../stores/appStore";
 import Shadermateriaal from "../../../../components/ShaderMateriaal";
 
 export function DeurSlot(props) {
-	const { nodes, materials } = useGLTF("./deur_slot.glb");
+	const { nodes, materials } = useGLTF("./models/deur_slot.glb");
 	const drawingplan = useStore((state) => state.sidepanel.drawingplan);
 
 	return (
@@ -52,4 +52,4 @@ export function DeurSlot(props) {
 	);
 }
 
-useGLTF.preload("./deur_slot.glb");
+useGLTF.preload("./models/deur_slot.glb");

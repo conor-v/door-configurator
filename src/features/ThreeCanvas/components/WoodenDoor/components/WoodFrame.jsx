@@ -29,7 +29,7 @@ const WoodFrame = ({ textures }) => {
 			</mesh>
 
 			{/* right bar */}
-			<mesh position={[doorWidth / 1000 / 2 + 0.0355, doorHeight / 1000 / 2, 2.15]}>
+			<mesh position={[doorWidth / 1000 / 2 + 0.034, doorHeight / 1000 / 2, 2.15]}>
 				<boxGeometry args={[0.07, doorHeight / 1000, 0.21]} />
 				<meshStandardMaterial map={textures[0]} />
 			</mesh>

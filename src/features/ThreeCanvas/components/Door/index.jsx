@@ -17,7 +17,7 @@ const Door = () => {
 		clearcoatRoughness: { value: 0.1, min: 0, max: 1, step: 0.1 },
 		transmission: { value: 0.9, min: 0.9, max: 1, step: 0.01 },
 		ior: { value: 1, min: 1, max: 2.3, step: 0.05 },
-		envMapIntensity: { value: 25, min: 0, max: 100, step: 1 },
+		envMapIntensity: { value: 1, min: 0, max: 100, step: 1 },
 		color: "#ffffff",
 		attenuationTint: "#ffe79e",
 		attenuationDistance: { value: 0.03, min: 0, max: 1 },

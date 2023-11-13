@@ -1,84 +1,84 @@
 [
 	{
-		"img": "door.svg",
+		"img": "./svgs/door.svg",
 		"type": "doors",
 		"name": "deuren",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "sliders.svg",
+		"img": "./svgs/sliders.svg",
 		"type": "layout",
 		"name": "layout",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "layers.svg",
+		"img": "./svgs/layers.svg",
 		"type": "aluminium",
 		"name": "materiaal",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "grid.svg",
+		"img": "./svgs/grid.svg",
 		"type": "door grid",
 		"name": "grid patronen",
 		"doortype": ["Vast raam"]
 	},
 	{
-		"img": "grid.svg",
+		"img": "./svgs/grid.svg",
 		"type": "door varianten",
 		"name": "varianten",
 		"doortype": ["Enkele deur"]
 	},
 	{
-		"img": "columns.svg",
+		"img": "./svgs/columns.svg",
 		"type": "partition grid",
 		"name": "grid lijnen",
 		"doortype": ["Vast raam"]
 	},
 	{
-		"img": "table.svg",
+		"img": "./svgs/table.svg",
 		"type": "material",
 		"name": "glas materiaal",
 		"doortype": ["Vast raam"]
 	},
 	{
-		"img": "eye.svg",
+		"img": "./svgs/eye.svg",
 		"type": "display",
 		"name": "weergave",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "list.svg",
+		"img": "./svgs/list.svg",
 		"type": "overview",
 		"name": "overzicht",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "plank.svg",
+		"img": "./svgs/plank.svg",
 		"type": "afmetingen",
 		"name": "afmetingen",
 		"doortype": ["Enkele deur"]
 	},
 	{
-		"img": "scharnier.svg",
+		"img": "./svgs/scharnier.svg",
 		"type": "scharnieren",
 		"name": "scharnieren",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "grepen.svg",
+		"img": "./svgs/grepen.svg",
 		"type": "grepen",
 		"name": "grepen",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "sloten.svg",
+		"img": "./svgs/sloten.svg",
 		"type": "sloten",
 		"name": "sloten",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]
 	},
 	{
-		"img": "euro.svg",
+		"img": "./svgs/euro.svg",
 		"type": "prijsberekening",
 		"name": "totaal",
 		"doortype": ["Vast raam", "Enkele deur", "Dubbele deur", "3 slagdeur", "4 slagdeur", "Raam"]

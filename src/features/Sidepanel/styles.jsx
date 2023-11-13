@@ -45,7 +45,7 @@ export const PanelToggle = styled.div`
 
 export const PannelContent = styled.div`
 	width: 100%;
-	height: 100%;
+	height: 91%;
 	overflow: hidden;
 	position: relative;
 `;
@@ -97,4 +97,20 @@ export const ButtonShader = styled.div`
 	@media (max-width: 479px) {
 		right: -52px;
 	}
+`;
+
+export const TotaalBox = styled.div`
+	background-color: #222221;
+	color: #eee;
+	padding: 19px;
+
+	p {
+		margin: 0;
+		text-align: center;
+	}
+`;
+
+export const TotaalLabel = styled.p`
+	color: #ccc;
+	margin-bottom: 5px !important;
 `;

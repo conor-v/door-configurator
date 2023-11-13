@@ -6,7 +6,7 @@ import { Base, Geometry, Subtraction } from "@react-three/csg";
 import { useStore } from "../../../../stores/appStore";
 
 function Room(props) {
-	const { nodes, materials } = useGLTF("./house_exterior2.glb");
+	const { nodes, materials } = useGLTF("./models/house_exterior2.glb");
 	const { doorHeight, doorWidth, door, aluminium, doortype } = useStore((state) => state.door.gekozendeur);
 	const widthCalc = doorWidth / 1000;
 	const heightCalc = doorHeight / 1000;
@@ -539,4 +539,4 @@ function Room(props) {
 
 export default Room;
 
-useGLTF.preload("./house_exterior2.glb");
+useGLTF.preload("./models/house_exterior2.glb");

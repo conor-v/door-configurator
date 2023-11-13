@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 
 export function GlasDoorHoek2(props) {
-	const { nodes } = useGLTF("/ferro_solid_door_hoek2.glb");
+	const { nodes } = useGLTF("/models/ferro_solid_door_hoek2.glb");
 	return (
 		<group {...props} dispose={null}>
 			<mesh
@@ -17,4 +17,4 @@ export function GlasDoorHoek2(props) {
 	);
 }
 
-useGLTF.preload("/ferro_solid_door_hoek2.glb");
+useGLTF.preload("/models/ferro_solid_door_hoek2.glb");

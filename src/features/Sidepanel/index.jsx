@@ -1,5 +1,14 @@
 import ChevronLeft from "@/assets/svgs/ChevronLeft";
-import { StyledBox, PanelToggle, PannelContent, PannelContentBox, ButtonDoor, ButtonShader } from "./styles";
+import {
+	StyledBox,
+	PanelToggle,
+	PannelContent,
+	PannelContentBox,
+	ButtonDoor,
+	ButtonShader,
+	TotaalBox,
+	TotaalLabel,
+} from "./styles";
 import { useState } from "react";
 import { useStore } from "../../stores/appStore";
 import Doors from "./components/sidePanelContent/doors";
@@ -20,8 +29,8 @@ import Ramen from "./components/sidePanelContent/ramen";
 
 const Sidepanel = ({ width = 500 }) => {
 	const [open, setOpen] = useState(true);
-	const sidePanelType = useStore((state) => state.sidepanel.sidePanelType);
-	const { doorOpen, sideOpen, drawingplan } = useStore((state) => state.sidepanel);
+	const { doorOpen, sideOpen, drawingplan, sidePanelType } = useStore((state) => state.sidepanel);
+	const gekozendeur = useStore((state) => state.door.gekozendeur);
 	const updateObject = useStore((state) => state.updateObject);
 
 	const sidePanelComp = () => {
@@ -79,15 +88,30 @@ const Sidepanel = ({ width = 500 }) => {
 				<ChevronLeft />
 			</PanelToggle>
 			<ButtonDoor sideOpen={sideOpen} onClick={() => updateObject("sidepanel", { doorOpen: Number(!doorOpen) })}>
-				<img src={doorOpen ? "/door_closed.svg" : "/door.svg"} alt="dooricon" />
+				<img src={doorOpen ? "/svgs/door_closed.svg" : "/svgs/door.svg"} alt="dooricon" />
 			</ButtonDoor>
 			<ButtonShader sideOpen={sideOpen} onClick={() => updateObject("sidepanel", { drawingplan: !drawingplan })}>
-				<img src={drawingplan ? "/shader_on.svg" : "/shader_off.svg"} alt="shadericon" />
+				<img src={drawingplan ? "/svgs/shader_on.svg" : "/svgs/shader_off.svg"} alt="shadericon" />
 			</ButtonShader>
 			<PannelContent>
 				<PannelContentBox>{sidePanelComp()}</PannelContentBox>
 				<IconNav />
 			</PannelContent>
+
+			<TotaalBox>
+				<div>
+					<TotaalLabel>Totaal</TotaalLabel>
+					<p>
+						€
+						{gekozendeur.door !== undefined &&
+							parseFloat(
+								parseFloat(gekozendeur.door.greep?.prijs) +
+									parseFloat(gekozendeur.door.slot?.prijs) +
+									parseFloat(gekozendeur.door.scharnier?.prijs)
+							).toFixed(2)}
+					</p>
+				</div>
+			</TotaalBox>
 		</StyledBox>
 	);
 };

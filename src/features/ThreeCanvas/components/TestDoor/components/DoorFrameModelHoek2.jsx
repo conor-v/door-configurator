@@ -3,7 +3,7 @@ import { useStore } from "../../../../../stores/appStore";
 import Shadermateriaal from "../../../../../components/ShaderMateriaal";
 
 export const DoorFrameModelHoek2 = (props) => {
-	const { nodes } = useGLTF("/doorframe_hoek2.glb");
+	const { nodes } = useGLTF("/models/doorframe_hoek2.glb");
 	const drawingplan = useStore((state) => state.sidepanel.drawingplan);
 
 	return (
@@ -21,4 +21,4 @@ export const DoorFrameModelHoek2 = (props) => {
 	);
 };
 
-useGLTF.preload("/doorframe_hoek2.glb");
+useGLTF.preload("/models/doorframe_hoek2.glb");

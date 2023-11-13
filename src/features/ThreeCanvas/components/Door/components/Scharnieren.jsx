@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 
 export function Scharnieren(props) {
-	const { nodes, materials } = useGLTF("/scharnieren.glb");
+	const { nodes, materials } = useGLTF("/models/scharnieren.glb");
 	return (
 		<group {...props} dispose={null}>
 			<mesh
@@ -17,4 +17,4 @@ export function Scharnieren(props) {
 	);
 }
 
-useGLTF.preload("/scharnieren.glb");
+useGLTF.preload("/models/scharnieren.glb");

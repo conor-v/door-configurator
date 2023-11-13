@@ -18,9 +18,15 @@ const inititalState = {
 		drawingplan: false,
 	},
 	pdf: {
+		data: [],
 		aanvragen: false,
 		offerte: "",
 		popupDowmloadPdf: false,
+		screenshot: false,
+		naam: "",
+		adres: "",
+		tel: "",
+		email: "",
 	},
 };
 

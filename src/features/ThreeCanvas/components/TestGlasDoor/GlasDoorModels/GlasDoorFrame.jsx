@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 
 export function GlasDoorFrame(props) {
-	const { nodes } = useGLTF("/ferro_solid_frame.glb");
+	const { nodes } = useGLTF("/models/ferro_solid_frame.glb");
 
 	return (
 		<group {...props} dispose={null}>
@@ -12,4 +12,4 @@ export function GlasDoorFrame(props) {
 	);
 }
 
-useGLTF.preload("/ferro_solid_frame.glb");
+useGLTF.preload("/models/ferro_solid_frame.glb");

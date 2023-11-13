@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { useStore } from "../../stores/appStore";
-import useGeneratePdf from "./hooks/useGeneratePdf";
 import { useState } from "react";
 import Popup from "./components/Popup";
+import Loading from "./components/Loading";
 
 const plaatsen = [
 	{ value: "Schoten", ardes: "Schotenstraat 14 2658" },
@@ -16,18 +16,11 @@ const AanvraagForm = () => {
 		ardes: "Schotenstraat 14 2658",
 	});
 	const updateObject = useStore((state) => state.updateObject);
-	const generatePdf = useGeneratePdf();
-	const { popupDowmloadPdf, optie } = useStore((state) => state.pdf);
+	const { popupDowmloadPdf, screenshot } = useStore((state) => state.pdf);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		let options;
-
-		if (optie === "SAVE_OFFERTE") {
-			options = { pdf: true };
-		}
-
-		generatePdf((options = { options }));
+		updateObject("pdf", { screenshot: true });
 	};
 
 	const handleCityChange = (event) => {
@@ -111,6 +104,7 @@ const AanvraagForm = () => {
 				</AanvraagBox>
 			)}
 			{popupDowmloadPdf && <Popup />}
+			{screenshot && <Loading />}
 		</>
 	);
 };
