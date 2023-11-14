@@ -1,3 +1,4 @@
+import Shadermateriaal from "../../../../components/ShaderMateriaal";
 import { useStore } from "../../../../stores/appStore";
 import Lines from "../Door/components/Lines";
 import { GlasDoorFrame } from "./GlasDoorModels/GlasDoorFrame";
@@ -8,7 +9,7 @@ import { a } from "@react-spring/three";
 
 const TestGlasDoor = ({ materialProps, handleGlassColor, handleBorderColor }) => {
 	const { doorWidth, doorHeight } = useStore((state) => state.door.gekozendeur);
-	const doorOpen = useStore((state) => state.sidepanel.doorOpen);
+	const { doorOpen, drawingplan } = useStore((state) => state.sidepanel);
 
 	const calcWidth = doorWidth / 1000;
 	const calcHeight = doorHeight / 1000;
@@ -27,7 +28,7 @@ const TestGlasDoor = ({ materialProps, handleGlassColor, handleBorderColor }) =>
 			<group position={[-doorWidth / 1000 / 2 + 0.05, 0.036, 0]}>
 				<mesh position={[0, calcHeight / 2 - 0.03, 0]} receiveShadow castShadow>
 					<boxGeometry args={[calcWidth - 0.05, calcHeight - 0.05, 0.01]} />
-					<meshPhysicalMaterial {...materialProps} color={handleGlassColor()} />
+					{drawingplan ? <Shadermateriaal /> : <meshPhysicalMaterial {...materialProps} color={handleGlassColor()} />}
 				</mesh>
 
 				{/* bottom frame */}
@@ -122,20 +123,40 @@ const TestGlasDoor = ({ materialProps, handleGlassColor, handleBorderColor }) =>
 				<group position={[-calcWidth / 2 + 0.03, calcHeight / 2, 0.04]}>
 					<mesh>
 						<boxGeometry args={[0.03, 0.15, 0.05]} />
-						<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+
+						{drawingplan ? (
+							<Shadermateriaal />
+						) : (
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+						)}
 					</mesh>
 					<mesh position={[0.035, 0, 0.04]}>
 						<boxGeometry args={[0.1, 0.15, 0.03]} />
-						<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+
+						{drawingplan ? (
+							<Shadermateriaal />
+						) : (
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+						)}
 					</mesh>
 
 					<mesh position-z={-0.08}>
 						<boxGeometry args={[0.03, 0.15, 0.05]} />
-						<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+
+						{drawingplan ? (
+							<Shadermateriaal />
+						) : (
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+						)}
 					</mesh>
 					<mesh position={[0.035, 0, -0.12]}>
 						<boxGeometry args={[0.1, 0.15, 0.03]} />
-						<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+
+						{drawingplan ? (
+							<Shadermateriaal />
+						) : (
+							<meshStandardMaterial color={handleBorderColor()} metalness={0.6} roughness={0.5} />
+						)}
 					</mesh>
 				</group>
 

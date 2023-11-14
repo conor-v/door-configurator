@@ -21,10 +21,10 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 	const { doorOpen, drawingplan } = useStore((state) => state.sidepanel);
 
 	const [colorMap, colorMap2, colorMap3, colorMap4] = useLoader(TextureLoader, [
-		"./textures/wood.jpg",
-		"./textures/wood2.jpg",
-		"./textures/wood3.jpg",
-		"./textures/wood4.jpg",
+		"./textures/wood2_1.jpg",
+		"./textures/wood2_2.jpg",
+		"./textures/wood2_3.jpg",
+		"./textures/wood2_4.jpg",
 	]);
 
 	// Draai de texture met 90 graden (met de klok mee)
@@ -36,11 +36,11 @@ const WoodenDoor = ({ materialProps, handleGlassColor }) => {
 
 	// Pas de repeat-eigenschap aan voor de materialen
 	colorMap.wrapS = colorMap.wrapT = colorMap2.wrapS = colorMap2.wrapT = RepeatWrapping;
-	colorMap.repeat.set(1, doorHeight / 1000);
-	colorMap2.repeat.set(1, doorHeight / 1000);
+	colorMap.repeat.set(1, 1);
+	colorMap2.repeat.set(1, 1);
 	colorMap3.wrapS = colorMap3.wrapT = colorMap4.wrapS = colorMap4.wrapT = RepeatWrapping;
-	colorMap3.repeat.set(doorWidth / 1000, 1);
-	colorMap4.repeat.set(doorWidth / 1000, 1);
+	colorMap3.repeat.set(1, 1);
+	colorMap4.repeat.set(1, 1);
 
 	const { spring } = useSpring({
 		spring: doorOpen,

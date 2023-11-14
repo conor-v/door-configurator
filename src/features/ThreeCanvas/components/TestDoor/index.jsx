@@ -26,7 +26,7 @@ const TestDoor = () => {
 	const handleBorderColor = () => {
 		switch (aluminium) {
 			case "Black":
-				return "#43464b";
+				return "#55585d";
 			case "White":
 				return "#eeeeee";
 			default:
@@ -36,6 +36,8 @@ const TestDoor = () => {
 
 	const handleVariant = (name) => {
 		switch (name) {
+			case "geen vensters":
+				return <boxGeometry args={[0]} />;
 			case "4 vensters":
 				return <VierRechthoeken />;
 			case "verticaal venster":
@@ -49,7 +51,7 @@ const TestDoor = () => {
 			case "halve maan venster":
 				return <HalveMoon />;
 			default:
-				return <Rechthoek />;
+				return <boxGeometry args={[0]} />;
 		}
 	};
 
@@ -114,9 +116,9 @@ const TestDoor = () => {
 					<mesh>
 						<Geometry>
 							<Base
-								position={[0, 1.013, 0.023]}
+								position={[0, drawingplan ? 1 : 1.013, 0.023]}
 								geometry={
-									new BoxGeometry(drawingplan ? 0.673 : 0.78, drawingplan ? 1.845 : 1.95, drawingplan ? 0.023 : 0.023)
+									new BoxGeometry(drawingplan ? 0.673 : 0.78, drawingplan ? 1.87 : 1.95, drawingplan ? 0.023 : 0.023)
 								}></Base>
 
 							<Subtraction ref={holeCut} name="cavity" position={doorVariant.position}>
@@ -124,7 +126,7 @@ const TestDoor = () => {
 							</Subtraction>
 						</Geometry>
 
-						{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#43464b"} />}
+						{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#55585d"} />}
 					</mesh>
 
 					{doorVariant.value !== "geen vensters" && (

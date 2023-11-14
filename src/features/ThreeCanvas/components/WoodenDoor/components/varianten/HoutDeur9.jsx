@@ -23,7 +23,7 @@ const HoutDeur9 = ({ colorMap, colorMap4, materialProps, handleGlassColor }) => 
 						<boxGeometry args={[doorWidth / 1000 - 0.332, doorHeight / 1000 - 1.014, 0.04]} />
 					</Base>
 
-					<Subtraction ref={holeCut} name="cavity" position={[-0.25, -0.68, -0.13]}>
+					<Subtraction ref={holeCut} name="cavity" position={[-0.25, -0.551, -0.13]}>
 						<WoodShape />
 					</Subtraction>
 				</Geometry>
@@ -31,7 +31,7 @@ const HoutDeur9 = ({ colorMap, colorMap4, materialProps, handleGlassColor }) => 
 				{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial map={colorMap4} />}
 			</mesh>
 
-			{/* <mesh position={[-0.25, 0.341 - 0.68, -0.13]}>
+			{/* <mesh position={[-0.25, 0.341 - 0.53, -0.13]}>
 				<WoodShape />
 				<meshBasicMaterial color={"red"} />
 			</mesh> */}

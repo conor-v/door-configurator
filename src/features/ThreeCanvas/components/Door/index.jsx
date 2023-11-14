@@ -40,7 +40,7 @@ const Door = () => {
 	const handleBorderColor = () => {
 		switch (aluminium) {
 			case "Black":
-				return "#43464b";
+				return "#55585d";
 			case "White":
 				return "#eeeeee";
 			default:

@@ -1,72 +1,64 @@
 [
-  { 
-    "name": "630x2015",
-    "prijs": 1.00,
-    "productName": "deurblad_afmeting"
-  },
-  {
-    "name": "680x2015",
-    "prijs": 2.00,
-    "productName": "deurblad_afmeting"
-  },
-  { 
-    "name": "730x2015",
-    "prijs": 3.00,
-    "productName": "deurblad_afmeting"
-  },
-  {
-    "name": "780x2015",
-    "prijs": 4.00,
-    "productName": "deurblad_afmeting"
-  },
-  { 
-    "name": "830x2015",
-    "prijs": 5.00,
-    "productName": "deurblad_afmeting"
-  },
-  {
-    "name": "880x2015",
-    "prijs": 6.00,
-    "productName": "deurblad_afmeting"
-  },
-  { 
-    "name": "930x2015",
-    "prijs": 7.00,
-    "productName": "deurblad_afmeting"
-  },
-  {
-    "name": "630x2115",
-    "prijs": 8.00,
-    "productName": "deurblad_afmeting"
-  },
-  { 
-    "name": "680x2115",
-    "prijs": 9.00,
-    "productName": "deurblad_afmeting"
-  },
-  {
-    "name": "730x2115",
-    "prijs": 10.00,
-    "productName": "deurblad_afmeting"
-  },
-  { 
-    "name": "780x2115",
-    "prijs": 11.00,
-    "productName": "deurblad_afmeting"
-  },
-  {
-    "name": "830x2115",
-    "prijs": 12.00,
-    "productName": "deurblad_afmeting"
-  },
-  { 
-    "name": "880x2115",
-    "prijs": 13.00,
-    "productName": "deurblad_afmeting"
-  },
-  {
-    "name": "930x2115",
-    "prijs": 14.00,
-    "productName": "deurblad_afmeting"
-  }
+	{
+		"name": "630x2015",
+		"prijs": 1.0,
+		"productName": "deurblad_afmeting",
+		"type": "Enkele deur"
+	},
+	{
+		"name": "680x2015",
+		"prijs": 2.0,
+		"productName": "deurblad_afmeting",
+		"type": "Enkele deur"
+	},
+
+	{
+		"name": "630x2015",
+		"prijs": 1.0,
+		"productName": "deurblad_afmeting",
+		"type": "Wooden door",
+		"width": 6300
+	},
+	{
+		"name": "680x2015",
+		"prijs": 2.0,
+		"productName": "deurblad_afmeting",
+		"type": "Wooden door",
+		"width": 6800
+	},
+	{
+		"name": "730x2015",
+		"prijs": 3.0,
+		"productName": "deurblad_afmeting",
+		"type": "Wooden door",
+		"width": 7300
+	},
+	{
+		"name": "780x2015",
+		"prijs": 4.0,
+		"productName": "deurblad_afmeting",
+		"type": "Wooden door",
+		"width": 7800
+	},
+	{
+		"name": "830x2015",
+		"prijs": 5.0,
+		"productName": "deurblad_afmeting",
+		"type": "Wooden door",
+		"width": 8300
+	},
+	{
+		"name": "880x2015",
+		"prijs": 5.0,
+		"productName": "deurblad_afmeting",
+		"type": "Wooden door",
+		"width": 8800
+	},
+	{
+		"name": "930x2015",
+		"prijs": 5.0,
+		"productName": "deurblad_afmeting",
+		"type": "Wooden door",
+		"width": 9300
+	}
 ]

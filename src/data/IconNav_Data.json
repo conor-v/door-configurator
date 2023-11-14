@@ -9,7 +9,7 @@
 		"img": "./svgs/plank.svg",
 		"type": "afmetingen",
 		"name": "afmetingen",
-		"doortype": ["Enkele deur"]
+		"doortype": ["Enkele deur", "Wooden door"]
 	},
 	{
 		"img": "./svgs/sliders.svg",

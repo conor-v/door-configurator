@@ -1,30 +1,14 @@
 import styled from "@emotion/styled";
-import IntervalData from "../../../../data/muurdikte_interval.json";
 import AfmetingenData from "../../../../data/deurblad_afmetingen.json";
 import { useStore } from "../../../../stores/appStore";
 
 const Afmetingen = () => {
-	const { muurdikte_interval, deurblad_afmeting } = useStore((state) => state.door.gekozendeur.door);
+	const { deurblad_afmeting } = useStore((state) => state.door.gekozendeur.door);
 	const gekozendeur = useStore((state) => state.door.gekozendeur);
 	const updateObject = useStore((state) => state.updateObject);
 
 	return (
 		<div>
-			<Title>Muurdikte interval (mm)</Title>
-			<List>
-				{IntervalData.map((item) => (
-					<ListItem
-						key={item.name}
-						onClick={() => {
-							const updatedGekozendeur = { ...gekozendeur, door: { ...gekozendeur.door, muurdikte_interval: item } };
-							updateObject("door", { gekozendeur: updatedGekozendeur });
-						}}
-						active={item.name === muurdikte_interval.name ? 1 : 0}>
-						<p>{item.name}</p>
-					</ListItem>
-				))}
-			</List>
-
 			<Title>Deurblad afmetingen (mm)</Title>
 			<List>
 				{AfmetingenData.map((item) => (

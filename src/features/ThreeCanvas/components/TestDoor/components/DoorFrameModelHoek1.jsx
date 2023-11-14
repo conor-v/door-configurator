@@ -15,7 +15,7 @@ export const DoorFrameModelHoek1 = (props) => {
 				material={nodes.Cube002.material}
 				rotation={[0, 0, Math.PI]}
 				scale={[-0.265, -0.001, -0.001]}>
-				{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#43464b"} />}
+				{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#55585d"} />}
 			</mesh>
 		</group>
 	);

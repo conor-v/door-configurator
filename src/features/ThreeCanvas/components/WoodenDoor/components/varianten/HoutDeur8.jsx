@@ -23,7 +23,7 @@ const HoutDeur8 = ({ colorMap, colorMap4 }) => {
 						<boxGeometry args={[doorWidth / 1000 - 0.332, doorHeight / 1000 - 1.014, 0.04]} />
 					</Base>
 
-					<Subtraction ref={holeCut} name="cavity" position={[-0.25, -0.68, -0.13]}>
+					<Subtraction ref={holeCut} name="cavity" position={[-0.25, -0.551, -0.13]}>
 						<WoodShape />
 					</Subtraction>
 				</Geometry>
@@ -36,7 +36,7 @@ const HoutDeur8 = ({ colorMap, colorMap4 }) => {
 				{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial map={colorMap4} />}
 			</mesh>
 
-			<mesh position={[-0.225, -0.135, -0.0049]} receiveShadow castShadow scale={[0.9, 0.8, 0.166]}>
+			<mesh position={[-0.225, -0.135, -0.0049]} receiveShadow castShadow scale={[0.9, 0.9, 0.166]}>
 				<WoodShape />
 				{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial map={colorMap} />}
 			</mesh>

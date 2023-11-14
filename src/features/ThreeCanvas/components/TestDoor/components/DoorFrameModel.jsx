@@ -14,7 +14,7 @@ export function DoorFrameModel({ scaling, scalingTop = -0.001 }) {
 				geometry={nodes.Cube.geometry}
 				position={[0, 0, 0]}
 				scale={[scaling, scalingTop, -0.001]}>
-				{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#43464b"} />}
+				{drawingplan ? <Shadermateriaal /> : <meshStandardMaterial color={"#55585d"} />}
 			</mesh>
 		</group>
 	);
